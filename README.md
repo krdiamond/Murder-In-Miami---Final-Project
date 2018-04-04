@@ -1,5 +1,5 @@
 TERMINAL
-- install redux yarn add redux, yarn add redux-react
+- install redux yarn add redux, yarn add react-redux
 
 SRC -> INDEX.JS
 - import requirements: react, provider, createStore, reducer, app   
