@@ -7,15 +7,16 @@ import room5 from '../../../../images/room5/room5.jpg';
 
 class Room5 extends Component {
 
-  handleGoToRoom = () => {
-    this.props.goToRoom(6)
+  handleGoToRoom = (roomNum) => {
+    this.props.goToRoom(roomNum)
   }
 
   render() {
     return (
       <div className="main_container">
         <img src={room5} alt="Victim's Living Room"/>
-        <div className="go_to_room" onClick={this.handleGoToRoom}> </div>
+        <div id="room5_go_to_room_4" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(4)}></div>
+        <div id="room5_go_to_room_6" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(6)}></div>
       </div>
     );
   }

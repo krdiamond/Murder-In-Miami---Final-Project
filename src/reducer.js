@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 1
+  currentRoom: 9
   }
 
 const reducer = (state = defaultState, action) => {

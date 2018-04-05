@@ -13,14 +13,14 @@
   border: 2px solid red;
 }
 
+/* -------------------------- LANDING PAGE CONTAINER ------------------------ */
+
 /* ---------------------------- GENERAL GAME PLAY --------------------------- */
 
-.go_to_room {
+.traverse_rooms {
     position: absolute;
-    top: 0px;
     border: 6px solid blue;
-    width: 400px;
-    height: 400px;
+    z-index: 2;
 }
 
 /* ------------------------------- START GAME ------------------------------- */
@@ -31,8 +31,184 @@
   font-size: 24px;
 }
 
+/* --------------------------------- ROOM 1 --------------------------------- */
 
+ #room1_go_to_room_2 {
+   top: 150px;
+   left: 350px;
+   width: 200px;
+   height: 300px;
+ }
 
+ #room1_go_to_room_3 {
+   bottom: 0px;
+   right: 0px;
+   width: 200px;
+   height: 180px;
+ }
 
+ #room1_go_to_room_4 {
+   bottom: 0px;
+   left: 0px;
+   width: 200px;
+   height: 300px;
+ }
 
-/* -------------------------- LANDING PAGE CONTAINER ------------------------ */
+/* --------------------------------- ROOM 2 --------------------------------- */
+
+#room2_go_to_room_1 {
+  top: 135px;
+  left: 150px;
+  width: 200px;
+  height: 300px;
+}
+
+#room2_go_to_room_3 {
+  bottom: 0px;
+  right: 0px;
+  width: 600px;
+  height: 75px;
+}
+/* --------------------------------- ROOM 3 --------------------------------- */
+
+#room3_go_to_room_2 {
+  bottom: 0px;
+  left: 0px;
+  width: 200px;
+  height: 210px;
+}
+
+/* --------------------------------- ROOM 4 --------------------------------- */
+
+#room4_go_to_room_5 {
+  bottom: 0px;
+  right: 0px;
+  width: 180px;
+  height: 220px;
+}
+
+#room4_go_to_room_1 {
+  bottom: 0px;
+  left: 0px;
+  width: 180px;
+  height: 300px;
+}
+
+/* --------------------------------- ROOM 5 --------------------------------- */
+
+#room5_go_to_room_4 {
+  bottom: 0px;
+  right: 0px;
+  width: 180px;
+  height: 220px;
+}
+
+#room5_go_to_room_6 {
+  top: 50px;
+  left: 350px;
+  width: 100px;
+  height: 300px;
+}
+
+/* --------------------------------- ROOM 6 --------------------------------- */
+
+#room6_go_to_room_4 {
+  top: 450px;
+  left: 0px;
+  width: 180px;
+  height: 250px;
+}
+
+#room6_go_to_room_7 {
+  top: 0px;
+  right: 200px;
+  width: 180px;
+  height: 500px;
+}
+
+#room6_go_to_room_9 {
+  bottom: 0px;
+  right: 0px;
+  width: 300px;
+  height: 140px;
+}
+
+/* --------------------------------- ROOM 7 --------------------------------- */
+
+#room7_go_to_room_6 {
+  top: 380px;
+  left: 0px;
+  width: 180px;
+  height: 250px;
+}
+
+#room7_go_to_room_8 {
+  bottom: 0px;
+  left: 0px;
+  width: 400px;
+  height: 150px;
+}
+
+/* --------------------------------- ROOM 8 --------------------------------- */
+
+#room8_go_to_room_7 {
+  bottom: 0px;
+  left: 0px;
+  width: 400px;
+  height: 100px;
+}
+
+/* --------------------------------- ROOM 9 --------------------------------- */
+
+#room9_go_to_room_10 {
+  top: 300px;
+  left: 500px;
+  width: 130px;
+  height: 400px;
+}
+
+#room9_go_to_room_6 {
+  bottom: 0px;
+  left: 0px;
+  width: 250px;
+  height: 150px;
+}
+
+#room9_go_to_room_4 {
+  bottom: 0px;
+  left: 320px;
+  width: 250px;
+  height: 150px;
+}
+
+#room9_go_to_room_1 {
+  bottom: 0px;
+  right: 0px;
+  width: 250px;
+  height: 150px;
+}
+
+/* --------------------------------- ROOM 10 --------------------------------- */
+
+#room10_go_to_room_11 {
+  top: 400px;
+  right: 0px;
+  width: 200px;
+  height: 300px;
+}
+
+#room10_go_to_room_9 {
+  bottom: 0px;
+  left: 0px;
+  width: 250px;
+  height: 150px;
+}
+
+/* --------------------------------- ROOM 11 --------------------------------- */
+
+#room11_go_to_room_10 {
+  bottom: 0px;
+  left: 0px;
+  width: 400px;
+  height: 150px;
+}
