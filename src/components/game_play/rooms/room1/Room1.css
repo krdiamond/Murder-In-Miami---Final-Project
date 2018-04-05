@@ -1,0 +1,22 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+ #room1_go_to_room_2 {
+   top: 150px;
+   left: 350px;
+   width: 200px;
+   height: 300px;
+ }
+
+ #room1_go_to_room_3 {
+   bottom: 0px;
+   right: 0px;
+   width: 200px;
+   height: 180px;
+ }
+
+ #room1_go_to_room_4 {
+   bottom: 0px;
+   left: 0px;
+   width: 200px;
+   height: 300px;
+ }
