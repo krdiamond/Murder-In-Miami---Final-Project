@@ -9,7 +9,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="app">
+      <div id="app">
         <Switch>
           <Route exact path="/" render={()=><LandingPageContainer/>}/>
           <Route path="/play" render={()=><GameContainer/>}/>

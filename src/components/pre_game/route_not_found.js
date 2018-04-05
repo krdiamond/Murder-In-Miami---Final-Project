@@ -4,7 +4,7 @@ import '../../App.css';
 class RouteNotFound extends Component {
   render() {
     return (
-      <div className="landing_page">
+      <div className="main_container">
         Route is not found
       </div>
     );
