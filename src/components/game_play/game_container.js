@@ -13,6 +13,7 @@ import Room8 from './rooms/room8/room8';
 import Room9 from './rooms/room9/room9';
 import Room10 from './rooms/room10/room10';
 import Room11 from './rooms/room11/room11';
+import PurseContainer from './purse_container';
 
 
 class GameContainer extends Component {
@@ -36,14 +37,20 @@ class GameContainer extends Component {
   render() {
     let Room = this.rooms[this.props.currentRoom];
     return (
+      <div className="main_container">
         <Room />
+        <PurseContainer />
+        {(this.props.isPurseOpened === true && this.props.showPhone === false)? <div id ="purse_contents" className="container"> THE PURSE IS OPENED </div> : null}
+      </div>
     );
   }
 }
 
 function mapStateToProps(state){
   return {
-    currentRoom: state.currentRoom
+    currentRoom: state.currentRoom,
+    isPurseOpened: state.isPurseOpened,
+    showPhone: state.showPhone,
   }
 }
 

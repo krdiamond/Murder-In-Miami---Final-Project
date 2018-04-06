@@ -21,24 +21,31 @@
    height: 300px;
  }
 
- #opening_story {
-   position: absolute;
-   z-index: 2;
-   background: black;
-   border: 6px solid blue;
-   color: white;
-   top: 0px;
- }
+ /* ----------------------------- OPENING STORY ----------------------------- */
 
- #hide_story {
-   border: 3px solid red;
+.story {
+  position: absolute;
+  background: black;
+  color: white;
+  width: 900px;
+}
+
+ #opening_story {
+   top: 0px;
+   height:100px;
  }
 
  #show_story {
-   position: absolute;
-   background: black;
-   width: 900px;
    top: 0px;
-   border: 3px solid red;
-  color: white;
  }
+
+/* ---------------------------------- PHONE --------------------------------- */
+
+#phone {
+  position: absolute;
+  top: 350px;
+  left: 140px;
+  width: 70px;
+  height: 30px;
+  /* border: 6px solid green; */
+}

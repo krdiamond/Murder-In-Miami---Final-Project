@@ -9,7 +9,6 @@
 .main_container {
   display: inline-block;
   position: relative;
-  text-align: center;
   border: 2px solid red;
 }
 
@@ -21,6 +20,42 @@
     position: absolute;
     border: 6px solid blue;
     z-index: 2;
+}
+
+.container {
+  position: absolute;
+  border: 6px solid green;
+  width:600px;
+  height:600px;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+}
+
+#purse_container {
+  position: absolute;
+  width:150px;
+  height:200px;
+  right:0px;
+  top: 0px;
+  z-index: 2;
+}
+
+#purse_contents {
+  background: white;
+}
+
+#blinking_message_dot {
+  position: absolute;
+  left:425px;
+  top:170px;
+}
+
+#phone_container{
+  z-index: 3;
 }
 
 /* ------------------------------- START GAME ------------------------------- */
