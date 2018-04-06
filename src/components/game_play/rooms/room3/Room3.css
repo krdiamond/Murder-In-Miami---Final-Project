@@ -1,0 +1,37 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room3_go_to_room_2 {
+  bottom: 0px;
+  left: 0px;
+  width: 200px;
+  height: 210px;
+}
+
+/* ------------------------------- CLOTHES  --------------------------------- */
+
+#clothes {
+  position: absolute;
+  border: 3px solid green;
+  width: 120px;
+  height: 120px;
+  bottom: 100px;
+  left: 650px;
+}
+
+#shoes {
+  position: absolute;
+  border: 3px solid green;
+  width: 150px;
+  height: 80px;
+  bottom: 50px;
+  left: 700px;
+}
+
+#clothes_message {
+  position: absolute;
+  border: 6px solid purple;
+  width: 200px;
+  height: 80px;
+  bottom: 210px;
+  left: 500px;
+}

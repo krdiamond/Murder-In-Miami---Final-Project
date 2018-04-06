@@ -13,6 +13,7 @@ class Room1 extends Component {
     hoverGoToRoom2: false,
     hoverGoToRoom4: false,
     openingStoryDisplayed: true,
+    showKellysUniformMessage: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -53,6 +54,15 @@ class Room1 extends Component {
 
   handlePhoneClick = () => {
     this.props.toggleShowPhone(!this.props.showPhone)
+    this.setState({
+      showKellysUniformMessage: false
+    })
+  }
+
+  toggleKellysUniform =() => {
+    this.setState({
+      showKellysUniformMessage: !this.state.showKellysUniformMessage
+    })
   }
 
 
@@ -65,10 +75,14 @@ class Room1 extends Component {
         <div id="phone" onClick={this.handlePhoneClick} >
           {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}
         </div>
-
         {(this.props.showPhone === true && this.props.isPurseOpened === false)?
           <PhoneContainer
-            message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP!!!!!!  "/>: null}
+            message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
+
+        <div id="kellys_uniform" onClick={this.toggleKellysUniform}></div>
+        {this.state.showKellysUniformMessage? <div id="kellys_uniform_message">
+          hmmm.. It looks like this is Kelly's uniform from the Beach club she works at. She must have come home to change after work...
+        </div> : null }
 
         <div id="room1_go_to_room_2" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(2)}

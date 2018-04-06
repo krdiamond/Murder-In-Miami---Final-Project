@@ -1,0 +1,54 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room2_go_to_room_1 {
+  top: 135px;
+  left: 150px;
+  width: 200px;
+  height: 300px;
+}
+
+#room2_go_to_room_3 {
+  bottom: 0px;
+  right: 0px;
+  width: 600px;
+  height: 70px;
+}
+
+/* --------------------------------- TENNIS --------------------------------- */
+
+#tennis_racket {
+  position: absolute;
+  border: 3px solid green;
+  width: 150px;
+  height: 100px;
+  bottom: 110px;
+  left: 500px;
+}
+
+#racket_message {
+  position: absolute;
+  border: 6px solid purple;
+  width: 200px;
+  height: 170px;
+  bottom: 210px;
+  left: 500px;
+}
+/* ----------------------------------- BED ---------------------------------- */
+
+#bed {
+  position: absolute;
+  border: 3px solid green;
+  width: 400px;
+  height: 300px;
+  bottom: 300px;
+  right: 0px;
+}
+
+#bed_message {
+  position: absolute;
+  border: 6px solid purple;
+  width: 200px;
+  height: 170px;
+  bottom: 210px;
+  left: 500px;
+}

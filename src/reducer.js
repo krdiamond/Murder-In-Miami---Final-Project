@@ -1,7 +1,6 @@
 const defaultState = {
-  currentRoom: 1,
+  currentRoom: 3,
   isPurseOpened: false,
-  room1listenedToMessage: false,
   showPhone: false,
   }
 
