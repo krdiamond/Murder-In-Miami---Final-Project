@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import '../../App.css';
 import * as actions from '../../actions';
 import purse from '../../images/purse.png';
+import Note from './rooms/room1/note'
+import Tape from './rooms/room11/tape'
 
 class PurseContainer extends Component {
 
@@ -24,6 +26,11 @@ class PurseContainer extends Component {
     return (
       <div id="purse_container" ref='purse' >
           <img src={purse} onClick={this.togglePurseOpen} width="150" alt="Your purse to store items"/>
+            {(this.props.isPurseOpened === true && this.props.showPhone === false)?
+                <div id ="purse_contents">
+                  <Note/>
+                  <Tape/>
+                </div> : null}
       </div>
     );
   }
@@ -34,6 +41,7 @@ function mapStateToProps(state){
   return {
       isPurseOpened: state.isPurseOpened,
       purseDropZone: state.purseDropZone,
+      showPhone: state.showPhone,
   }
 }
 

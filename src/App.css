@@ -35,20 +35,24 @@
   z-index: 2;
 }
 
+/* --------------------------------- PURSE ---------------------------------- */
 #purse_container {
   position: absolute;
   width:150px;
-  height:200px;
   right:0px;
   top: 0px;
   z-index: 2;
-    border: 6px solid purple;
+  margin: 20px;
+  /* border: 6px solid purple; */
 }
 
 #purse_contents {
   background: white;
+  width: 150PX;
+  height: 645px;
 }
 
+/* --------------------------------- PHONE ---------------------------------- */
 #blinking_message_dot {
   position: absolute;
   left:425px;

@@ -42,10 +42,6 @@ class GameContainer extends Component {
       <div className="main_container">
         <Room />
         <PurseContainer/>
-        {(this.props.isPurseOpened === true && this.props.showPhone === false)?
-            <div id ="purse_contents" className="container">
-              items go here
-            </div> : null}
       </div>
     );
   }
