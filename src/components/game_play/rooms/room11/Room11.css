@@ -52,10 +52,13 @@
 
 #tape {
   position: absolute;
-  width: 200px;
-  height: 100px;
-  top: 0px;
-  left: 0px;
   z-index: 3;
-  border: 3px solid green;
+}
+
+#clear_tape{
+  position: absolute;
+  top: 0px;
+  height:65.752px;
+  Width: 65.996px;
+  z-index: 4;
 }

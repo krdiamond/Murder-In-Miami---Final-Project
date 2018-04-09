@@ -13,8 +13,8 @@ class Tape extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:320,
-        y:530,
+        x:520,
+        y:700,
         showTape: true,
       };
 
@@ -58,6 +58,7 @@ class Tape extends Component {
     putTapeInPurse = () => {
       this.props.addItemToPurse(this.tape)
       this.props.hideBeachClubTape()
+
     }
 
 
@@ -70,7 +71,8 @@ class Tape extends Component {
         onMouseDown={(e)=>this.handleMouseDown(e)}
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
-          i'm a tape
+        <img src={tape} alt="Secret Video Tape"/>
+        <div id="clear_tape" ></div>
       </div>
     )
   }
@@ -79,6 +81,7 @@ class Tape extends Component {
 function mapStateToProps(state){
   return {
     purseDropZone: state.purseDropZone,
+    showTape: state.showTape,
   }
 }
 
