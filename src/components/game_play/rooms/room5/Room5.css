@@ -1,0 +1,72 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room5_go_to_room_4 {
+  bottom: 0px;
+  right: 0px;
+  width: 180px;
+  height: 220px;
+}
+
+#room5_go_to_room_6 {
+  top: 50px;
+  left: 350px;
+  width: 100px;
+  height: 300px;
+}
+
+/* ---------------------------- TENNIS RACKET ------------------------------- */
+
+#jess_tennis_racket{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 320px;
+  right: 620px;
+}
+
+#tennis_message {
+  position: absolute;
+  border: 3px solid green;
+  width: 150px;
+  height: 120px;
+  top: 220px;
+  right: 650px;
+}
+
+/* -------------------------------- SHOES ----------------------------------- */
+
+#jess_shoes{
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  top: 300px;
+  right: 540px;
+}
+
+#shoe_message {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  top: 220px;
+  right: 650px;
+}
+
+/* ------------------------------ ASHTRAY ----------------------------------- */
+
+#jess_ashtray {
+  position: absolute;
+  border: 3px solid green;
+  width: 40px;
+  height: 50px;
+  bottom: 220px;
+  left: 130px;
+}
+
+#ashtray_message {
+  position: absolute;
+  border: 3px solid green;
+  width: 150px;
+  height: 120px;
+  top: 520px;
+  right: 650px;
+}

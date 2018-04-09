@@ -18,3 +18,53 @@ export function toggleShowPhone(phoneIsShowing) {
     payload: phoneIsShowing
   }
 }
+
+export function crumpledNoteFound() {
+  return {
+    type: "FIND_CRUMPLED_NOTE",
+    payload: true
+  }
+}
+
+export function showJessicasNote(result) {
+  return {
+    type: "SHOW_JESSICAS_NOTE",
+    payload: result
+  }
+}
+
+
+export function isBeachAddressShowing(result) {
+  return {
+    type: "SHOW_BEACH_ADDRESS",
+    payload: result
+  }
+}
+
+export function storeNoteInPurse() {
+  return {
+    type: "PUT_NOTE_IN_PURSE",
+    payload: false
+  }
+}
+
+export function loadPurseLocation(zone) {
+  return {
+    type: "LOAD_PURSE_LOCATION",
+    payload: zone
+  }
+}
+
+export function addItemToPurse(item) {
+  return {
+    type: "ADD_ITEM_TO_PURSE",
+    payload: item
+  }
+}
+
+export function hideBeachClubTape() {
+  return {
+    type: "SHOW_TAPE",
+    payload: false
+  }
+}

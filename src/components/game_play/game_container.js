@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
+import * as actions from '../../actions';
 import '../../App.css';
 import StartGame from './start_game';
 import Room1 from './rooms/room1/room1';
@@ -35,12 +36,16 @@ class GameContainer extends Component {
 
 
   render() {
+    console.log(this.props.itemsInPurse, "need to display these in the viewable purse")
     let Room = this.rooms[this.props.currentRoom];
     return (
       <div className="main_container">
         <Room />
-        <PurseContainer />
-        {(this.props.isPurseOpened === true && this.props.showPhone === false)? <div id ="purse_contents" className="container"> THE PURSE IS OPENED </div> : null}
+        <PurseContainer/>
+        {(this.props.isPurseOpened === true && this.props.showPhone === false)?
+            <div id ="purse_contents" className="container">
+              items go here
+            </div> : null}
       </div>
     );
   }
@@ -51,7 +56,9 @@ function mapStateToProps(state){
     currentRoom: state.currentRoom,
     isPurseOpened: state.isPurseOpened,
     showPhone: state.showPhone,
+    purseDropZone: state.purseDropZone,
+    itemsInPurse: state.itemsInPurse,
   }
 }
 
-export default connect(mapStateToProps)(GameContainer);
+export default connect( mapStateToProps, actions)(GameContainer);

@@ -1,0 +1,90 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room8_go_to_room_7 {
+  bottom: 0px;
+  left: 0px;
+  width: 400px;
+  height: 100px;
+}
+
+/* ------------------------------ WINE GLASSES ------------------------------ */
+#wine_glass_right {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  top: 510px;
+  right: 580px;
+  border: 3px solid green;
+}
+
+#wine_glass_left{
+  position: absolute;
+  width: 120px;
+  height: 160px;
+  top: 480px;
+  right: 700px;
+  border: 3px solid green;
+}
+
+
+#wine_glasses_message {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  top: 650px;
+  right: 680px;
+  border: 3px solid green;
+  background-color: white;
+}
+
+/* ----------------------------- TENNIS RACKET ------------------------------ */
+
+#allisons_tennis_racket {
+  position: absolute;
+  width: 260px;
+  height: 120px;
+  top: 450px;
+  left: 420px;
+  border: 3px solid green;
+}
+
+#racket_message {
+  position: absolute;
+  width: 260px;
+  height: 120px;
+  top: 580px;
+  left: 420px;
+  background-color: white;
+}
+
+/* ------------------------------ CIGARETTES -------------------------------- */
+
+#cigs {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 615px;
+  left: 250px;
+  border: 3px solid green;
+}
+
+#cigs_message {
+  position: absolute;
+  width: 260px;
+  height: 120px;
+  top: 715px;
+  left: 250px;
+  border: 3px solid green;
+  background-color: white;
+}
+
+/* -------------------------------- PHONE ----------------------------------- */
+
+#room8phone {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  top: 580px;
+  left: 690px;
+  border: 3px solid green;
+}

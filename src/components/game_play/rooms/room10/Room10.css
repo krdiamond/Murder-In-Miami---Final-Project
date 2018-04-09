@@ -1,0 +1,15 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room10_go_to_room_11 {
+  top: 400px;
+  right: 0px;
+  width: 200px;
+  height: 300px;
+}
+
+#room10_go_to_room_9 {
+  bottom: 0px;
+  left: 0px;
+  width: 250px;
+  height: 150px;
+}

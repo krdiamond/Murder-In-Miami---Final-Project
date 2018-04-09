@@ -1,0 +1,69 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room4_go_to_room_5 {
+  bottom: 0px;
+  right: 0px;
+  width: 180px;
+  height: 220px;
+}
+
+#room4_go_to_room_1 {
+  bottom: 0px;
+  left: 0px;
+  width: 180px;
+  height: 300px;
+}
+
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#jessica {
+  position: absolute;
+  width: 60px;
+  height: 140px;
+  bottom: 330px;
+  left: 390px;
+}
+
+.jessicas_message {
+  position: absolute;
+  border: 6px solid purple;
+  bottom: 410px;
+  left: 500px;
+  width: 200px;
+}
+
+#knees {
+  position: absolute;
+  bottom: 240px;
+  left: 430px;
+  width: 80px;
+  height: 60px;
+}
+
+#cell_phone {
+  position: absolute;
+  bottom: 370px;
+  left: 490px;
+  width: 40px;
+  height: 60px;
+}
+
+/* --------------------------------- PLANT ---------------------------------- */
+
+#plant {
+  position: absolute;
+  bottom: 230px;
+  right: 120px;
+  width: 80px;
+  height: 140px;
+}
+
+/* --------------------------------- PHONE ---------------------------------- */
+#room4phone {
+  position: absolute;
+  top: 435px;
+  left: 30px;
+  width: 60px;
+  height: 140px;
+  border: 6px solid green;
+}

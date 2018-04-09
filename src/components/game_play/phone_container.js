@@ -27,10 +27,12 @@ class PhoneContainer extends Component {
       <div id="phone_container" className="container">
           <div onClick={this.handleClosePhone}>x</div>
           <img src={phone}  alt="A phone"/>
-            <div id="blinking_message_dot" onClick={this.handleClickMessage}>
-              <img src={redDot} width="20" alt="blinking light"/>
-            </div>}
-          {this.state.messageDisplayed? <div>{this.props.message}</div> :null }
+
+        {(this.props.message === "0")? null :
+        <div id="blinking_message_dot" onClick={this.handleClickMessage}>
+            <img src={redDot} width="20" alt="blinking light"/>
+        </div>}
+        {this.state.messageDisplayed? <div>{this.props.message}</div> :null }
       </div>
     );
   }

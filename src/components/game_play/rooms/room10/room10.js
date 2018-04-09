@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {goToRoom} from '../../../../actions'
 import '../../../../App.css';
 import room10 from '../../../../images/room10/room10.jpg';
+import './Room10.css';
 
 
 class Room10 extends Component {

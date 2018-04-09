@@ -18,7 +18,7 @@
 
 #tennis_racket {
   position: absolute;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   width: 150px;
   height: 100px;
   bottom: 110px;
@@ -37,7 +37,7 @@
 
 #bed {
   position: absolute;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   width: 400px;
   height: 300px;
   bottom: 300px;

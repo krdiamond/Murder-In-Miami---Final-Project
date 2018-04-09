@@ -1,0 +1,32 @@
+/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+
+#room6_go_to_room_4 {
+  top: 450px;
+  left: 0px;
+  width: 180px;
+  height: 250px;
+}
+
+#room6_go_to_room_7 {
+  top: 0px;
+  right: 200px;
+  width: 180px;
+  height: 500px;
+}
+
+#room6_go_to_room_9 {
+  bottom: 0px;
+  right: 0px;
+  width: 300px;
+  height: 140px;
+}
+
+
+#room6phone {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  top: 580px;
+  left: 690px;
+  border: 3px solid green;
+}

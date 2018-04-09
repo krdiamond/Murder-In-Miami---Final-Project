@@ -5,7 +5,10 @@ import '../../../../App.css';
 import './Room1.css';
 import room1 from '../../../../images/room1/room1.jpg';
 import redDot from '../../../../images/room1/red_dot.gif';
+import crumpledNote from '../../../../images/room1/crumpled_note.png';
 import PhoneContainer from '../../phone_container';
+import Note from './note'
+import BeachClubAddress from './beach_club_address'
 
 class Room1 extends Component {
 
@@ -13,7 +16,7 @@ class Room1 extends Component {
     hoverGoToRoom2: false,
     hoverGoToRoom4: false,
     openingStoryDisplayed: true,
-    showKellysUniformMessage: false,
+    readHeart: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -60,10 +63,20 @@ class Room1 extends Component {
   }
 
   toggleKellysUniform =() => {
+    this.props.isBeachAddressShowing(!this.props.showNoteWithBeachAddress)
+  }
+
+  handleFindCrumpledNote = () => {
+    this.props.crumpledNoteFound()
+    this.props.showJessicasNote(!this.props.findJessicasNote)
+  }
+
+  handleHeart = () => {
     this.setState({
-      showKellysUniformMessage: !this.state.showKellysUniformMessage
+      readHeart: !this.state.readHeart
     })
   }
+
 
 
   render() {
@@ -72,37 +85,43 @@ class Room1 extends Component {
 
         <img src={room1} alt="Victim's Living Room"/>
 
-        <div id="phone" onClick={this.handlePhoneClick} >
+        {this.props.findCrumpledNote? null : <img id="crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
+        {this.props.findJessicasNote? <Note/> : null }
+
+        <div id="heart" onClick={this.handleHeart}> </div>
+        {this.state.readHeart? <div id="heart_award">"AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE IN 1987" what a strange award... but then why were there cigarettes found at the crime scene?
+        </div> : null}
+
+        <div id="room1phone" onClick={this.handlePhoneClick} >
           {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}
         </div>
         {(this.props.showPhone === true && this.props.isPurseOpened === false)?
           <PhoneContainer
             message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
 
-        <div id="kellys_uniform" onClick={this.toggleKellysUniform}></div>
-        {this.state.showKellysUniformMessage? <div id="kellys_uniform_message">
-          hmmm.. It looks like this is Kelly's uniform from the Beach club she works at. She must have come home to change after work...
-        </div> : null }
+        <div id="jacket"  onClick={this.toggleKellysUniform}></div>
+        {this.props.showNoteWithBeachAddress? <BeachClubAddress/>: null }
+
 
         <div id="room1_go_to_room_2" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(2)}
           onMouseEnter={(e) => this.handlehoverEnterGoTo(2)}
           onMouseLeave={(e) => this.handlehoverLeaveGoTo(2)}>
-            {this.state.hoverGoToRoom2? <div>GO TO KELLY'S BEDROOM</div> : null}
+            {this.state.hoverGoToRoom2? <div>GO TO KELLY''S BEDROOM</div> : null}
         </div>
 
         <div id="room1_go_to_room_4" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(4)}
           onMouseEnter={(e) => this.handlehoverEnterGoTo(4)}
           onMouseLeave={(e) => this.handlehoverLeaveGoTo(4)}>
-          {this.state.hoverGoToRoom4? <div>GO TO JESSICA'S HOUSE</div> : null}
+          {this.state.hoverGoToRoom4? <div>GO TO JESSICA''S HOUSE</div> : null}
         </div>
 
         <div id= "opening_story_closed" className="story"> </div>
         <div id="show_story" className="story" onClick={this.toggleShowStory}>x</div>
         {this.state.openingStoryDisplayed?
           <div id="opening_story" className="story">
-             A girl named Kelly was found brutally murdered by the beach two nights ago. Police found the body covered with fallen branches, rocks, sand and dirt.  They also found numerous cigarette butts all over the area but were too covered with sand to test for DNA. The police have not been able to find any leads and the case is looking bleak. You are super nosy and have decided to snoop around to try and help. If you are able to figure out who the murderer is, please call 911 from any phone as soon as possible!!!!
+             A girl named Kelly was found brutally murdered by the beach two nights ago. Police found the body covered with fallen branches, rocks, sand and dirt.  They also found numerous cigarette butts all over the area but were too covered with sand to test for DNA. The police have not been able to find any leads and the case is looking bleak. You are super nosy and have decided to snoop around to try and help. If you are able to figure out who the murderer is and what the murder weapon was, please call 911 from any phone as soon as possible!!!!
              <div className="story" onClick={this.toggleShowStory}>x</div>
           </div> : null}
 
@@ -114,7 +133,11 @@ class Room1 extends Component {
 function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
-    isPurseOpened: state.isPurseOpened
+    isPurseOpened: state.isPurseOpened,
+    itemsInPurse: state.itemsInPurse,
+    findCrumpledNote: state.findCrumpledNote,
+    findJessicasNote: state.findJessicasNote,
+    showNoteWithBeachAddress: state.showNoteWithBeachAddress,
   }
 }
 

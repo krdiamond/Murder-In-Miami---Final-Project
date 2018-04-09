@@ -3,6 +3,10 @@ import {connect} from 'react-redux'
 import {goToRoom} from '../../../../actions'
 import '../../../../App.css';
 import room6 from '../../../../images/room6/room6.jpg';
+import './Room6.css';
+import redDot from '../../../../images/room1/red_dot.gif';
+import * as actions from '../../../../actions';
+import PhoneContainer from '../../phone_container';
 
 
 class Room6 extends Component {
@@ -53,10 +57,18 @@ class Room6 extends Component {
     }
   }
 
+  handlePhoneClick = () => {
+    this.props.toggleShowPhone(!this.props.showPhone)
+  }
+
   render() {
     return (
       <div className="main_container">
         <img src={room6} alt="Victim's Living Room"/>
+
+          <div id="room6phone" onClick={this.handlePhoneClick} >
+          </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
+
           <div id="room6_go_to_room_4" className="traverse_rooms"
             onClick={(e) => this.handleGoToRoom(4)}
             onMouseEnter={(e) => this.handlehoverEnterGoTo(4)}
@@ -80,4 +92,13 @@ class Room6 extends Component {
   }
 }
 
-export default connect( null, {goToRoom} )(Room6);
+function mapStateToProps(state){
+  return {
+    showPhone: state.showPhone,
+    isPurseOpened: state.isPurseOpened,
+  }
+}
+
+export default connect( mapStateToProps, actions)(Room6);
+
+  // {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}

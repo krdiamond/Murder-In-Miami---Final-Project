@@ -69,7 +69,7 @@ class Room2 extends Component {
 
         <div id="bed" onClick={this.toggleBedMessage}></div>
         {this.state.showBedMessage? <div id="bed_message">
-          ... Kelly's bed is made. Did she ever come home from work?
+          ... Kelly's bed is made. Did she ever come home from work? I guess she didn't sleep here...
         </div> : null }
 
         <img src={room2} alt="Victim's Living Room"/>
