@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import * as actions from '../../../../actions';
 import '../../../../App.css';
-import './Room1.css';
-import note from '../../../../images/room1/note.png';
+import './Room7.css';
 
-class Note extends Component {
+class FridgeNote extends Component {
 
   state = {
         oldMouseX: 0,
@@ -17,8 +16,8 @@ class Note extends Component {
         y:100,
       };
 
-  address = {
-    title: 'club address',
+  beachAddress = {
+    title: 'Beach Club Address',
     img: 'link here',
     text: 'text here'
   }
@@ -55,8 +54,8 @@ class Note extends Component {
     }
 
     putAddressInPurse = () => {
-      this.props.addItemToPurse(this.address)
-      this.props.isBeachAddressShowing(!this.props.showNoteWithBeachAddress)
+      this.props.addItemToPurse(this.beachAddress)
+      this.props.showBeachAddress(false)
       console.log(this.props.itemsInPurse)
     }
 
@@ -81,15 +80,8 @@ function mapStateToProps(state){
   return {
     purseDropZone: state.purseDropZone,
     itemsInPurse: state.itemsInPurse,
-    showNoteWithBeachAddress: state.showNoteWithBeachAddress,
+    showNoteBeachAddress: state.showNoteBeachAddress,
   }
 }
 
-export default connect( mapStateToProps, actions)(Note);
-
-
-
-
-
-// <div id="clearbox"></div>
-// <img src={note} alt="Note"/>
+export default connect( mapStateToProps, actions)(FridgeNote);

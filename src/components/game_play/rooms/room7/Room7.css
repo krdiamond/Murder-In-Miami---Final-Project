@@ -24,3 +24,21 @@
   left: 300px;
   border: 3px solid green;
 }
+
+/* --------------------------------- NOTE ----------------------------------- */
+
+#fridge_note {
+  position: absolute;
+  top: 312px;
+  left: 30px;
+}
+
+#beach_club_address {
+  position: absolute;
+  border: 6px solid purple;
+  height:200px;
+  width: 200px;
+  top: 200px;
+  left: 580px;
+  z-index: 3;
+}

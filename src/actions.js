@@ -33,14 +33,6 @@ export function showJessicasNote(result) {
   }
 }
 
-
-export function isBeachAddressShowing(result) {
-  return {
-    type: "SHOW_BEACH_ADDRESS",
-    payload: result
-  }
-}
-
 export function storeNoteInPurse() {
   return {
     type: "PUT_NOTE_IN_PURSE",
@@ -73,5 +65,19 @@ export function parrotTalkedTo(parrot) {
   return {
     type: "TALK_TO_PARROTS",
     payload: parrot
+  }
+}
+
+export function showBeachAddress(result) {
+  return {
+    type: "SHOW_BEACH_ADDRESS",
+    payload: result
+  }
+}
+
+export function foundFridgeNote() {
+  return {
+    type: "FOUND_FRIDGE_NOTE",
+    payload: true,
   }
 }

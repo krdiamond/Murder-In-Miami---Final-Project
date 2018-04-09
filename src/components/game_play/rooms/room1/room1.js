@@ -8,7 +8,6 @@ import redDot from '../../../../images/room1/red_dot.gif';
 import crumpledNote from '../../../../images/room1/crumpled_note.png';
 import PhoneContainer from '../../phone_container';
 import Note from './note'
-import BeachClubAddress from './beach_club_address'
 
 class Room1 extends Component {
 
@@ -63,7 +62,7 @@ class Room1 extends Component {
   }
 
   toggleKellysUniform =() => {
-    this.props.isBeachAddressShowing(!this.props.showNoteWithBeachAddress)
+    console.log("something should happen when this is clicked but idk yet")
   }
 
   handleFindCrumpledNote = () => {
@@ -100,8 +99,6 @@ class Room1 extends Component {
             message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
 
         <div id="jacket"  onClick={this.toggleKellysUniform}></div>
-        {this.props.showNoteWithBeachAddress? <BeachClubAddress/>: null }
-
 
         <div id="room1_go_to_room_2" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(2)}

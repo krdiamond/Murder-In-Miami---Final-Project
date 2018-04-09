@@ -7,6 +7,8 @@ import './Room7.css';
 import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
+import fridgeNote from '../../../../images/room7/fridge_note.png';
+import FridgeNote from './fridge_note'
 
 
 class Room7 extends Component {
@@ -50,12 +52,21 @@ class Room7 extends Component {
     this.props.toggleShowPhone(!this.props.showPhone)
   }
 
+  handleFindFridgeNote = () => {
+    console.log("i'm clicked")
+    this.props.showBeachAddress(!this.props.showNoteBeachAddress)
+    this.props.foundFridgeNote()
+  }
+
 
 
   render() {
     return (
       <div className="main_container">
-        <img src={room7} alt="Victim's Living Room"/>
+        <img src={room7} alt="Allison's Kitchen"/>
+
+          {this.props.findFridgeNote? null : <img id="fridge_note" src={fridgeNote} onClick={this.handleFindFridgeNote} alt="Fridge Note"/> }
+          {this.props.showNoteBeachAddress? <FridgeNote/> : null }
 
           <div id="room7phone" onClick={this.handlePhoneClick} >
           </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
@@ -81,6 +92,8 @@ function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
+    findFridgeNote :state.findFridgeNote,
+    showNoteBeachAddress: state.showNoteBeachAddress,
   }
 }
 
