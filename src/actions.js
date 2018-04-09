@@ -88,3 +88,10 @@ export function hideKeys() {
     payload: false,
   }
 }
+
+export function receivedClueFromSnake() {
+  return {
+    type: "GET_CLUE_FROM_SNAKE",
+    payload: true,
+  }
+}

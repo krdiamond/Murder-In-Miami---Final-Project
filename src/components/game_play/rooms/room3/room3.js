@@ -37,23 +37,25 @@ class Room3 extends Component {
   }
 
   handleSnake = () => {
+    this.props.receivedClueFromSnake()
     this.setState({
       talkToSnake: !this.state.talkToSnake
     })
   }
 
-  // areKeysInPurse = () => {
-  //   const result = this.props.itemsInPurse.find(item => item.title === 'keys')
-  //   if (result === undefined){
-  //     return false
-  //   }
-  //   else {
-  //     return true
-  //   }
-  // }
+  isMeanLetterInPurse = () => {
+    const result = this.props.itemsInPurse.find(item => item.title === 'note')
+    if (result === undefined){
+      return false
+    }
+    else {
+      return true
+    }
+  }
 
 
   render() {
+    console.log(this.isMeanLetterInPurse())
     return (
       <div className="main_container">
 
@@ -67,6 +69,15 @@ class Room3 extends Component {
 
         <div id="snake" onClick={this.handleSnake}></div>
 
+        {this.state.talkToSnake && this.isMeanLetterInPurse() ?
+          <div className="snake_message">
+            ssssssssssss... that note from Jesssssssssssica sssssssssseemsssssss sssssssusssssspicioussssssss maybe ssssssssssssssssshe knowssssssssssssss ssssssssssssssomething
+        </div> : null }
+
+        {this.state.talkToSnake && (this.isMeanLetterInPurse() === false) ?
+          <div className="snake_message">
+            ssssssssssss... i'm just Kelly's pet ssssssssssnake.... when is ssssssssshe coming back sssssssss
+        </div> : null }
 
         <div id="room3_go_to_room_2" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(2)}
@@ -84,7 +95,7 @@ class Room3 extends Component {
 function mapStateToProps(state){
   return {
     findJessicasNote: state.findJessicasNote,
-    itemsInPurse: state.itemsInPurse
+    itemsInPurse: state.itemsInPurse,
   }
 }
 

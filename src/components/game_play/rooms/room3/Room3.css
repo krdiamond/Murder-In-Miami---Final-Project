@@ -46,3 +46,12 @@
   left: 150px;
   border: 6px solid purple;
 }
+
+.snake_message {
+  position: absolute;
+  width: 250px;
+  height: 120px;
+  bottom: 330px;
+  left: 150px;
+  background-color: white;
+}

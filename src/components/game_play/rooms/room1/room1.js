@@ -107,12 +107,13 @@ class Room1 extends Component {
             {this.state.hoverGoToRoom2? <div>GO TO KELLY''S BEDROOM</div> : null}
         </div>
 
+        {this.props.gotClueFromSnake?
         <div id="room1_go_to_room_4" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(4)}
           onMouseEnter={(e) => this.handlehoverEnterGoTo(4)}
           onMouseLeave={(e) => this.handlehoverLeaveGoTo(4)}>
           {this.state.hoverGoToRoom4? <div>GO TO JESSICA''S HOUSE</div> : null}
-        </div>
+        </div> :null}
 
         <div id= "opening_story_closed" className="story"> </div>
         <div id="show_story" className="story" onClick={this.toggleShowStory}>x</div>
@@ -135,6 +136,7 @@ function mapStateToProps(state){
     findCrumpledNote: state.findCrumpledNote,
     findJessicasNote: state.findJessicasNote,
     showNoteWithBeachAddress: state.showNoteWithBeachAddress,
+    gotClueFromSnake: state.gotClueFromSnake
   }
 }
 
