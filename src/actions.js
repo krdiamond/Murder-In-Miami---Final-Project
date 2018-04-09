@@ -68,3 +68,10 @@ export function hideBeachClubTape() {
     payload: false
   }
 }
+
+export function parrotTalkedTo(parrot) {
+  return {
+    type: "TALK_TO_PARROTS",
+    payload: parrot
+  }
+}

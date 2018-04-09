@@ -39,12 +39,14 @@ class Room11 extends Component {
   }
 
   handleParrotLeft = () => {
+    this.props.parrotTalkedTo('left')
     this.setState({
       clickParrotLeft: !this.state.clickParrotLeft
     })
   }
 
   handleParrotRight = () => {
+    this.props.parrotTalkedTo('right')
     this.setState({
       clickParrotRight: !this.state.clickParrotRight
     })
@@ -55,7 +57,7 @@ class Room11 extends Component {
       <div className="main_container">
         <img src={room11} alt="Beach Club Cafe"/>
 
-        {this.props.showTape? <Tape/>: null} 
+        {this.props.showTape? <Tape/>: null}
 
           <div id="room11phone" onClick={this.handlePhoneClick} >
           </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
@@ -86,6 +88,7 @@ function mapStateToProps(state){
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
     showTape: state.showTape,
+    talkedtoParrots: state.talkedtoParrots
   }
 }
 

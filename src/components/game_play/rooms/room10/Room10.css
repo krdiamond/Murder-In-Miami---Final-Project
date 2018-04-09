@@ -3,8 +3,8 @@
 #room10_go_to_room_11 {
   top: 400px;
   right: 0px;
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 250px;
 }
 
 #room10_go_to_room_9 {
@@ -12,4 +12,24 @@
   left: 0px;
   width: 250px;
   height: 150px;
+}
+
+/* -------------------------------- HEATHER --------------------------------- */
+
+#heather {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  top: 650px;
+  left: 520px;
+  border: 3px solid green;
+}
+
+.heather_message {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 400px;
+  left: 520px;
+  background-color: white;
 }
