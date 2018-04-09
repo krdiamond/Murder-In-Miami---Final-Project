@@ -17,11 +17,13 @@ class Note extends Component {
         y:530,
       };
 
-  note = {
-    title: 'note',
-    img: 'link here',
-    text: 'text here'
-  }
+    note = {
+      title: 'note',
+      x:0,
+      y:10,
+      idx:0,
+      img: note,
+    }
 
     handleMouseDown = (e) => {
       this.setState({
@@ -57,7 +59,6 @@ class Note extends Component {
     putNoteInPurse = () => {
       this.props.addItemToPurse(this.note)
       this.props.showJessicasNote(!this.props.findJessicasNote)
-
     }
 
 
@@ -82,6 +83,7 @@ function mapStateToProps(state){
   return {
     purseDropZone: state.purseDropZone,
     findJessicasNote: state.findJessicasNote,
+    itemsInPurse: state.itemsInPurse
   }
 }
 

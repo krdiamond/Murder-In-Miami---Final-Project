@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {goToRoom} from '../../../../actions'
+import * as actions from '../../../../actions';
 import '../../../../App.css';
 import room5 from '../../../../images/room5/room5.jpg';
+import Keys from './keys'
 import './Room5.css';
 
 
@@ -64,11 +65,26 @@ class Room5 extends Component {
     })
   }
 
+  areKeysInPurse = () => {
+    const result = this.props.itemsInPurse.find(item => item.title === 'keys')
+    if (result === undefined){
+      return false
+    }
+    else {
+      return true
+    }
+  }
+
+
+
   render() {
     return (
       <div className="main_container">
 
         <img src={room5} alt="Victim's Living Room"/>
+
+        {this.props.showKeys? <Keys/>: null}
+
 
         <div id="jess_tennis_racket" onClick={this.handleTennisRacket}></div>
         {this.state.clickTennisRacket? <div id="tennis_message">
@@ -91,15 +107,26 @@ class Room5 extends Component {
           onMouseLeave={(e) => this.handlehoverLeaveGoTo(4)}>
           {this.state.hoverGoToRoom4? <div>GO BACK TO JESSICA'S STUDY</div> : null}
         </div>
+
+        {this.areKeysInPurse() ?
         <div id="room5_go_to_room_6" className="traverse_rooms"
           onClick={(e) => this.handleGoToRoom(6)}
           onMouseEnter={(e) => this.handlehoverEnterGoTo(6)}
           onMouseLeave={(e) => this.handlehoverLeaveGoTo(6)}>
-          {this.state.hoverGoToRoom6? <div>SNEAK OUT TO ALLISON'S HOUSE</div> : null}
-        </div>
+          {this.state.hoverGoToRoom6? <div>YOU FOUND ALLISON'S KEYS! SNEAK OVER TO ALLISON'S HOUSE</div> : null}
+        </div> : null}
+
+
       </div>
     );
   }
 }
 
-export default connect( null, {goToRoom} )(Room5);
+function mapStateToProps(state){
+  return {
+    showKeys: state.showKeys,
+    itemsInPurse: state.itemsInPurse,
+  }
+}
+
+export default connect( mapStateToProps, actions)(Room5);

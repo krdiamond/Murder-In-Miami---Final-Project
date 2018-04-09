@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {goToRoom} from '../../../../actions'
 import '../../../../App.css';
 import room11 from '../../../../images/room11/room11.jpg';
 import './Room11.css';

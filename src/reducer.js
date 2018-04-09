@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 7,
+  currentRoom: 3,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -9,7 +9,8 @@ const defaultState = {
   purseDropZone: {},
   itemsInPurse: [],
   showTape: true,
-  talkedtoParrots: []
+  talkedtoParrots: [],
+  showKeys: true,
   }
 
 const reducer = (state = defaultState, action) => {
@@ -36,6 +37,8 @@ const reducer = (state = defaultState, action) => {
         return {...state, showNoteBeachAddress: action.payload}
     case "FOUND_FRIDGE_NOTE":
         return {...state, findFridgeNote: action.payload}
+    case "SHOW_KEYS":
+        return {...state, showKeys: action.payload}
     default:
       return state
     }

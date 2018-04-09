@@ -81,3 +81,10 @@ export function foundFridgeNote() {
     payload: true,
   }
 }
+
+export function hideKeys() {
+  return {
+    type: "SHOW_KEYS",
+    payload: false,
+  }
+}

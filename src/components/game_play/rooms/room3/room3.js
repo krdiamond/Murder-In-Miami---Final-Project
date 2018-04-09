@@ -40,19 +40,17 @@ class Room3 extends Component {
     this.setState({
       talkToSnake: !this.state.talkToSnake
     })
-    this.isJessicasNoteInPurse()
   }
 
-  isJessicasNoteInPurse = () => {
-    if (this.props.itemsInPurse.length === 0){
-      return false
-    }
-    else {
-      let result = this.props.itemsInPurse.find(item => item.title === "note")
-      console.log(result)
-    }
-
-  }
+  // areKeysInPurse = () => {
+  //   const result = this.props.itemsInPurse.find(item => item.title === 'keys')
+  //   if (result === undefined){
+  //     return false
+  //   }
+  //   else {
+  //     return true
+  //   }
+  // }
 
 
   render() {

@@ -19,9 +19,11 @@ class Tape extends Component {
       };
 
   tape = {
-    title: 'tape',
-    img: 'link here',
-    text: 'text here'
+    title: 'note',
+    x:0,
+    y:10,
+    idx:3,
+    img: tape,
   }
 
     handleMouseDown = (e) => {

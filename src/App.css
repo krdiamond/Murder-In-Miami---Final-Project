@@ -43,13 +43,37 @@
   top: 0px;
   z-index: 2;
   margin: 20px;
-  /* border: 6px solid purple; */
+  height: 200px;
+  border: 6px solid purple;
 }
 
 #purse_contents {
   background: white;
   width: 150PX;
   height: 645px;
+}
+
+.cell {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  margin:10px
+}
+
+.moon {
+    position: absolute;
+    z-index: -100;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+#clearbox {
+  width:120px;
+  height:120px;
 }
 
 /* --------------------------------- PHONE ---------------------------------- */

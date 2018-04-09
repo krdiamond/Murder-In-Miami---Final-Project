@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import * as actions from '../../../../actions';
 import '../../../../App.css';
-import './Room7.css';
+import './Room5.css';
+import keys from '../../../../images/room5/keys.png';
 
-class FridgeNote extends Component {
+class Keys extends Component {
 
   state = {
         oldMouseX: 0,
@@ -12,17 +13,18 @@ class FridgeNote extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:100,
-        y:100,
+        x:60,
+        y:670,
+        showTape: true,
       };
 
-  beachAddress = {
-    title: 'Beach Club Address',
-    x:0,
-    y:10,
-    idx:2,
-    img: 'fridge_note',
-  }
+    keys = {
+        title: 'keys',
+        x:0,
+        y:10,
+        idx:1,
+        img: keys,
+    }
 
     handleMouseDown = (e) => {
       this.setState({
@@ -51,28 +53,29 @@ class FridgeNote extends Component {
         this.state.x < (this.props.purseDropZone.right + 100) &&
         this.state.y < (this.props.purseDropZone.bottom - 100)){
         console.log("i'm here")
-        this.putAddressInPurse()
+        this.putKeysInPurse()
       }
     }
 
-    putAddressInPurse = () => {
-      this.props.addItemToPurse(this.beachAddress)
-      this.props.showBeachAddress(false)
-      console.log(this.props.itemsInPurse)
+    putKeysInPurse = () => {
+      this.props.addItemToPurse(this.keys)
+      this.props.hideKeys()
+
     }
 
 
   render() {
     return (
-      <div id="beach_club_address"
+      <div
+        id="keys"
         style={{left: this.state.x,
-                top: this.state.y}}
+                top: this.state.y,
+                }}
         onMouseDown={(e)=>this.handleMouseDown(e)}
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
-        <div id="text">
-        CLUB ADDRESS
-        </div>
+        <img src={keys} height="40" alt="Secret Video Tape"/>
+        <div id="clear_keys" ></div>
       </div>
     )
   }
@@ -81,9 +84,8 @@ class FridgeNote extends Component {
 function mapStateToProps(state){
   return {
     purseDropZone: state.purseDropZone,
-    itemsInPurse: state.itemsInPurse,
-    showNoteBeachAddress: state.showNoteBeachAddress,
+    showTape: state.showTape,
   }
 }
 
-export default connect( mapStateToProps, actions)(FridgeNote);
+export default connect( mapStateToProps, actions)(Keys);
