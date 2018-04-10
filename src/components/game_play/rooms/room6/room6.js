@@ -8,7 +8,7 @@ import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 
 
-class Room6 extends Component {
+class Room6 extends Component { 
 
   state = {
     hoverGoToRoom4: false,

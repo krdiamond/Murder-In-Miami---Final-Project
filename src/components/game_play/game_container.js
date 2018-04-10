@@ -35,6 +35,13 @@ class GameContainer extends Component {
     Room11
   ];
 
+  componentDidMount = () => {
+    setInterval(this.tick, 1000);
+  }
+
+  tick = () => {
+    this.props.startTimer(this.props.timer)
+  }
 
   render() {
     let Room = this.rooms[this.props.currentRoom];
@@ -43,6 +50,7 @@ class GameContainer extends Component {
         <Room />
         <PurseContainer/>
         <Television/>
+        {this.props.timer}
       </div>
     );
   }
@@ -51,7 +59,8 @@ class GameContainer extends Component {
 function mapStateToProps(state){
   return {
     currentRoom: state.currentRoom,
-    peopleTalkedTO: state.peopleTalkedTO
+    peopleTalkedTO: state.peopleTalkedTO,
+    timer: state.timer,
   }
 }
 

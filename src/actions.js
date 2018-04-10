@@ -1,3 +1,11 @@
+export function startTimer(counter) {
+  return {
+    type: "TIMER",
+    payload: counter + 1
+  }
+}
+
+
 export function goToRoom(roomNumber) {
   return {
     type: "GO_TO_ROOM",

@@ -16,6 +16,7 @@ const defaultState = {
   showingAllisonsPhoneNumber: false,
   TVDropZone: {},
   peopleTalkedTO: ["Pet Snake"],
+  timer: 0,
   }
 
 const reducer = (state = defaultState, action) => {
@@ -54,6 +55,8 @@ const reducer = (state = defaultState, action) => {
         return {...state, showingAllisonsPhoneNumber : action.payload}
     case "TALKED_TO":
         return {...state, peopleTalkedTO: [...state.peopleTalkedTO, action.payload]}
+    case "TIMER":
+      return {...state, timer: action.payload}
     default:
       return state
     }
