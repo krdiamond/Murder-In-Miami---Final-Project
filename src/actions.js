@@ -116,3 +116,10 @@ export function showAllisonsPhoneNumber(result) {
     payload: result,
   }
 }
+
+export function addToPeopleYouHaveTalkedTo(result) {
+  return {
+    type: "TALKED_TO",
+    payload: result,
+  }
+}

@@ -9,6 +9,7 @@ class PhoneContainer extends Component {
 
   state={
     messageDisplayed:false,
+    toggleCallPolice: false,
   }
 
   handleClosePhone = () => {
@@ -21,18 +22,50 @@ class PhoneContainer extends Component {
     })
   }
 
+  callPolice = () => {
+    this.setState({
+      toggleCallPolice: !this.state.toggleCallPolice
+    })
+  }
+
+  solveMurder = (person) => {
+    if(person === "Jessica"){
+      console.log("GO TO WINNERS PAGE!!!")
+    }
+    else{
+      console.log("GO TO LOSERS PAGE!!!")
+    }
+  }
 
   render() {
-    return (
-      <div id="phone_container" className="container">
-          <div onClick={this.handleClosePhone}>x</div>
-          <img src={phone}  alt="A phone"/>
+    let people = this.props.peopleTalkedTO.map(person => {
 
+      return(<div id="each_person" onClick={(e) => this.solveMurder(person)} >{person}</div>)
+    });
+
+    return (
+      <div id="phone_container">
+          <div id="close_phone" onClick={this.handleClosePhone}>HANG UP PHONE</div>
+          <img src={phone} alt="A phone"/>
         {(this.props.message === "0")? null :
         <div id="blinking_message_dot" onClick={this.handleClickMessage}>
             <img src={redDot} width="20" alt="blinking light"/>
         </div>}
-        {this.state.messageDisplayed? <div>{this.props.message}</div> :null }
+
+        <div className="phone_button" id="call_police" onClick={this.callPolice} > CALL POLICE </div>
+        {this.state.toggleCallPolice?
+          <div id="police_message">
+              hmm.. you say you know who murdered Kelly... Please see a list of everyone you have talked to recently. Was it any of     these people? Please choose one.
+          </div> : null}
+
+        {this.state.toggleCallPolice? <div id="people_container">{people}</div> :null}
+
+        <div className="phone_button" id="call_allison"> CALL ALLISON </div>
+        {this.state.messageDisplayed? <div id="phone_message">{this.props.message}</div> :null }
+
+
+
+
       </div>
     );
   }
@@ -42,6 +75,7 @@ class PhoneContainer extends Component {
 function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
+    peopleTalkedTO: state.peopleTalkedTO
   }
 }
 

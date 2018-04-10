@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import * as actions from '../../actions';
 import '../../App.css';
 import StartGame from './start_game';
+import Television from './television';
 import Room1 from './rooms/room1/room1';
 import Room2 from './rooms/room2/room2';
 import Room3 from './rooms/room3/room3';
@@ -36,11 +37,13 @@ class GameContainer extends Component {
 
 
   render() {
+        console.log(this.props.peopleTalkedTO)
     let Room = this.rooms[this.props.currentRoom];
     return (
       <div className="main_container">
         <Room />
         <PurseContainer/>
+        <Television/>
       </div>
     );
   }
@@ -49,10 +52,7 @@ class GameContainer extends Component {
 function mapStateToProps(state){
   return {
     currentRoom: state.currentRoom,
-    isPurseOpened: state.isPurseOpened,
-    showPhone: state.showPhone,
-    purseDropZone: state.purseDropZone,
-    itemsInPurse: state.itemsInPurse,
+    peopleTalkedTO: state.peopleTalkedTO
   }
 }
 

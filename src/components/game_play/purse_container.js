@@ -66,11 +66,12 @@ class PurseContainer extends Component {
 
   insertTape = () => {
     if(this.state.x > -(this.props.TVDropZone.x) &&
-      this.state.x < - this.props.TVDropZone.x - 100 || this.props.TVDropZone.x - 450 &&
-      this.state.y > -(this.props.TVDropZone.y) &&
-      this.state.y < -(this.props.TVDropZone.y - 150)) {
-      console.log("play tape")
-    }
+        this.state.x < -(this.props.TVDropZone.x - 100) &&
+        this.state.y > -(this.props.TVDropZone.y) &&
+        this.state.y < -(this.props.TVDropZone.y - 150) &&
+        this.props.currentRoom === 8) {
+        console.log("play tape")
+      }
   }
 
   render() {
@@ -107,6 +108,7 @@ function mapStateToProps(state){
       showPhone: state.showPhone,
       itemsInPurse: state.itemsInPurse,
       TVDropZone: state.TVDropZone,
+      currentRoom: state.currentRoom,
   }
 }
 

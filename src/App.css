@@ -22,19 +22,6 @@
     z-index: 2;
 }
 
-.container {
-  position: absolute;
-  border: 6px solid green;
-  width:600px;
-  height:600px;
-  margin: auto;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  z-index: 2;
-}
-
 /* --------------------------------- PURSE ---------------------------------- */
 #purse_container {
   position: absolute;
@@ -90,13 +77,84 @@
 /* --------------------------------- PHONE ---------------------------------- */
 #blinking_message_dot {
   position: absolute;
-  left:425px;
-  top:170px;
+  left:325px;
+  top:80px;
 }
 
 #phone_container{
   z-index: 3;
+  position: absolute;
+  width:400px;
+  height:400px;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
 }
+
+#phone_message{
+    border: 6px solid purple;
+    background-color: white;
+}
+
+#close_phone{
+  background-color:white;
+}
+
+.phone_button {
+  position: absolute;
+  background-color: white;
+  height: 50px;
+  width: 80px;
+  padding-top: 10px;
+  top: 111px;
+
+}
+
+#call_police {
+  left: 199px;
+}
+
+#call_allison {
+  left: 287px;
+}
+
+#police_message {
+  position: absolute;
+  background-color: white;
+  top: 100px;
+  left: 420px;
+  height: 100px;
+  width: 210px;
+}
+
+#each_person{
+  background-color: white;
+  height: 20px;
+  width: 100px;
+  padding: 5px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+#people_container{
+  position: absolute;
+  left: 227px;
+  top: 180px;
+  width: 110px;
+}
+
+/* ------------------------------ TELEVISION --------------------------------- */
+
+#tv_container {
+  position: absolute;
+  width: 125px;
+  height: 130px;
+  top: 155px;
+  left: 15px;
+}
+
 
 /* ------------------------------- START GAME ------------------------------- */
 

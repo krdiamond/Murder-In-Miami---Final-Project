@@ -50,6 +50,7 @@ class Room10 extends Component {
       talkedToHeather: !this.state.talkedToHeather
     })
     this.talkedToBothParrots()
+    this.props.addToPeopleYouHaveTalkedTo("Heather")
   }
 
   talkedToBothParrots = () => {
@@ -59,6 +60,7 @@ class Room10 extends Component {
     else{
       return false
     }
+
   }
 
 

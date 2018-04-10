@@ -56,6 +56,7 @@ class Room4 extends Component {
     this.setState({
       talkToJessica: !this.state.talkToJessica
     })
+    this.props.addToPeopleYouHaveTalkedTo("Jessica")
   }
 
   handleJessKnees = () => {

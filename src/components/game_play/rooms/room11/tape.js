@@ -23,7 +23,6 @@ class Tape extends Component {
     title: 'tape',
     x:0,
     y:10,
-    idx:3,
     img: tape,
   }
 
@@ -53,7 +52,6 @@ class Tape extends Component {
       if(this.state.x > this.props.purseDropZone.right &&
         this.state.x < (this.props.purseDropZone.right + 100) &&
         this.state.y < (this.props.purseDropZone.bottom - 100)){
-        console.log("i'm here")
         this.putTapeInPurse()
       }
     }

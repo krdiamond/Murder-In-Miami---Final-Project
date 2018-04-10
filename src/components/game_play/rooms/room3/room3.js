@@ -41,6 +41,7 @@ class Room3 extends Component {
     this.setState({
       talkToSnake: !this.state.talkToSnake
     })
+    this.props.addToPeopleYouHaveTalkedTo("snake")
   }
 
   isMeanLetterInPurse = () => {
@@ -55,7 +56,6 @@ class Room3 extends Component {
 
 
   render() {
-    console.log(this.isMeanLetterInPurse())
     return (
       <div className="main_container">
 

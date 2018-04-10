@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 8,
+  currentRoom: 1,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -7,14 +7,15 @@ const defaultState = {
   findFridgeNote: false,
   showNoteBeachAddress: false,
   purseDropZone: {},
-  itemsInPurse: [ {title: "tape", id:10, x: 0, y: 10, img: "/static/media/tape.9736635e.png"}],
+  itemsInPurse: [{id: 1, title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"}],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,
   gotClueFromSnake: false,
   findRoom4CrumpledNote: false,
   showingAllisonsPhoneNumber: false,
-  TVDropZone: {}
+  TVDropZone: {},
+  peopleTalkedTO: ["Pet Snake"],
   }
 
 const reducer = (state = defaultState, action) => {
@@ -51,9 +52,12 @@ const reducer = (state = defaultState, action) => {
         return {...state, findRoom4CrumpledNote: action.payload}
     case "TOGGLE_ALLISONS_PHONE_NUMBER":
         return {...state, showingAllisonsPhoneNumber : action.payload}
+    case "TALKED_TO":
+        return {...state, peopleTalkedTO: [...state.peopleTalkedTO, action.payload]}
     default:
       return state
     }
   }
+
 
 export default reducer
