@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {goToRoom} from '../../../../actions'
 import '../../../../App.css';
 import room7 from '../../../../images/room7/room7.jpg';
 import './Room7.css';
@@ -53,7 +52,6 @@ class Room7 extends Component {
   }
 
   handleFindFridgeNote = () => {
-    console.log("i'm clicked")
     this.props.showBeachAddress(!this.props.showNoteBeachAddress)
     this.props.foundFridgeNote()
   }

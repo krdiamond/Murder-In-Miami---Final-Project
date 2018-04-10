@@ -50,7 +50,6 @@ class FridgeNote extends Component {
       if(this.state.x > this.props.purseDropZone.right &&
         this.state.x < (this.props.purseDropZone.right + 100) &&
         this.state.y < (this.props.purseDropZone.bottom - 100)){
-        console.log("i'm here")
         this.putAddressInPurse()
       }
     }
@@ -58,7 +57,6 @@ class FridgeNote extends Component {
     putAddressInPurse = () => {
       this.props.addItemToPurse(this.beachAddress)
       this.props.showBeachAddress(false)
-      console.log(this.props.itemsInPurse)
     }
 
 

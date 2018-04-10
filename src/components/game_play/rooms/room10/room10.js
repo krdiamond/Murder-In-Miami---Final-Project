@@ -3,9 +3,7 @@ import {connect} from 'react-redux'
 import '../../../../App.css';
 import room10 from '../../../../images/room10/room10.jpg';
 import './Room10.css';
-import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
-import PhoneContainer from '../../phone_container';
 
 
 class Room10 extends Component {
@@ -92,7 +90,7 @@ class Room10 extends Component {
             onMouseLeave={(e) => this.handlehoverLeaveGoTo(9)}>
             {this.state.hoverGoToRoom9? <div>GO TO CLUB PARKING LOT</div> : null}
           </div>
-          
+
       </div>
     );
   }

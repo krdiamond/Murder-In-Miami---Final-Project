@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 import '../../App.css';
 import * as actions from '../../actions';
 import purse from '../../images/purse.png';
-import meanNote from '../../images/room1/note.png';
-import tape from '../../images/room11/tape.png';
-import fridgeNote from '../../images/room7/fridge_note.png';
 import Cell from './cell';
 
 class PurseContainer extends Component {
@@ -16,7 +13,6 @@ class PurseContainer extends Component {
     oldMouseY: 0,
     mouseX: 0,
     mouseY: 0,
-    holdIndex: -1,
     holdTitle: null
   };
 
@@ -34,11 +30,10 @@ class PurseContainer extends Component {
     this.props.toggleIsPurseOpened(!this.props.isPurseOpened)
   }
 
-  findTheMovingCellOnMouseDown = (e, idx, title) => {
+  findTheMovingCellOnMouseDown = (e, title) => {
     this.setState({
       oldMouseX: e.clientX,
       oldMouseY: e.clientY,
-      holdIndex: idx,
       holdTitle: title
     });
   }
@@ -63,18 +58,30 @@ class PurseContainer extends Component {
   }
 
   handleMouseUp = (event) => {
-    this.setState({
-      holdTitle: null,
-    });
+    if (this.state.holdTitle === 'tape'){
+      this.insertTape()
+    }
+    this.setState({holdTitle: null});
   }
 
+  insertTape = () => {
+    if(this.state.x > -(this.props.TVDropZone.x) &&
+      this.state.x < -(this.props.TVDropZone.x - 100) &&
+      this.state.y > -(this.props.TVDropZone.y) &&
+      this.state.y < -(this.props.TVDropZone.y - 150)) {
+      this.playTape()
+    }
+  }
+
+  playTape = () => {
+    console.log('TAPE IS PLAYING')
+  }
 
   render() {
     let cells = this.props.itemsInPurse.map((cell) => {
         return (
           <Cell
-            id={cell.id}
-            idx={cell.idx}
+            key={cell.id}
             title={cell.title}
             x={cell.x}
             y={cell.y}
@@ -101,7 +108,8 @@ function mapStateToProps(state){
       isPurseOpened: state.isPurseOpened,
       purseDropZone: state.purseDropZone,
       showPhone: state.showPhone,
-      itemsInPurse: state.itemsInPurse
+      itemsInPurse: state.itemsInPurse,
+      TVDropZone: state.TVDropZone,
   }
 }
 

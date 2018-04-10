@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 11,
+  currentRoom: 8,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -7,7 +7,7 @@ const defaultState = {
   findFridgeNote: false,
   showNoteBeachAddress: false,
   purseDropZone: {},
-  itemsInPurse: [ ],
+  itemsInPurse: [ {title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"}],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,
