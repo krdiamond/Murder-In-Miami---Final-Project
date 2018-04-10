@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 1,
+  currentRoom: 4,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -12,6 +12,8 @@ const defaultState = {
   talkedtoParrots: [],
   showKeys: true,
   gotClueFromSnake: false,
+  findRoom4CrumpledNote: false,
+  showingAllisonsPhoneNumber: false,
   }
 
 const reducer = (state = defaultState, action) => {
@@ -42,6 +44,10 @@ const reducer = (state = defaultState, action) => {
         return {...state, showKeys: action.payload}
     case "GET_CLUE_FROM_SNAKE":
         return {...state, gotClueFromSnake: action.payload}
+    case "FIND_ROOM4_CRUMPLED_NOTE":
+        return {...state, findRoom4CrumpledNote: action.payload}
+    case "TOGGLE_ALLISONS_PHONE_NUMBER":
+        return {...state, showingAllisonsPhoneNumber : action.payload}
     default:
       return state
     }

@@ -81,12 +81,14 @@ class Room6 extends Component {
             onMouseLeave={(e) => this.handlehoverLeaveGoTo(7)}>
             {this.state.hoverGoToRoom7? <div>GO TO ALLISON'S KITCHEN</div> : null}
           </div>
+
+          {this.props.findFridgeNote?
           <div id="room6_go_to_room_9" className="traverse_rooms"
             onClick={(e) => this.handleGoToRoom(9)}
             onMouseEnter={(e) => this.handlehoverEnterGoTo(9)}
             onMouseLeave={(e) => this.handlehoverLeaveGoTo(9)}>
             {this.state.hoverGoToRoom9? <div>GO TO THE BEACH CLUB</div> : null}
-          </div>
+          </div> :null}
       </div>
     );
   }
@@ -96,6 +98,7 @@ function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
+    findFridgeNote: state.findFridgeNote,
   }
 }
 

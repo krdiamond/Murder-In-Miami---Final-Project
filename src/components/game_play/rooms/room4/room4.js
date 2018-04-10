@@ -6,6 +6,8 @@ import room4 from '../../../../images/room4/room4.jpg';
 import * as actions from '../../../../actions';
 import './Room4.css';
 import PhoneContainer from '../../phone_container';
+import PhoneNumber from './phone_number'
+import crumpledNote from '../../../../images/room4/crumpled_note.png';
 
 
 class Room4 extends Component {
@@ -86,11 +88,20 @@ class Room4 extends Component {
     this.props.toggleShowPhone(!this.props.showPhone)
   }
 
+  handleFindCrumpledNote = () => {
+    this.props.crumpledNoteRoom4Found()
+    this.props.showAllisonsPhoneNumber(!this.props.showingAllisonsPhoneNumber)
+  }
+
   render() {
     return (
       <div className="main_container">
 
         <img src={room4} alt="Victim's Living Room"/>
+
+
+        {this.props.findRoom4CrumpledNote? null : <img id="room4crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
+        {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null }
 
         <div id="jessica" onClick={this.handleTalkToJess}></div>
         {this.state.talkToJessica? <div className="jessicas_message">
@@ -150,6 +161,8 @@ function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
+    findRoom4CrumpledNote: state.findRoom4CrumpledNote,
+    showingAllisonsPhoneNumber: state.showingAllisonsPhoneNumber,
   }
 }
 

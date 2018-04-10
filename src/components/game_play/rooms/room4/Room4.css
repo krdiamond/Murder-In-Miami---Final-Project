@@ -3,8 +3,8 @@
 #room4_go_to_room_5 {
   bottom: 0px;
   right: 0px;
-  width: 180px;
-  height: 220px;
+  width: 160px;
+  height: 160px;
 }
 
 #room4_go_to_room_1 {
@@ -65,5 +65,22 @@
   left: 30px;
   width: 60px;
   height: 140px;
+  border: 6px solid green;
+}
+
+
+/* -------------------------- PHONE NUMBER NOTE ------------------------------ */
+
+#phone_number {
+  position: absolute;
+  border: 6px solid purple;
+  width: 200px;
+  z-index: 3;
+}
+
+#room4crumpled_note{
+  position: absolute;
+  top: 700px;
+  left: 750px;
   border: 6px solid green;
 }

@@ -95,3 +95,17 @@ export function receivedClueFromSnake() {
     payload: true,
   }
 }
+
+export function crumpledNoteRoom4Found() {
+  return {
+    type: "FIND_ROOM4_CRUMPLED_NOTE",
+    payload: true,
+  }
+}
+
+export function showAllisonsPhoneNumber(result) {
+  return {
+    type: "TOGGLE_ALLISONS_PHONE_NUMBER",
+    payload: result,
+  }
+}
