@@ -37,6 +37,16 @@ class PhoneContainer extends Component {
     }
   }
 
+  isAllisonsPhoneNumberInPurse = () => {
+    const result = this.props.itemsInPurse.find(item => item.title === 'Phone Number')
+    if (result === undefined){
+      return false
+    }
+    else {
+      return true
+    }
+  }
+
   render() {
     let people = this.props.peopleTalkedTO.map(person => {
 
@@ -60,7 +70,12 @@ class PhoneContainer extends Component {
 
         {this.state.toggleCallPolice? <div id="people_container">{people}</div> :null}
 
-        <div className="phone_button" id="call_allison"> CALL ALLISON </div>
+
+        {this.isAllisonsPhoneNumberInPurse()?
+        <div className="phone_button" id="call_allison"> CALL ALLISON </div> :null}
+
+
+
         {this.state.messageDisplayed? <div id="phone_message">{this.props.message}</div> :null }
 
 
@@ -75,7 +90,9 @@ class PhoneContainer extends Component {
 function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
-    peopleTalkedTO: state.peopleTalkedTO
+    peopleTalkedTO: state.peopleTalkedTO,
+    findRoom4CrumpledNote: state.findRoom4CrumpledNote,
+    itemsInPurse: state.itemsInPurse,
   }
 }
 
