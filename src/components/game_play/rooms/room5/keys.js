@@ -22,7 +22,7 @@ class Keys extends Component {
         title: 'keys',
         x:0,
         y:10,
-        idx:1,
+        id:4,
         img: keys,
     }
 

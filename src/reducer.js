@@ -7,7 +7,7 @@ const defaultState = {
   findFridgeNote: false,
   showNoteBeachAddress: false,
   purseDropZone: {},
-  itemsInPurse: [ {title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"}],
+  itemsInPurse: [ {title: "tape", id:10, x: 0, y: 10, img: "/static/media/tape.9736635e.png"}],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,

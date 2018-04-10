@@ -91,7 +91,7 @@
 
 /* -------------------------------- TV ----------------------------------- */
 
-#tv {
+#tv_container {
   position: absolute;
   width: 125px;
   height: 130px;

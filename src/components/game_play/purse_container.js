@@ -66,15 +66,11 @@ class PurseContainer extends Component {
 
   insertTape = () => {
     if(this.state.x > -(this.props.TVDropZone.x) &&
-      this.state.x < -(this.props.TVDropZone.x - 100) &&
+      this.state.x < - this.props.TVDropZone.x - 100 || this.props.TVDropZone.x - 450 &&
       this.state.y > -(this.props.TVDropZone.y) &&
       this.state.y < -(this.props.TVDropZone.y - 150)) {
-      this.playTape()
+      console.log("play tape")
     }
-  }
-
-  playTape = () => {
-    console.log('TAPE IS PLAYING')
   }
 
   render() {
@@ -82,6 +78,7 @@ class PurseContainer extends Component {
         return (
           <Cell
             key={cell.id}
+            id={cell.id}
             title={cell.title}
             x={cell.x}
             y={cell.y}

@@ -21,7 +21,7 @@ class PhoneNumber extends Component {
       title: 'Phone Number',
       x:0,
       y:10,
-      idx:0,
+      id:2,
       img: note,
     }
 

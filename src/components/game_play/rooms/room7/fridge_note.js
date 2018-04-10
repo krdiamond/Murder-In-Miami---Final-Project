@@ -20,7 +20,7 @@ class FridgeNote extends Component {
     title: 'Beach Club Address',
     x:0,
     y:10,
-    idx:2,
+    id:8,
     img: 'fridge_note',
   }
 

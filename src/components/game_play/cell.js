@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Cell extends Component {
 
  render() {
-
    return (
      <div className="cell"
+          id={this.props.id}
           key ={this.props.id}
           style={{left: this.props.x,
                   top: this.props.y}}

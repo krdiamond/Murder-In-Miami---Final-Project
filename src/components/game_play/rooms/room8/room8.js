@@ -16,6 +16,7 @@ class Room8 extends Component {
     clickWineGlasses: false,
     clickRacket: false,
     clickCigs: false,
+    TVDropZone: null,
   }
 
   componentDidMount = () => {
@@ -24,7 +25,11 @@ class Room8 extends Component {
 
   findTVDropZone = () => {
     let zone = ReactDOM.findDOMNode(this.refs['tv']).getBoundingClientRect()
+    console.log(ReactDOM.findDOMNode(this.refs['tv']).getBoundingClientRect())
     this.props.loadTVLocation(zone)
+    this.setState({
+      TVDropZone:zone,
+    })
   }
 
   handleGoToRoom = (roomNum) => {
@@ -67,12 +72,11 @@ class Room8 extends Component {
 
 
   render() {
-    console.log(this.props.TVDropZone)
     return (
       <div className="main_container">
         <img src={room8} alt="Allison's Bedroom"/>
 
-          <div id="tv" ref='tv'></div>
+          <div id="tv_container" ref='tv'></div>
 
           <div id="wine_glass_right" onClick={this.handleWineGlasses}></div>
           <div id="wine_glass_left" onClick={this.handleWineGlasses}></div>

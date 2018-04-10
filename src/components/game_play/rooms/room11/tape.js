@@ -19,6 +19,7 @@ class Tape extends Component {
       };
 
   tape = {
+    id: 1,
     title: 'tape',
     x:0,
     y:10,
@@ -37,7 +38,7 @@ class Tape extends Component {
     handleMouseMove = (e) => {
       this.setState({
         mouseX: e.clientX,
-        mouseY: e.clientY, 
+        mouseY: e.clientY,
       })
       if(this.state.clicked === true ) {
           this.setState({

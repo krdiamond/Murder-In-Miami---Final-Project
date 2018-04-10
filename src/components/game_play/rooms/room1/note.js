@@ -21,7 +21,7 @@ class Note extends Component {
       title: 'note',
       x:0,
       y:10,
-      idx:0,
+      id:0,
       img: note,
     }
 
