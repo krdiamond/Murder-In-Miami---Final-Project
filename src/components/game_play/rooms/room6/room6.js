@@ -8,7 +8,7 @@ import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 
 
-class Room6 extends Component { 
+class Room6 extends Component {
 
   state = {
     hoverGoToRoom4: false,
@@ -60,13 +60,20 @@ class Room6 extends Component {
     this.props.toggleShowPhone(!this.props.showPhone)
   }
 
+
   render() {
     return (
       <div className="main_container">
         <img src={room6} alt="Victim's Living Room"/>
 
+          {this.props.displayDadsMessage? <div id="dads_message">THIS IS YOUR FATHER</div>:null}
+
           <div id="room6phone" onClick={this.handlePhoneClick} >
-          </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
+            <img src={redDot} width="5" alt="blinking light"/>}
+          </div>
+          {(this.props.showPhone === true)? <PhoneContainer message="Hi Allison, It's your father. Your mother and I went by your house today and we noticed you weren't home. I thought we had plans to do our usual sunday brunch? Where are you? Call me back when you get this. "/>: null}
+
+
 
           <div id="room6_go_to_room_4" className="traverse_rooms"
             onClick={(e) => this.handleGoToRoom(4)}
@@ -98,9 +105,9 @@ function mapStateToProps(state){
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
     findFridgeNote: state.findFridgeNote,
+    timer: state.timer,
+    displayDadsMessage: state.displayDadsMessage,
   }
 }
 
 export default connect( mapStateToProps, actions)(Room6);
-
-  // {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}

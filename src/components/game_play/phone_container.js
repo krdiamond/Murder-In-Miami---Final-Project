@@ -10,6 +10,7 @@ class PhoneContainer extends Component {
   state={
     messageDisplayed:false,
     toggleCallPolice: false,
+    toggleCallAllison: false,
   }
 
   handleClosePhone = () => {
@@ -47,9 +48,14 @@ class PhoneContainer extends Component {
     }
   }
 
+  callAllison = () => {
+    this.setState({
+      toggleCallAllison: !this.state.toggleCallAllison
+    })
+  }
+
   render() {
     let people = this.props.peopleTalkedTO.map(person => {
-
       return(<div id="each_person" onClick={(e) => this.solveMurder(person)} >{person}</div>)
     });
 
@@ -74,7 +80,12 @@ class PhoneContainer extends Component {
         {this.state.toggleCallPolice? <div id="people_container">{people}</div> :null}
 
         {this.isAllisonsPhoneNumberInPurse()?
-        <div className="phone_button" id="call_allison"> CALL ALLISON </div> :null}
+        <div className="phone_button" id="call_allison" onClick={this.callAllison}> CALL ALLISON </div> :null}
+          {this.state.toggleCallAllison?
+            <div id="allison_message">
+              oh I'll be back at the beach club soon, I got all my shifts covered by Jessica. I'm just in Mexico for a little while with my mom and my dad and my brother. You know just enjoying the sun. I should be back soon nice and tan. Who is this again? I don't think we've ever worked together?
+            </div> : null}
+
 
         {this.state.messageDisplayed? <div id="phone_message">{this.props.message}</div> :null }
 

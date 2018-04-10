@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 6,
+  currentRoom: 8,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -16,7 +16,8 @@ const defaultState = {
   showingAllisonsPhoneNumber: false,
   TVDropZone: {},
   peopleTalkedTO: ["Pet Snake"],
-  timer: 0,
+  timer: 1,
+  displayDadsMessage: false,
   }
 
 const reducer = (state = defaultState, action) => {
@@ -57,10 +58,16 @@ const reducer = (state = defaultState, action) => {
         return {...state, peopleTalkedTO: [...state.peopleTalkedTO, action.payload]}
     case "TIMER":
       return {...state, timer: action.payload}
+    case "DADS_MESSAGE":
+      return {...state, displayDadsMessage: action.payload}
+    case "REMOVE_ITEM_FROM_PURSE":
+      return {...state, itemsInPurse: action.payload}
     default:
       return state
     }
   }
+
+
 
 
 export default reducer

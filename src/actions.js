@@ -131,3 +131,17 @@ export function addToPeopleYouHaveTalkedTo(result) {
     payload: result,
   }
 }
+
+export function heardDadsMessage() {
+  return {
+    type: "DADS_MESSAGE",
+    payload: true
+  }
+}
+
+export function removeItemFromPurse(result) {
+  return {
+    type: "REMOVE_ITEM_FROM_PURSE",
+    payload: result
+  }
+}

@@ -92,7 +92,7 @@ class Room1 extends Component {
         </div> : null}
 
         <div id="room1phone" onClick={this.handlePhoneClick} >
-          {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}
+          <img src={redDot} width="5" alt="blinking light"/>
         </div>
         {(this.props.showPhone === true)?
           <PhoneContainer
