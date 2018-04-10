@@ -7,6 +7,7 @@ import './Room8.css';
 import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
+import ReactDOM from 'react-dom';
 
 
 class Room8 extends Component {
@@ -16,6 +17,15 @@ class Room8 extends Component {
     clickWineGlasses: false,
     clickRacket: false,
     clickCigs: false,
+  }
+
+  componentDidMount = () => {
+    this.findTVDropZone()
+  }
+
+  findTVDropZone = () => {
+    let zone = ReactDOM.findDOMNode(this.refs['tv']).getBoundingClientRect()
+    this.props.loadTVLocation(zone)
   }
 
   handleGoToRoom = (roomNum) => {
@@ -57,12 +67,13 @@ class Room8 extends Component {
   }
 
 
-
-
   render() {
+    console.log(this.props.TVDropZone)
     return (
       <div className="main_container">
         <img src={room8} alt="Allison's Bedroom"/>
+
+          <div id="tv" ref='tv'></div>
 
           <div id="wine_glass_right" onClick={this.handleWineGlasses}></div>
           <div id="wine_glass_left" onClick={this.handleWineGlasses}></div>
@@ -99,10 +110,12 @@ function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
+    TVDropZone: state.TVDropZone,
   }
 }
 
 export default connect( mapStateToProps, actions)(Room8);
+
 
 
 

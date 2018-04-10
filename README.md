@@ -1,3 +1,10 @@
+yarn install && yarn start
+
+
+
+
+
+
 TERMINAL
 - install redux yarn add redux, yarn add react-redux
 

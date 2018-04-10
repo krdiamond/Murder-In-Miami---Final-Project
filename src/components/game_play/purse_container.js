@@ -17,6 +17,7 @@ class PurseContainer extends Component {
     mouseX: 0,
     mouseY: 0,
     holdIndex: -1,
+    holdTitle: null
   };
 
 
@@ -33,40 +34,38 @@ class PurseContainer extends Component {
     this.props.toggleIsPurseOpened(!this.props.isPurseOpened)
   }
 
-  findTheMovingCellOnMouseDown = (e, idx) => {
+  findTheMovingCellOnMouseDown = (e, idx, title) => {
     this.setState({
       oldMouseX: e.clientX,
       oldMouseY: e.clientY,
       holdIndex: idx,
+      holdTitle: title
     });
   }
 
-  handleMouseMove = (e) => {
-    let newState = {
-      mouseX: e.clientX,
-      mouseY: e.clientY,
-      holdIndex: this.state.holdIndex,
-    };
+  findItemByTitle = () => {
+    const result = this.props.itemsInPurse.find(item => item.title === this.state.holdTitle)
+    return result
+  }
 
-    if(newState.holdIndex >= 0) {
-      newState.cells = this.props.itemsInPurse;
-      let target = newState.cells[this.state.holdIndex];
-      target.x += e.clientX - this.state.mouseX;
-      target.y += e.clientY - this.state.mouseY;
-      //drop zone needs to be updated to locations that you can put things, these items are already in the purse
-      // let dropZone = this.findDropZone()
-      // if(target.x < dropZone.right &&
-      //   target.x > (dropZone.right - dropZone.width - 100) &&
-      //   target.y < dropZone.bottom &&
-      //   target.y > (dropZone.bottom - dropZone.height-100)){
-      //   console.log("i'm here")
-      // }
+  handleMouseMove = (e) => {
+      this.setState({
+        mouseX: e.clientX,
+        mouseY: e.clientY,
+      });
+
+    if(this.state.holdTitle != null) {
+      this.setState({
+        x: this.findItemByTitle().x += e.clientX - this.state.mouseX,
+        y: this.findItemByTitle().y += e.clientY - this.state.mouseY,
+      });
     }
-    this.setState(newState);
   }
 
   handleMouseUp = (event) => {
-    this.setState({holdIndex: -1});
+    this.setState({
+      holdTitle: null,
+    });
   }
 
 
@@ -74,9 +73,9 @@ class PurseContainer extends Component {
     let cells = this.props.itemsInPurse.map((cell) => {
         return (
           <Cell
-            key={cell.idx}
             id={cell.id}
             idx={cell.idx}
+            title={cell.title}
             x={cell.x}
             y={cell.y}
             img={cell.img}

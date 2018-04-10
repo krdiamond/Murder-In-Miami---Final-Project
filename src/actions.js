@@ -47,6 +47,13 @@ export function loadPurseLocation(zone) {
   }
 }
 
+export function loadTVLocation(zone) {
+  return {
+    type: "LOAD_TV_LOCATION",
+    payload: zone
+  }
+}
+
 export function addItemToPurse(item) {
   return {
     type: "ADD_ITEM_TO_PURSE",

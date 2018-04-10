@@ -88,3 +88,14 @@
   left: 690px;
   border: 3px solid green;
 }
+
+/* -------------------------------- TV ----------------------------------- */
+
+#tv {
+  position: absolute;
+  width: 125px;
+  height: 130px;
+  top: 155px;
+  left: 15px;
+  border: 6px solid purple;
+}

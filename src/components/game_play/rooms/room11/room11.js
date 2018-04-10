@@ -52,6 +52,7 @@ class Room11 extends Component {
   }
 
   render() {
+    console.log(this.props.itemsInPurse)
     return (
       <div className="main_container">
         <img src={room11} alt="Beach Club Cafe"/>
@@ -87,7 +88,8 @@ function mapStateToProps(state){
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
     showTape: state.showTape,
-    talkedtoParrots: state.talkedtoParrots
+    talkedtoParrots: state.talkedtoParrots,
+    itemsInPurse: state.itemsInPurse,
   }
 }
 

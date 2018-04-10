@@ -19,7 +19,7 @@ class Tape extends Component {
       };
 
   tape = {
-    title: 'note',
+    title: 'tape',
     x:0,
     y:10,
     idx:3,

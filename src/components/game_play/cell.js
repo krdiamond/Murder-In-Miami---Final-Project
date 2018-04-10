@@ -6,13 +6,13 @@ export default class Cell extends Component {
 
    return (
      <div className="cell"
-          key={this.props.idx}
           id ={this.props.id}
+          title={this.props.title}
 
           style={{left: this.props.x,
                   top: this.props.y}}
 
-          onMouseDown={(e)=>this.props.findTheMovingCell(e,this.props.idx)}>
+          onMouseDown={(e)=>this.props.findTheMovingCell(e,this.props.idx,this.props.title)}>
         <div id="clearbox"></div>
         <img className="moon" src={this.props.img} alt="full moon" />
     </div>
