@@ -94,7 +94,7 @@ class Room1 extends Component {
         <div id="room1phone" onClick={this.handlePhoneClick} >
           {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}
         </div>
-        {(this.props.showPhone === true && this.props.isPurseOpened === false)?
+        {(this.props.showPhone === true)?
           <PhoneContainer
             message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
 

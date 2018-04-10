@@ -140,11 +140,8 @@ class Room4 extends Component {
             mumble ... mumble ...  ugh I have so many plants to water, I have to go to Allison's later to water hers too. Ugh, it's so annoying... mumble
             </div> : null }
 
-            <div id="room4phone" onClick={this.handlePhoneClick} >
-            </div>
-
-            {(this.props.showPhone === true && this.props.isPurseOpened === false)?
-              <PhoneContainer message="0"/>: null}
+            <div id="room4phone" onClick={this.handlePhoneClick}></div>
+            {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
 
           <div id="room4_go_to_room_1" className="traverse_rooms"
             onClick={(e) => this.handleGoToRoom(1)}

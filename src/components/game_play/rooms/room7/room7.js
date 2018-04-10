@@ -67,7 +67,7 @@ class Room7 extends Component {
           {this.props.showNoteBeachAddress? <FridgeNote/> : null }
 
           <div id="room7phone" onClick={this.handlePhoneClick} >
-          </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
+          </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
 
           <div id="room7_go_to_room_6" className="traverse_rooms"
             onClick={(e) => this.handleGoToRoom(6)}

@@ -66,7 +66,7 @@ class Room6 extends Component {
         <img src={room6} alt="Victim's Living Room"/>
 
           <div id="room6phone" onClick={this.handlePhoneClick} >
-          </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
+          </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
 
           <div id="room6_go_to_room_4" className="traverse_rooms"
             onClick={(e) => this.handleGoToRoom(4)}

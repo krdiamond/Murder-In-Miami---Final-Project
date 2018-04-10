@@ -55,8 +55,11 @@ class PhoneContainer extends Component {
 
     return (
       <div id="phone_container">
+
           <div id="close_phone" onClick={this.handleClosePhone}>HANG UP PHONE</div>
+
           <img src={phone} alt="A phone"/>
+
         {(this.props.message === "0")? null :
         <div id="blinking_message_dot" onClick={this.handleClickMessage}>
             <img src={redDot} width="20" alt="blinking light"/>
@@ -70,16 +73,10 @@ class PhoneContainer extends Component {
 
         {this.state.toggleCallPolice? <div id="people_container">{people}</div> :null}
 
-
         {this.isAllisonsPhoneNumberInPurse()?
         <div className="phone_button" id="call_allison"> CALL ALLISON </div> :null}
 
-
-
         {this.state.messageDisplayed? <div id="phone_message">{this.props.message}</div> :null }
-
-
-
 
       </div>
     );

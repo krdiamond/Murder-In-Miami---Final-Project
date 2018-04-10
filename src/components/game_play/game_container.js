@@ -37,7 +37,6 @@ class GameContainer extends Component {
 
 
   render() {
-        console.log(this.props.peopleTalkedTO)
     let Room = this.rooms[this.props.currentRoom];
     return (
       <div className="main_container">

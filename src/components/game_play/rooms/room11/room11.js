@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import '../../../../App.css';
 import room11 from '../../../../images/room11/room11.jpg';
 import './Room11.css';
-import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 import Tape from './tape'
@@ -60,7 +59,7 @@ class Room11 extends Component {
         {this.props.showTape? <Tape/>: null}
 
           <div id="room11phone" onClick={this.handlePhoneClick} >
-          </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
+          </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
 
           <div id="parrot_left" onClick={this.handleParrotLeft}></div>
           {this.state.clickParrotLeft? <div className="parrot_message">

@@ -5,17 +5,17 @@ export function goToRoom(roomNumber) {
   }
 }
 
-export function toggleIsPurseOpened(isPurseOpened) {
+export function toggleIsPurseOpened(result) {
   return {
     type: "TOGGLE_PURSE_OPEN",
-    payload: isPurseOpened
+    payload: result
   }
 }
 
-export function toggleShowPhone(phoneIsShowing) {
+export function toggleShowPhone(result) {
   return {
     type: "TOGGLE_SHOW_PHONE",
-    payload: phoneIsShowing
+    payload: result
   }
 }
 

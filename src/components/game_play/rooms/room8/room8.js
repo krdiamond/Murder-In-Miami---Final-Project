@@ -5,7 +5,6 @@ import room8 from '../../../../images/room8/room8.jpg';
 import './Room8.css';
 import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
-import ReactDOM from 'react-dom';
 import PhoneContainer from '../../phone_container';
 
 
@@ -71,7 +70,7 @@ class Room8 extends Component {
           </div> : null }
 
           <div id="room8phone" onClick={this.handlePhoneClick} >
-          </div> {(this.props.showPhone === true && this.props.isPurseOpened === false)? <PhoneContainer message="0"/>: null}
+          </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
 
 
           <div id="cigs" onClick={this.handleCigs}></div>
