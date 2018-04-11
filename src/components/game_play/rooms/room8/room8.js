@@ -12,7 +12,6 @@ import PhoneContainer from '../../phone_container';
 class Room8 extends Component {
 
   state = {
-    hoverGoToRoom7: false,
     clickWineGlasses: false,
     clickRacket: false,
     clickCigs: false,
@@ -21,18 +20,6 @@ class Room8 extends Component {
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
-  }
-
-  handlehoverEnterGoTo = () => {
-    this.setState({
-      hoverGoToRoom7: true
-    })
-  }
-
-  handlehoverLeaveGoTo = () => {
-    this.setState({
-      hoverGoToRoom7: false
-    })
   }
 
   handleWineGlasses = () => {
@@ -99,11 +86,8 @@ class Room8 extends Component {
             Another tennis racket. It seems like Allison and Jessica all play tennis together. This one seems to be broken in and pretty dirty.
           </div> : null }
 
-        <div id="room8_go_to_room_7" className="traverse_rooms"
-          onClick={(e) => this.handleGoToRoom(7)}
-          onMouseEnter={this.handlehoverEnterGoTo}
-          onMouseLeave={this.handlehoverLeaveGoTo}>
-          {this.state.hoverGoToRoom7? <div>GO TO ALLISON'S KITCHEN</div> : null}
+        <div id="room8_go_to_room_7" onClick={(e) => this.handleGoToRoom(7)}>
+            <div id="room8_go_to_room_7_text">GO TO ALLISON'S KITCHEN</div>
         </div>
       </div>
     );

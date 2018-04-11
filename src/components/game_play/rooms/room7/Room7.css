@@ -1,18 +1,58 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
 
-#room7_go_to_room_6 {
+#room7_go_to_room_6{
+  position: absolute;
   top: 380px;
-  left: 0px;
+  left: 10px;
   width: 180px;
   height: 250px;
+  /* border: 6px solid purple; */
 }
 
-#room7_go_to_room_8 {
-  bottom: 0px;
-  left: 0px;
-  width: 280px;
-  height: 150px;
+#room7_go_to_room_6:hover{
+  cursor: url('../../../../images/arrows/left_arrow.png') 10 30,auto;
 }
+
+ #room7_go_to_room_6_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room7_go_to_room_6:hover #room7_go_to_room_6_text  {
+   visibility: visible;
+ }
+
+/* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
+
+#room7_go_to_room_8{
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width: 280px;
+  height: 250px;
+  /* border: 6px solid purple; */
+}
+
+#room7_go_to_room_8:hover{
+  cursor: url('../../../../images/arrows/diagonal_left_up_arrow.png') 30 30,auto;
+}
+
+ #room7_go_to_room_8_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room7_go_to_room_8:hover #room7_go_to_room_8_text  {
+   visibility: visible;
+ }
 
 /* -------------------------------- PHONE ----------------------------------- */
 
@@ -20,9 +60,9 @@
   position: absolute;
   width: 90px;
   height: 50px;
-  top: 800px;
-  left: 300px;
-  border: 3px solid green;
+  top: 809px;
+  left: 302px;
+  /* border: 3px solid green; */
 }
 
 /* --------------------------------- NOTE ----------------------------------- */

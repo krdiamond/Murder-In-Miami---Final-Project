@@ -1,11 +1,32 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
 
-#room8_go_to_room_7 {
+#room8_go_to_room_7{
+  position: absolute;
   bottom: 0px;
-  left: 0px;
-  width: 400px;
-  height: 100px;
+  left: 10px;
+  width: 300px;
+  height: 200px;
+  /* border: 6px solid purple; */
 }
+
+#room8_go_to_room_7:hover{
+  cursor: url('../../../../images/arrows/down_left_arrow.png') 10 30,auto;
+}
+
+ #room8_go_to_room_7_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room8_go_to_room_7:hover #room8_go_to_room_7_text  {
+   visibility: visible;
+ }
+
+
 
 /* ------------------------------ WINE GLASSES ------------------------------ */
 #wine_glass_right {

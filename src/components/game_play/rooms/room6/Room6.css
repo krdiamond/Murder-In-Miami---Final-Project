@@ -55,9 +55,6 @@
    visibility: visible;
  }
 
-
-
-
 /* -------------------------- NAVIGATE TO ROOM 9 ---------------------------- */
 
 #room6_go_to_room_9{
@@ -85,7 +82,6 @@
  #room6_go_to_room_9:hover #room6_go_to_room_9_text  {
    visibility: visible;
  }
-
 
 /* ---------------------------- PHONE MESSAGES ------------------------------ */
 
