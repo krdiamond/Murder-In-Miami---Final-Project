@@ -19,9 +19,9 @@ class PhoneNumber extends Component {
 
     phoneNumber = {
       title: 'Phone Number',
+      id:2,
       x:0,
       y:10,
-      id:2,
       img: note,
     }
 

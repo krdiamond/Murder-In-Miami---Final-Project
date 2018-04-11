@@ -22,32 +22,6 @@ class Room1 extends Component {
     this.props.goToRoom(roomNum)
   }
 
-  handlehoverEnterGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 2){
-      this.setState({
-        hoverGoToRoom2: true
-      })
-    }
-    else if (num === 4){
-      this.setState({
-        hoverGoToRoom4: true
-      })
-    }
-  }
-
-  handlehoverLeaveGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 2){
-      this.setState({
-        hoverGoToRoom2: false
-      })
-    }
-    else if (num === 4){
-      this.setState({
-        hoverGoToRoom4: false
-      })
-    }
-  }
-
   toggleShowStory = () => {
     this.setState({
       openingStoryDisplayed: !this.state.openingStoryDisplayed
@@ -100,21 +74,6 @@ class Room1 extends Component {
 
         <div id="jacket"  onClick={this.toggleKellysUniform}></div>
 
-        <div id="room1_go_to_room_2" className="traverse_rooms"
-          onClick={(e) => this.handleGoToRoom(2)}
-          onMouseEnter={(e) => this.handlehoverEnterGoTo(2)}
-          onMouseLeave={(e) => this.handlehoverLeaveGoTo(2)}>
-            {this.state.hoverGoToRoom2? <div>GO TO KELLY''S BEDROOM</div> : null}
-        </div>
-
-        {this.props.gotClueFromSnake?
-        <div id="room1_go_to_room_4" className="traverse_rooms"
-          onClick={(e) => this.handleGoToRoom(4)}
-          onMouseEnter={(e) => this.handlehoverEnterGoTo(4)}
-          onMouseLeave={(e) => this.handlehoverLeaveGoTo(4)}>
-          {this.state.hoverGoToRoom4? <div>GO TO JESSICA''S HOUSE</div> : null}
-        </div> :null}
-
         <div id= "opening_story_closed" className="story"> </div>
         <div id="show_story" className="story" onClick={this.toggleShowStory}>x</div>
         {this.state.openingStoryDisplayed?
@@ -122,6 +81,16 @@ class Room1 extends Component {
              A girl named Kelly was found brutally murdered by the beach two nights ago. Police found the body covered with fallen branches, rocks, sand and dirt.  They also found numerous cigarette butts all over the area but were too covered with sand to test for DNA. The police have not been able to find any leads and the case is looking bleak. You are super nosy and have decided to snoop around to try and help. If you are able to figure out who the murderer is and what the murder weapon was, please call the police from any phone as soon as possible!!!!
              <div className="story" onClick={this.toggleShowStory}>x</div>
           </div> : null}
+
+
+        <div id="room1_go_to_room_2" onClick={(e) => this.handleGoToRoom(2)}>
+            <div id="room1_go_to_room_2_text">GO TO KELLY'S BEDROOM</div>
+        </div>
+
+        {this.props.gotClueFromSnake?
+        <div id="room1_go_to_room_4" onClick={(e) => this.handleGoToRoom(4)}>
+          <div id="room1_go_to_room_4_text"> USE THE NOTE YOU FOUND TO GO TO JESSICA''S HOUSE</div>
+        </div> :null}
 
       </div>
     );

@@ -45,7 +45,7 @@
   height: 50px;
   bottom: 230px;
   left: 150px;
-  border: 6px solid purple;
+  /* border: 6px solid purple; */
 }
 
 .snake_message {

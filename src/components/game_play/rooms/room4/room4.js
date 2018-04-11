@@ -99,9 +99,10 @@ class Room4 extends Component {
 
         <img src={room4} alt="Victim's Living Room"/>
 
+          {this.props.findRoom4CrumpledNote? null : <img id="room4crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
+          {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null }
 
-        {this.props.findRoom4CrumpledNote? null : <img id="room4crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
-        {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null }
+
 
         <div id="jessica" onClick={this.handleTalkToJess}></div>
         {this.state.talkToJessica? <div className="jessicas_message">
@@ -131,6 +132,7 @@ class Room4 extends Component {
             onMouseLeave={(e) => this.handlehoverLeaveGoTo(5)}>
             {this.state.hoverGoToRoom5? <div>GO TO JESSICA'S LIVING ROOM</div> : null}
           </div> }
+
           {this.state.youAreBeingNosey? <div className="jessicas_message">
             OMG WHAT ARE YOU DOING??? You can't just walk around my house. STOP SNOOPING AROUND. PLEASE LEAVE.
             </div> : null }
@@ -164,3 +166,8 @@ function mapStateToProps(state){
 }
 
 export default connect( mapStateToProps, actions)(Room4);
+
+
+          // <div className="jessicas_message"> DON'T TOUCH ANYTHING IN MY HOUSE. STOP SNOOPING AROUND AND LEAVE?</div>
+
+        // {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null}

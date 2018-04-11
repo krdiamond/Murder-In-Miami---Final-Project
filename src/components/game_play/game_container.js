@@ -60,6 +60,7 @@ function mapStateToProps(state){
     currentRoom: state.currentRoom,
     peopleTalkedTO: state.peopleTalkedTO,
     timer: state.timer,
+    itemsInPurse: state.itemsInPurse,
   }
 }
 

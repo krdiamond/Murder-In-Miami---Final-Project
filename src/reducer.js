@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 8,
+  currentRoom: 1,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -19,7 +19,8 @@ const defaultState = {
   timer: 1,
   displayDadsMessage: false,
   playingTape: false,
-  }
+  suspiciousItemsInspected: [],
+}
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -59,12 +60,12 @@ const reducer = (state = defaultState, action) => {
         return {...state, peopleTalkedTO: [...state.peopleTalkedTO, action.payload]}
     case "TIMER":
       return {...state, timer: action.payload}
-    case "DADS_MESSAGE":
-      return {...state, displayDadsMessage: action.payload}
     case "REMOVE_ITEM_FROM_PURSE":
       return {...state, itemsInPurse: action.payload}
     case "PLAY_TAPE":
       return {...state, playingTape: action.payload}
+    case "SUSPICIOUS_ITEMS":
+      return {...state, suspiciousItemsInspected: [...state.suspiciousItemsInspected, action.payload]}
     default:
       return state
     }
@@ -74,3 +75,10 @@ const reducer = (state = defaultState, action) => {
 
 
 export default reducer
+
+// ALL ITEMS OBJECTS INCASE THEY ARE NEEDED FOR TESTING
+// {id: 1, title: "note", x: 0, y: 10, img: "/static/media/note.4a5fa407.png"},
+// {id: 2, title: "Phone Number", x: 0, y: 10,  img: "/static/media/note.4a5fa407.png"},
+// {id: 0, title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"},
+// {id: 3, title: "keys", x: 0, y: 10, img: "/static/media/keys.e1c9c6c0.png"},
+// {id: 4, title: "Beach Club Address", x: 0, y: 10, img: "/static/media/fridge_note.bf29f077.png"}

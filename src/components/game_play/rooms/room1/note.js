@@ -18,10 +18,10 @@ class Note extends Component {
       };
 
     note = {
+      id: 1,
       title: 'note',
       x:0,
       y:10,
-      id:0,
       img: note,
     }
 

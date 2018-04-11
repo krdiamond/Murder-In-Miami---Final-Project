@@ -19,10 +19,10 @@ class Keys extends Component {
       };
 
     keys = {
+        id:3,
         title: 'keys',
         x:0,
         y:10,
-        id:4,
         img: keys,
     }
 

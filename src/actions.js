@@ -132,13 +132,6 @@ export function addToPeopleYouHaveTalkedTo(result) {
   }
 }
 
-export function heardDadsMessage() {
-  return {
-    type: "DADS_MESSAGE",
-    payload: true
-  }
-}
-
 export function removeItemFromPurse(result) {
   return {
     type: "REMOVE_ITEM_FROM_PURSE",
@@ -150,5 +143,12 @@ export function playTape(result) {
   return {
     type: "PLAY_TAPE",
     payload: result
+  }
+}
+
+export function foundSuspiciousItem(item) {
+  return {
+    type: "SUSPICIOUS_ITEMS",
+    payload: item
   }
 }

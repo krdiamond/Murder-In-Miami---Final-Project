@@ -58,6 +58,7 @@ class PurseContainer extends Component {
   }
 
   handleMouseUp = (event) => {
+          console.log(this.state.holdTitle)
     if (this.state.holdTitle === 'tape'){
       this.insertTape()
     }
@@ -80,8 +81,12 @@ class PurseContainer extends Component {
     this.props.removeItemFromPurse(this.props.itemsInPurse.filter(item => item.title !== "tape"))
   }
 
+  sortItemsInThePurseByID = () => {
+    return this.props.itemsInPurse.sort((a,b) => a.id - b.id)
+  }
+
   render() {
-    let cells = this.props.itemsInPurse.map((cell) => {
+    let cells = this.sortItemsInThePurseByID().map((cell) => {
         return (
           <Cell
             key={cell.id}

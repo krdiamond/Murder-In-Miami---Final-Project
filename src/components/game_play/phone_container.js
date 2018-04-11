@@ -21,6 +21,9 @@ class PhoneContainer extends Component {
     this.setState({
       messageDisplayed: true
     })
+    if (this.props.currentRoom === 6){
+      this.props.addToPeopleYouHaveTalkedTo("Allison's Dad")
+    }
   }
 
   callPolice = () => {
@@ -52,12 +55,19 @@ class PhoneContainer extends Component {
     this.setState({
       toggleCallAllison: !this.state.toggleCallAllison
     })
+    this.props.addToPeopleYouHaveTalkedTo("Allison")
   }
 
   render() {
-    let people = this.props.peopleTalkedTO.map(person => {
+    let people = [...new Set( this.props.peopleTalkedTO )].map(person => {
       return(<div id="each_person" onClick={(e) => this.solveMurder(person)} >{person}</div>)
     });
+
+    let suspiciousItems = [...new Set( this.props.suspiciousItemsInspected )].map(item => {
+      return(<div id="each_suspicious_item" onClick={(e) => this.solveMurder(item)} >{item}</div>)
+    });
+
+
 
     return (
       <div id="phone_container">
@@ -74,13 +84,16 @@ class PhoneContainer extends Component {
         <div className="phone_button" id="call_police" onClick={this.callPolice} > CALL POLICE </div>
         {this.state.toggleCallPolice?
           <div id="police_message">
-              hmm.. you say you know who murdered Kelly... Please see a list of everyone you have talked to recently. Was it any of     these people? Please choose one.
+              hmm.. you say you know who murdered Kelly... This is a list of everyone you talked to recently and all of the suspicious items you have inspected. Did you solve the case? Help us out by selecting the murderer and the murder weapon.
           </div> : null}
 
         {this.state.toggleCallPolice? <div id="people_container">{people}</div> :null}
+        {this.state.toggleCallPolice? <div id="each_suspicious_item_container">{suspiciousItems}</div> :null}
+
 
         {this.isAllisonsPhoneNumberInPurse()?
-        <div className="phone_button" id="call_allison" onClick={this.callAllison}> CALL ALLISON </div> :null}
+        <div className="phone_button" id="call_allison" onClick={this.callAllison}> CALL ALLISON </div> :
+        <div className="phone_button" id="call_allison" ></div>}
           {this.state.toggleCallAllison?
             <div id="allison_message">
               oh I'll be back at the beach club soon, I got all my shifts covered by Jessica. I'm just in Mexico for a little while with my mom and my dad and my brother. You know just enjoying the sun. I should be back soon nice and tan. Who is this again? I don't think we've ever worked together?
@@ -101,6 +114,8 @@ function mapStateToProps(state){
     peopleTalkedTO: state.peopleTalkedTO,
     findRoom4CrumpledNote: state.findRoom4CrumpledNote,
     itemsInPurse: state.itemsInPurse,
+    suspiciousItemsInspected: state.suspiciousItemsInspected,
+    currentRoom: state.currentRoom,
   }
 }
 

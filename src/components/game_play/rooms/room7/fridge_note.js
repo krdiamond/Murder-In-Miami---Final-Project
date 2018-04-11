@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import * as actions from '../../../../actions';
 import '../../../../App.css';
 import './Room7.css';
+import fridgeNote from '../../../../images/room7/fridge_note.png';
 
 class FridgeNote extends Component {
 
@@ -17,11 +18,11 @@ class FridgeNote extends Component {
       };
 
   beachAddress = {
+    id:4 ,
     title: 'Beach Club Address',
     x:0,
     y:10,
-    id:8,
-    img: 'fridge_note',
+    img: fridgeNote,
   }
 
     handleMouseDown = (e) => {

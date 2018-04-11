@@ -19,7 +19,7 @@ class Tape extends Component {
       };
 
   tape = {
-    id: 1,
+    id: 0,
     title: 'tape',
     x:0,
     y:10,
@@ -27,7 +27,7 @@ class Tape extends Component {
   }
 
 
-  
+
 
     handleMouseDown = (e) => {
       this.setState({
@@ -86,6 +86,7 @@ function mapStateToProps(state){
   return {
     purseDropZone: state.purseDropZone,
     showTape: state.showTape,
+    itemsInPurse: state.itemsInPurse
   }
 }
 

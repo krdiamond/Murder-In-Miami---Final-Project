@@ -48,6 +48,7 @@ class Room5 extends Component {
   }
 
   handleTennisRacket = () => {
+    this.props.foundSuspiciousItem("Tennis Racket")
     this.setState({
       clickTennisRacket: !this.state.clickTennisRacket
     })

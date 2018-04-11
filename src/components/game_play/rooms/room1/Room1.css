@@ -1,25 +1,58 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 2 ---------------------------- */
 
- #room1_go_to_room_2 {
-   top: 150px;
-   left: 350px;
+#room1_go_to_room_2{
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  width: 80px;
+  height: 300px;
+  /* border: 6px solid purple; */
+}
+
+#room1_go_to_room_2:hover{
+  cursor: url('../../../../images/right_arrow.png'),auto;
+}
+
+ #room1_go_to_room_2_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room1_go_to_room_2:hover #room1_go_to_room_2_text  {
+   visibility: visible;
+ }
+
+/* -------------------------- NAVIGATE TO ROOM 4 ---------------------------- */
+
+ #room1_go_to_room_4{
+   position: absolute;
+   bottom: 0px;
+   left: 10px;
    width: 150px;
-   height: 300px;
+   height: 250px;
+   /* border: 6px solid purple; */
  }
 
- #room1_go_to_room_3 {
-   bottom: 0px;
-   right: 0px;
-   width: 200px;
-   height: 180px;
+ #room1_go_to_room_4:hover{
+   cursor: url('../../../../images/down_arrow.png'),auto;
  }
 
- #room1_go_to_room_4 {
-   bottom: 0px;
-   left: 0px;
-   width: 200px;
-   height: 300px;
- }
+  #room1_go_to_room_4_text {
+   width: 150px;
+   visibility: hidden;
+   background-color: black;
+   color: #fff;
+   border-radius: 6px;
+   padding: 5px 0;
+  }
+
+  #room1_go_to_room_4:hover #room1_go_to_room_4_text  {
+    visibility: visible;
+  }
 
  /* ----------------------------- OPENING STORY ----------------------------- */
 
