@@ -14,7 +14,7 @@
   height: 300px;
 }
 
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------------- JESSICA -------------------------------- */
 
 #jessica {
   position: absolute;
@@ -26,10 +26,11 @@
 
 .jessicas_message {
   position: absolute;
-  border: 6px solid purple;
+  /* border: 6px solid purple; */
   bottom: 410px;
   left: 500px;
   width: 200px;
+    background-color:white;
 }
 
 #knees {
@@ -65,7 +66,7 @@
   left: 30px;
   width: 60px;
   height: 140px;
-  border: 6px solid green;
+  /* border: 6px solid green; */
 }
 
 
@@ -76,11 +77,12 @@
   border: 6px solid purple;
   width: 200px;
   z-index: 3;
+  background-color:white;
 }
 
 #room4crumpled_note{
   position: absolute;
   top: 700px;
   left: 750px;
-  border: 6px solid green;
+  /* border: 6px solid green; */
 }

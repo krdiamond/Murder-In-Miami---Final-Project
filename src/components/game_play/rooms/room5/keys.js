@@ -52,7 +52,6 @@ class Keys extends Component {
       if(this.state.x > this.props.purseDropZone.right &&
         this.state.x < (this.props.purseDropZone.right + 100) &&
         this.state.y < (this.props.purseDropZone.bottom - 100)){
-        console.log("i'm here")
         this.putKeysInPurse()
       }
     }

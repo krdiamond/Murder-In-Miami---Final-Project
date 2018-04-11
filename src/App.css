@@ -9,7 +9,7 @@
 .main_container {
   display: inline-block;
   position: relative;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 /* -------------------------- LANDING PAGE CONTAINER ------------------------ */
@@ -18,7 +18,7 @@
 
 .traverse_rooms {
     position: absolute;
-    border: 6px solid blue;
+    /* border: 6px solid blue; */
     z-index: 2;
 }
 
@@ -31,7 +31,7 @@
   z-index: 2;
   margin: 20px;
   height: 200px;
-  border: 6px solid purple;
+  /* border: 6px solid purple; */
 }
 
 #purse_contents {

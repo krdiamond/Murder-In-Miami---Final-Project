@@ -76,7 +76,6 @@ class Room5 extends Component {
   }
 
   render() {
-    console.log(this.areKeysInPurse())
     return (
       <div className="main_container">
 

@@ -145,3 +145,10 @@ export function removeItemFromPurse(result) {
     payload: result
   }
 }
+
+export function playTape(result) {
+  return {
+    type: "PLAY_TAPE",
+    payload: result
+  }
+}

@@ -47,7 +47,7 @@
   left: 140px;
   width: 70px;
   height: 30px;
-  border: 6px solid green;
+  /* border: 6px solid green; */
 }
 
 
@@ -72,10 +72,10 @@
 
 #jessicas_note {
   position: absolute;
-  height:200px;
+  height:210px;
   width: 200px;
-  border: 6px solid purple;
   z-index: 3;
+  background-color:white;
 }
 
 #text {
@@ -103,4 +103,5 @@
   width: 180px;
   height: 180px;
   border: 6px solid purple;
+  background-color:white;
 }

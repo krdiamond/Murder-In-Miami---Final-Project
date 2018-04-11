@@ -26,6 +26,9 @@ class Tape extends Component {
     img: tape,
   }
 
+
+  
+
     handleMouseDown = (e) => {
       this.setState({
         oldMouseX: e.clientX,

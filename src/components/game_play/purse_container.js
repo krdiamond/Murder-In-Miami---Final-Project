@@ -14,7 +14,6 @@ class PurseContainer extends Component {
     mouseX: 0,
     mouseY: 0,
     holdTitle: null,
-    playingTape: false,
   };
 
 
@@ -71,12 +70,13 @@ class PurseContainer extends Component {
         this.state.y > -(this.props.TVDropZone.y) &&
         this.state.y < -(this.props.TVDropZone.y - 150) &&
         this.props.currentRoom === 8) {
+          console.log("i'm here")
         this.playTape()
       }
   }
 
   playTape = () => {
-    this.setState({playingTape: true});
+    this.props.playTape(!this.props.playingTape)
     this.props.removeItemFromPurse(this.props.itemsInPurse.filter(item => item.title !== "tape"))
   }
 
@@ -115,6 +115,7 @@ function mapStateToProps(state){
       itemsInPurse: state.itemsInPurse,
       TVDropZone: state.TVDropZone,
       currentRoom: state.currentRoom,
+      playingTape: state.playingTape
   }
 }
 

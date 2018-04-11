@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import '../../../../App.css';
 import room8 from '../../../../images/room8/room8.jpg';
+import beach from '../../../../images/room8/beach.jpg';
 import './Room8.css';
-import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 
@@ -57,11 +57,27 @@ class Room8 extends Component {
     this.props.toggleShowPhone(!this.props.showPhone)
   }
 
+  handleBeachScene = () => { //not sure if I should actually use this or not
+    console.log("i'm clicked")
+    this.props.playTape(!this.props.playingTape)
+  }
+
 
   render() {
     return (
       <div className="main_container">
         <img src={room8} alt="Allison's Bedroom"/>
+
+          {this.props.playingTape? <img src={beach} id="beach_scene" alt="Beach Scene"/> : null}
+          {this.props.playingTape? <div id="beach_message">
+            Heather: "ok like I've never even met that girl but she is so gross, how could she do that??"
+            Jessica: " I know I hate her so much"
+            Heather: "it would be so funny to take her out to the beach at night and like totally bash her head in"
+            Jessica: "hahahaha could you imagine"
+            Heather: " who would even miss her???"
+            Jessica: "well I guess me beacuse like she does most of the work around here anyways, I just sit around and hang out with you.... I should probably be working right now..."
+            Heather: "yea what are you even doing talking to me, go get me a drink hahahaha!! "
+            </div> : null}
 
           <div id="wine_glass_right" onClick={this.handleWineGlasses}></div>
           <div id="wine_glass_left" onClick={this.handleWineGlasses}></div>
@@ -99,6 +115,7 @@ function mapStateToProps(state){
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
     TVDropZone: state.TVDropZone,
+    playingTape: state.playingTape
   }
 }
 

@@ -35,10 +35,11 @@
 
 #beach_club_address {
   position: absolute;
-  border: 6px solid purple;
+  /* border: 6px solid purple; */
   height:200px;
   width: 200px;
   top: 200px;
   left: 580px;
   z-index: 3;
+    background-color:white;
 }
