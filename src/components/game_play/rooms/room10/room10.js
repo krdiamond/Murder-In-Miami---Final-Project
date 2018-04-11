@@ -9,40 +9,12 @@ import * as actions from '../../../../actions';
 class Room10 extends Component {
 
   state = {
-    hoverGoToRoom11: false,
-    hoverGoToRoom9: false,
     talkedToHeather: false,
   }
 
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
-  }
-
-  handlehoverEnterGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 11){
-      this.setState({
-        hoverGoToRoom11: true
-      })
-    }
-    else if (num === 9){
-      this.setState({
-        hoverGoToRoom9: true
-      })
-    }
-  }
-
-  handlehoverLeaveGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 11){
-      this.setState({
-        hoverGoToRoom11: false
-      })
-    }
-    else if (num === 9){
-      this.setState({
-        hoverGoToRoom9: false
-      })
-    }
   }
 
   handleHeather = () => {
@@ -80,17 +52,12 @@ class Room10 extends Component {
             <div className="heather_message"> Are you even a member? Don't bother me while I'm swimming... </div>
           :null}
 
-          <div id="room10_go_to_room_11" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(11)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(11)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(11)}>
-            {this.state.hoverGoToRoom11? <div>GO TO CLUB CAFE</div> : null}
+          <div id="room10_go_to_room_11" onClick={(e) => this.handleGoToRoom(11)}>
+            <div id="room10_go_to_room_11_text">GO TO THE BEACH CLUB'S CAFE</div>
           </div>
-          <div id="room10_go_to_room_9" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(9)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(9)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(9)}>
-            {this.state.hoverGoToRoom9? <div>GO TO CLUB PARKING LOT</div> : null}
+
+          <div id="room10_go_to_room_9" onClick={(e) => this.handleGoToRoom(9)}>
+            <div id="room10_go_to_room_9_text">GO TO BEACH CLUB PARKING LOT</div>
           </div>
 
       </div>

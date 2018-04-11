@@ -11,25 +11,12 @@ import Tape from './tape'
 class Room11 extends Component {
 
   state = {
-    hoverGoToRoom10: false,
     clickParrotLeft: false,
     clickParrotRight: false,
   }
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
-  }
-
-  handlehoverEnterGoTo = () => {
-    this.setState({
-      hoverGoToRoom10: true
-    })
-  }
-
-  handlehoverLeaveGoTo = () => {
-    this.setState({
-      hoverGoToRoom10: false
-    })
   }
 
   handlePhoneClick = () => {
@@ -54,6 +41,7 @@ class Room11 extends Component {
     console.log(this.props.itemsInPurse)
     return (
       <div className="main_container">
+
         <img src={room11} alt="Beach Club Cafe"/>
 
         {this.props.showTape? <Tape/>: null}
@@ -71,11 +59,8 @@ class Room11 extends Component {
           squawk ... squawk .. Heather I don't know Heather I don't know squawk ....
           </div> : null }
 
-          <div id="room11_go_to_room_10" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(10)}
-            onMouseEnter={this.handlehoverEnterGoTo}
-            onMouseLeave={this.handlehoverLeaveGoTo}>
-            {this.state.hoverGoToRoom10? <div>GO TO POOL</div> : null}
+          <div id="room11_go_to_room_10" onClick={(e) => this.handleGoToRoom(10)}>
+             <div id="room11_go_to_room_10_text">GO TO THE POOL</div>
           </div>
       </div>
     );

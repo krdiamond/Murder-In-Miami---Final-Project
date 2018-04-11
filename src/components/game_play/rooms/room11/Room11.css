@@ -1,11 +1,31 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 10 ---------------------------- */
 
-#room11_go_to_room_10 {
+#room11_go_to_room_10{
+  position: absolute;
   bottom: 0px;
   left: 0px;
   width: 300px;
-  height: 150px;
+  height: 200px;
+  /* border: 6px solid purple; */
 }
+
+#room11_go_to_room_10:hover{
+  cursor: url('../../../../images/arrows/down_arrow.png') 30 80,auto;
+}
+
+ #room11_go_to_room_10_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room11_go_to_room_10:hover #room11_go_to_room_10_text  {
+   visibility: visible;
+ }
 
 /* -------------------------------- PHONE ----------------------------------- */
 

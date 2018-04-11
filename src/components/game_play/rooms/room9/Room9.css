@@ -1,32 +1,120 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 10 ---------------------------- */
 
-#room9_go_to_room_10 {
+#room9_go_to_room_10{
+  position: absolute;
   top: 300px;
-  left: 500px;
+  left: 513px;
   width: 130px;
   height: 400px;
+  /* border: 6px solid purple; */
 }
 
-#room9_go_to_room_6 {
+#room9_go_to_room_10:hover{
+  cursor: url('../../../../images/arrows/up_arrow.png') 10 30,auto;
+}
+
+ #room9_go_to_room_10_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room9_go_to_room_10:hover #room9_go_to_room_10_text  {
+   visibility: visible;
+ }
+
+/* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
+
+#room9_go_to_room_6{
+  position: absolute;
   bottom: 0px;
   left: 0px;
   width: 250px;
-  height: 120px;
+  height: 200px;
+  /* border: 6px solid purple; */
 }
 
-#room9_go_to_room_4 {
+#room9_go_to_room_6:hover{
+  cursor: url('../../../../images/arrows/straight_down_arrow.png') 50 80,auto;
+}
+
+ #room9_go_to_room_6_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room9_go_to_room_6:hover #room9_go_to_room_6_text  {
+   visibility: visible;
+ }
+
+
+
+/* -------------------------- NAVIGATE TO ROOM 4 ---------------------------- */
+
+#room9_go_to_room_4{
+  position: absolute;
   bottom: 0px;
   left: 320px;
   width: 250px;
-  height: 120px;
+  height: 200px;
+  /* border: 6px solid purple; */
 }
 
-#room9_go_to_room_1 {
+#room9_go_to_room_4:hover{
+  cursor: url('../../../../images/arrows/straight_down_arrow.png') 50 80,auto;
+}
+
+ #room9_go_to_room_4_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room9_go_to_room_4:hover #room9_go_to_room_4_text  {
+   visibility: visible;
+ }
+
+/* -------------------------- NAVIGATE TO ROOM 1 ---------------------------- */
+
+#room9_go_to_room_1{
+  position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 250px;
-  height: 120px;
+  width: 180px;
+  height: 200px;
+  /* border: 6px solid purple; */
 }
+
+#room9_go_to_room_1:hover{
+  cursor: url('../../../../images/arrows/straight_down_arrow.png') 50 80,auto;
+}
+
+ #room9_go_to_room_1_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room9_go_to_room_1:hover #room9_go_to_room_1_text  {
+   visibility: visible;
+ }
 
 /* ---------------------------- TALK TO JESSICA ----------------------------- */
 

@@ -1,18 +1,61 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 11 ---------------------------- */
 
-#room10_go_to_room_11 {
-  top: 400px;
+#room10_go_to_room_11{
+  position: absolute;
+  top: 320px;
   right: 0px;
-  width: 150px;
-  height: 250px;
+  width: 200px;
+  height: 300px;
+  /* border: 6px solid purple; */
 }
 
-#room10_go_to_room_9 {
+#room10_go_to_room_11:hover{
+  cursor: url('../../../../images/arrows/right_arrow.png') 80 30,auto;
+}
+
+ #room10_go_to_room_11_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room10_go_to_room_11:hover #room10_go_to_room_11_text  {
+   visibility: visible;
+ }
+
+/* -------------------------- NAVIGATE TO ROOM 9 ---------------------------- */
+
+#room10_go_to_room_9{
+  position: absolute;
   bottom: 0px;
   left: 0px;
   width: 250px;
-  height: 150px;
+  height: 250px;
+  /* border: 6px solid purple; */
 }
+
+#room10_go_to_room_9:hover{
+  cursor: url('../../../../images/arrows/down_arrow.png') 30 80,auto;
+}
+
+ #room10_go_to_room_9_text {
+  width: 200px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: auto;
+ }
+
+ #room10_go_to_room_9:hover #room10_go_to_room_9_text  {
+   visibility: visible;
+ }
+
 
 /* -------------------------------- HEATHER --------------------------------- */
 
