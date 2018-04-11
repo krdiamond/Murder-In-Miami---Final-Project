@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 11,
+  currentRoom: 4,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -16,8 +16,6 @@ const defaultState = {
   showingAllisonsPhoneNumber: false,
   TVDropZone: {},
   peopleTalkedTO: [],
-  timer: 1,
-  displayDadsMessage: false,
   playingTape: false,
   suspiciousItemsInspected: [],
 }

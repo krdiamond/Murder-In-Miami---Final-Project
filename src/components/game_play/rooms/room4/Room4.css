@@ -1,3 +1,8 @@
+#jessica:hover, #knees:hover, #cell_phone:hover, #plant:hover, #phone_number:hover, #cell_phone:hover, #room4phone:hover, #room4crumpled_note:hover {
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
 /* -------------------------- NAVIGATE TO ROOM 5 ---------------------------- */
 
 #room4_go_to_room_5{

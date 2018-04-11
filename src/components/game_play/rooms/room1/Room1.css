@@ -103,12 +103,21 @@
   right: 400px;
 }
 
+#crumpled_note:hover{
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
 #jessicas_note {
   position: absolute;
   height:210px;
   width: 200px;
   z-index: 3;
   background-color:white;
+}
+
+#jessicas_note:hover{
+  cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
 #text {
@@ -129,12 +138,15 @@
   right: 120px;
 }
 
+#heart:hover{
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
 #heart_award {
   position: absolute;
   top: 450px;
   right: 0px;
   width: 180px;
   height: 180px;
-  border: 6px solid purple;
   background-color:white;
 }

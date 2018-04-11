@@ -16,11 +16,6 @@
 
 /* ---------------------------- GENERAL GAME PLAY --------------------------- */
 
-.traverse_rooms {
-    position: absolute;
-    z-index: 2;
-}
-
 /* --------------------------------- PURSE ---------------------------------- */
 #purse_container {
   position: absolute;

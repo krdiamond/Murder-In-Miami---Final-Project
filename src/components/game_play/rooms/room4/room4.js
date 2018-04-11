@@ -18,6 +18,7 @@ class Room4 extends Component {
     togglePlantMessage: false,
     jessIsTooBusy: false,
     youAreBeingNosey: false,
+    stopSnooping: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -66,6 +67,11 @@ class Room4 extends Component {
       this.props.crumpledNoteRoom4Found()
       this.props.showAllisonsPhoneNumber(!this.props.showingAllisonsPhoneNumber)
     }
+    else {
+      this.setState({
+        stopSnooping: !this.state.stopSnooping
+      })
+    }
   }
 
   render() {
@@ -76,6 +82,11 @@ class Room4 extends Component {
 
         {this.props.findRoom4CrumpledNote? null :
           <img id="room4crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
+
+        {this.state.stopSnooping?
+          <div className="jessicas_message">
+           DON'T TOUCH ANY OF MY THINGS!!!!! STOP SNOOPING AROUND!!!!
+         </div> :null}
 
         {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null }
 
