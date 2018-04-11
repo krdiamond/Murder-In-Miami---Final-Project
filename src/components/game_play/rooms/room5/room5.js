@@ -10,8 +10,6 @@ import './Room5.css';
 class Room5 extends Component {
 
   state = {
-    hoverGoToRoom4: false,
-    hoverGoToRoom6: false,
     clickShoes: false,
     clickTennisRacket: false,
     clickAshtray: false,
@@ -19,32 +17,6 @@ class Room5 extends Component {
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
-  }
-
-  handlehoverEnterGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 4){
-      this.setState({
-        hoverGoToRoom4: true
-      })
-    }
-    else if (num === 6){
-      this.setState({
-        hoverGoToRoom6: true
-      })
-    }
-  }
-
-  handlehoverLeaveGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 4){
-      this.setState({
-        hoverGoToRoom4: false
-      })
-    }
-    else if (num === 6){
-      this.setState({
-        hoverGoToRoom6: false
-      })
-    }
   }
 
   handleTennisRacket = () => {

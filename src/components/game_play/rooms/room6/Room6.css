@@ -1,25 +1,90 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 4 ---------------------------- */
 
-#room6_go_to_room_4 {
-  top: 450px;
+#room6_go_to_room_4{
+  position: absolute;
+  bottom: 0px;
   left: 0px;
-  width: 180px;
+  width: 137px;
   height: 250px;
+  /* border: 6px solid purple; */
 }
 
-#room6_go_to_room_7 {
-  top: 0px;
-  right: 200px;
-  width: 180px;
-  height: 500px;
+#room6_go_to_room_4:hover{
+  cursor: url('../../../../images/arrows/down_left_arrow.png') 10 30,auto;
 }
 
-#room6_go_to_room_9 {
+ #room6_go_to_room_4_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room6_go_to_room_4:hover #room6_go_to_room_4_text  {
+   visibility: visible;
+ }
+
+
+/* -------------------------- NAVIGATE TO ROOM 7 ---------------------------- */
+
+#room6_go_to_room_7{
+  position: absolute;
+  top: 20px;
+  right: 216px;
+  width: 150px;
+  height: 400px;
+  /* border: 6px solid purple; */
+}
+
+#room6_go_to_room_7:hover{
+  cursor: url('../../../../images/arrows/left_arrow.png') 30 30,auto;
+}
+
+ #room6_go_to_room_7_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room6_go_to_room_7:hover #room6_go_to_room_7_text  {
+   visibility: visible;
+ }
+
+
+
+
+/* -------------------------- NAVIGATE TO ROOM 9 ---------------------------- */
+
+#room6_go_to_room_9{
+  position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 300px;
-  height: 140px;
+  width: 189px;
+  height: 246px;
+  /* border: 6px solid purple; */
 }
+
+#room6_go_to_room_9:hover{
+  cursor: url('../../../../images/arrows/right_down_arrow.png') 30 30,auto;
+}
+
+ #room6_go_to_room_9_text {
+  width: 150px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room6_go_to_room_9:hover #room6_go_to_room_9_text  {
+   visibility: visible;
+ }
 
 
 /* ---------------------------- PHONE MESSAGES ------------------------------ */
@@ -28,9 +93,9 @@
   position: absolute;
   width: 50px;
   height: 80px;
-  top: 308px;
+  top: 218px;
   left: 100px;
-  border: 3px solid green
+  /* border: 3px solid green */
 }
 
 #dads_message {

@@ -10,50 +10,9 @@ import PhoneContainer from '../../phone_container';
 
 class Room6 extends Component {
 
-  state = {
-    hoverGoToRoom4: false,
-    hoverGoToRoom7: false,
-    hoverGoToRoom9: false,
-  }
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
-  }
-
-  handlehoverEnterGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 4){
-      this.setState({
-        hoverGoToRoom4: true
-      })
-    }
-    else if (num === 7){
-      this.setState({
-        hoverGoToRoom7: true
-      })
-    }
-    else if (num === 9){
-      this.setState({
-        hoverGoToRoom9: true
-      })
-    }
-  }
-
-  handlehoverLeaveGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 4){
-      this.setState({
-        hoverGoToRoom4: false
-      })
-    }
-    else if (num === 7){
-      this.setState({
-        hoverGoToRoom7: false
-      })
-    }
-    else if (num === 9){
-      this.setState({
-        hoverGoToRoom9: false
-      })
-    }
   }
 
   handlePhoneClick = () => {
@@ -63,38 +22,31 @@ class Room6 extends Component {
 
   render() {
     return (
-      <div className="main_container">
-        <img src={room6} alt="Victim's Living Room"/>
 
-          {this.props.displayDadsMessage? <div id="dads_message">THIS IS YOUR FATHER</div>:null}
+      <div className="main_container">
+
+          <img src={room6} alt="Allison's Kitchen"/>
 
           <div id="room6phone" onClick={this.handlePhoneClick} >
-            <img src={redDot} width="5" alt="blinking light"/>}
+            <img src={redDot} width="5" alt="blinking light"/>
           </div>
-          {(this.props.showPhone === true)? <PhoneContainer message="Hi Allison, It's your father. Your mother and I went by your house today and we noticed you weren't home. I thought we had plans to do our usual sunday brunch? Where are you? Call me back when you get this. "/>: null}
 
-
-
-          <div id="room6_go_to_room_4" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(4)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(4)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(4)}>
-            {this.state.hoverGoToRoom4? <div>GO TO JESSICA'S HOUSE</div> : null}
-          </div>
-          <div id="room6_go_to_room_7" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(7)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(7)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(7)}>
-            {this.state.hoverGoToRoom7? <div>GO TO ALLISON'S KITCHEN</div> : null}
-          </div>
+          {(this.props.showPhone === true)?
+            <PhoneContainer message="Hi Allison, It's your father. Your mother and I went by your house today and we noticed you weren't home. I thought we had plans to do our usual sunday brunch? Where are you? Call me back when you get this. "/>: null}
 
           {this.props.findFridgeNote?
-          <div id="room6_go_to_room_9" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(9)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(9)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(9)}>
-            {this.state.hoverGoToRoom9? <div>GO TO THE BEACH CLUB</div> : null}
+          <div id="room6_go_to_room_9" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(9)}>
+            <div id="room6_go_to_room_9_text">YOU FOUND THE ADDRESS TO THE BEACH CLUB! HEAD OVER THERE</div>
           </div> :null}
+
+          <div id="room6_go_to_room_4" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(4)}>
+            <div id="room6_go_to_room_4_text">GO TO JESSICA'S HOUSE</div>
+          </div>
+
+          <div id="room6_go_to_room_7" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(7)}>
+            <div id="room6_go_to_room_7_text">GO TO ALLISON'S KITCHEN</div>
+          </div>
+
       </div>
     );
   }
@@ -103,10 +55,7 @@ class Room6 extends Component {
 function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
-    isPurseOpened: state.isPurseOpened,
     findFridgeNote: state.findFridgeNote,
-    timer: state.timer,
-    displayDadsMessage: state.displayDadsMessage,
   }
 }
 
