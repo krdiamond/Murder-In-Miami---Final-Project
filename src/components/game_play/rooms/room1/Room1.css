@@ -4,13 +4,13 @@
   position: absolute;
   top: 150px;
   left: 350px;
-  width: 80px;
+  width: 150px;
   height: 300px;
   /* border: 6px solid purple; */
 }
 
 #room1_go_to_room_2:hover{
-  cursor: url('../../../../images/right_arrow.png'),auto;
+  cursor: url('../../../../images/arrows/right_arrow.png') 80 30,auto;
 }
 
  #room1_go_to_room_2_text {
@@ -38,7 +38,7 @@
  }
 
  #room1_go_to_room_4:hover{
-   cursor: url('../../../../images/down_arrow.png'),auto;
+   cursor: url('../../../../images/arrows/down_arrow.png')30 80 ,auto;
  }
 
   #room1_go_to_room_4_text {

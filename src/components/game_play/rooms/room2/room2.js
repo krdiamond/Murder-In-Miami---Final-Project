@@ -10,40 +10,12 @@ import room2 from '../../../../images/room2/room2.jpg';
 class Room2 extends Component {
 
   state = {
-    hoverGoToRoom1: false,
-    hoverGoToRoom3: false,
     showRacketMessage:false,
     showBedMessage: false,
   }
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
-  }
-
-  handlehoverEnterGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 1){
-      this.setState({
-        hoverGoToRoom1: true
-      })
-    }
-    else if (num === 3){
-      this.setState({
-        hoverGoToRoom3: true
-      })
-    }
-  }
-
-  handlehoverLeaveGoTo = (num) => { //can I do this dynamically somehow??
-    if (num === 1){
-      this.setState({
-        hoverGoToRoom1: false
-      })
-    }
-    else if (num === 3){
-      this.setState({
-        hoverGoToRoom3: false
-      })
-    }
   }
 
   toggleRacketMessage =() => {
@@ -62,6 +34,8 @@ class Room2 extends Component {
     return (
       <div className="main_container">
 
+        <img src={room2} alt="Kelly's Bedroom"/>
+
         <div id="tennis_racket" onClick={this.toggleRacketMessage}></div>
         {this.state.showRacketMessage? <div id="racket_message">
           ... seems like Kelly played a lot of tennis. This racket is so dirty and worn in.
@@ -72,19 +46,14 @@ class Room2 extends Component {
           ... Kelly's bed is made. Did she ever come home from work? I guess she didn't sleep here...
         </div> : null }
 
-        <img src={room2} alt="Victim's Living Room"/>
-          <div id="room2_go_to_room_1" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(1)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(1)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(1)}>
-              {this.state.hoverGoToRoom1? <div>GO TO KELLY'S LIVING ROOM</div> : null}
-          </div>
-          <div id="room2_go_to_room_3" className="traverse_rooms"
-            onClick={(e) => this.handleGoToRoom(3)}
-            onMouseEnter={(e) => this.handlehoverEnterGoTo(3)}
-            onMouseLeave={(e) => this.handlehoverLeaveGoTo(3)}>
-              {this.state.hoverGoToRoom3? <div>GO TO KELLY'S STUDY</div> : null}
-          </div>
+        <div id="room2_go_to_room_1" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(1)}>
+          <div id="room2_go_to_room_1_text">GO TO KELLY'S LIVING ROOM</div>
+        </div>
+
+        <div id="room2_go_to_room_3" onClick={(e) => this.handleGoToRoom(3)}>
+          <div id="room2_go_to_room_3_text">GO TO KELLY'S OFFICE</div>
+        </div>
+
       </div>
     );
   }

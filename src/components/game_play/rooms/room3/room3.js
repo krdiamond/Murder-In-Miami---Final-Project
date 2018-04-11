@@ -9,7 +9,6 @@ import * as actions from '../../../../actions';
 class Room3 extends Component {
 
   state = {
-    hoverGoToRoom2: false,
     showClothesMessage: false,
     talkToSnake: false,
   }
@@ -17,19 +16,7 @@ class Room3 extends Component {
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
   }
-
-  handlehoverEnterGoTo = () => {
-    this.setState({
-      hoverGoToRoom2: true
-    })
-  }
-
-  handlehoverLeaveGoTo = () => {
-    this.setState({
-      hoverGoToRoom2: false
-    })
-  }
-
+  
   toggleClothesMessage =() => {
     this.setState({
       showClothesMessage: !this.state.showClothesMessage
@@ -79,11 +66,8 @@ class Room3 extends Component {
             ssssssssssss... i'm just Kelly's pet ssssssssssnake.... when is ssssssssshe coming back sssssssss
         </div> : null }
 
-        <div id="room3_go_to_room_2" className="traverse_rooms"
-          onClick={(e) => this.handleGoToRoom(2)}
-          onMouseEnter={this.handlehoverEnterGoTo}
-          onMouseLeave={this.handlehoverLeaveGoTo}>
-            {this.state.hoverGoToRoom2? <div>GO TO KELLY'S BEDROOM</div> : null}
+        <div id="room3_go_to_room_2" onClick={(e) => this.handleGoToRoom(2)}>
+            <div id="room3_go_to_room_2_text">GO TO KELLY'S BEDROOM</div>
         </div>
 
       </div>

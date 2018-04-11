@@ -1,11 +1,31 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 2 ---------------------------- */
 
-#room3_go_to_room_2 {
+#room3_go_to_room_2{
+  position: absolute;
   bottom: 0px;
   left: 0px;
   width: 200px;
   height: 210px;
+  /* border: 6px solid purple; */
 }
+
+#room3_go_to_room_2:hover{
+  cursor: url('../../../../images/arrows/straight_left_arrow.png') 10 50,auto;
+}
+
+ #room3_go_to_room_2_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room3_go_to_room_2:hover #room3_go_to_room_2_text  {
+   visibility: visible;
+ }
+
 
 /* ------------------------------- CLOTHES  --------------------------------- */
 

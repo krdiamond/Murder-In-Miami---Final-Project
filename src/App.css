@@ -18,7 +18,6 @@
 
 .traverse_rooms {
     position: absolute;
-    border: 6px solid blue;
     z-index: 2;
 }
 

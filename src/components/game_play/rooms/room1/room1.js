@@ -12,8 +12,6 @@ import Note from './note'
 class Room1 extends Component {
 
   state = {
-    hoverGoToRoom2: false,
-    hoverGoToRoom4: false,
     openingStoryDisplayed: true,
     readHeart: false,
   }
@@ -89,7 +87,7 @@ class Room1 extends Component {
 
         {this.props.gotClueFromSnake?
         <div id="room1_go_to_room_4" onClick={(e) => this.handleGoToRoom(4)}>
-          <div id="room1_go_to_room_4_text"> USE THE NOTE YOU FOUND TO GO TO JESSICA''S HOUSE</div>
+          <div id="room1_go_to_room_4_text"> VISIT JESSICA </div>
         </div> :null}
 
       </div>
