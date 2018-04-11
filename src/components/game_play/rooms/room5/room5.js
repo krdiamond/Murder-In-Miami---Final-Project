@@ -100,21 +100,14 @@ class Room5 extends Component {
         there are so many cigarettes in this ashtray. Jessica sure does smoke a lot.
         </div> : null }
 
-        <div id="room5_go_to_room_4" className="traverse_rooms"
-          onClick={(e) => this.handleGoToRoom(4)}
-          onMouseEnter={(e) => this.handlehoverEnterGoTo(4)}
-          onMouseLeave={(e) => this.handlehoverLeaveGoTo(4)}>
-          {this.state.hoverGoToRoom4? <div>GO BACK TO JESSICA'S STUDY</div> : null}
+        <div id="room5_go_to_room_4" onClick={(e) => this.handleGoToRoom(4)}>
+          <div id="room5_go_to_room_4_text">GO TO JESSICA'S STUDY</div>
         </div>
 
         {this.areKeysInPurse() ?
-        <div id="room5_go_to_room_6" className="traverse_rooms"
-          onClick={(e) => this.handleGoToRoom(6)}
-          onMouseEnter={(e) => this.handlehoverEnterGoTo(6)}
-          onMouseLeave={(e) => this.handlehoverLeaveGoTo(6)}>
-          {this.state.hoverGoToRoom6? <div>YOU FOUND ALLISON'S KEYS! SNEAK OVER TO ALLISON'S HOUSE</div> : null}
+        <div id="room5_go_to_room_6" onClick={(e) => this.handleGoToRoom(6)}>
+          <div id="room5_go_to_room_6_text">YOU FOUND ALLISON'S HOUSE KEYS! SNEAK OVER TO HER HOUSE</div>
         </div> : null}
-
 
       </div>
     );

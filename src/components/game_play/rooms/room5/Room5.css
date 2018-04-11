@@ -1,18 +1,58 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 4 ---------------------------- */
 
-#room5_go_to_room_4 {
+#room5_go_to_room_4{
+  position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 180px;
-  height: 220px;
+  width: 250px;
+  height: 200px;
+  /* border: 6px solid purple; */
 }
 
-#room5_go_to_room_6 {
-  top: 50px;
-  left: 350px;
-  width: 100px;
-  height: 300px;
+#room5_go_to_room_4:hover{
+  cursor: url('../../../../images/arrows/diagonal_left_arrow.png') 10 80,auto;
 }
+
+ #room5_go_to_room_4_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room5_go_to_room_4:hover #room5_go_to_room_4_text  {
+   visibility: visible;
+ }
+
+/* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
+
+#room5_go_to_room_6{
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  width: 150px;
+  height: 250px;
+  /* border: 6px solid purple; */
+}
+
+#room5_go_to_room_6:hover{
+  cursor: url('../../../../images/arrows/right_arrow.png') 80 30,auto;
+}
+
+ #room5_go_to_room_6_text {
+  width: 150px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room5_go_to_room_6:hover #room5_go_to_room_6_text  {
+   visibility: visible;
+ }
 
 /* ---------------------------- TENNIS RACKET ------------------------------- */
 

@@ -1,18 +1,58 @@
-/* ---------------------------- ROOM NAVIGATION ----------------------------- */
+/* -------------------------- NAVIGATE TO ROOM 5 ---------------------------- */
 
-#room4_go_to_room_5 {
+#room4_go_to_room_5{
+  position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 160px;
+  width: 250px;
   height: 160px;
+  /* border: 6px solid purple; */
 }
 
-#room4_go_to_room_1 {
-  bottom: 0px;
-  left: 0px;
-  width: 180px;
-  height: 300px;
+#room4_go_to_room_5:hover{
+  cursor: url('../../../../images/arrows/diagonal_right_arrow.png') 80 10,auto;
 }
+
+ #room4_go_to_room_5_text {
+  width: 100px;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+ }
+
+ #room4_go_to_room_5:hover #room4_go_to_room_5_text  {
+   visibility: visible;
+ }
+
+ /* -------------------------- NAVIGATE TO ROOM 1 ---------------------------- */
+
+ #room4_go_to_room_1{
+   position: absolute;
+   bottom: 0px;
+   left: 10px;
+   width: 180px;
+   height: 300px;
+   /* border: 6px solid purple; */
+ }
+
+ #room4_go_to_room_1:hover{
+   cursor: url('../../../../images/arrows/down_left_arrow.png') 80 10,auto;
+ }
+
+  #room4_go_to_room_1_text {
+   width: 100px;
+   visibility: hidden;
+   background-color: black;
+   color: #fff;
+   border-radius: 6px;
+   padding: 5px 0;
+  }
+
+  #room4_go_to_room_1:hover #room4_go_to_room_1_text  {
+    visibility: visible;
+  }
 
 /* -------------------------------- JESSICA -------------------------------- */
 
@@ -27,7 +67,7 @@
 .jessicas_message {
   position: absolute;
   /* border: 6px solid purple; */
-  bottom: 410px;
+  bottom: 510px;
   left: 500px;
   width: 200px;
     background-color:white;

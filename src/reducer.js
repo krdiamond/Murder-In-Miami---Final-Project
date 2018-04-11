@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 3,
+  currentRoom: 5,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
