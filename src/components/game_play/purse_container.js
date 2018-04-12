@@ -96,6 +96,7 @@ class PurseContainer extends Component {
             x={cell.x}
             y={cell.y}
             img={cell.img}
+            width={cell.width}
             findTheMovingCell={this.findTheMovingCellOnMouseDown}
           />
         );

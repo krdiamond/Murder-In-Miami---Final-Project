@@ -47,7 +47,7 @@
   height: 120px;
   z-index: 10;
   margin:10px;
-      border: 6px solid purple;
+  border: 6px solid purple;
 }
 
 .moon {
@@ -58,7 +58,7 @@
     right: 0px;
     bottom: 0px;
     margin: auto;
-    border: 6px solid purple;
+    /* border: 6px solid purple; */
 }
 
 #clearbox {
@@ -68,7 +68,7 @@
 
 #position_text{
     position: absolute;
-    border: 6px solid purple;
+    /* border: 6px solid purple; */
     top: 0px;
     right: 0px;
     left: 0px;

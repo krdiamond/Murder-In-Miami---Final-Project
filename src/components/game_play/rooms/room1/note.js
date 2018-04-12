@@ -23,6 +23,7 @@ class Note extends Component {
       x:0,
       y:10,
       img: note,
+      width: 100,
     }
 
     handleMouseDown = (e) => {
