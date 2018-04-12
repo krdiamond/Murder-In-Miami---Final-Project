@@ -26,7 +26,8 @@ class PurseContainer extends Component {
     this.props.loadPurseLocation(zone)
   }
 
-  togglePurseOpen = () => {
+  handleTogglePurseOpen = () => {
+    this.props.toggleShowPhone(false)
     this.props.toggleIsPurseOpened(!this.props.isPurseOpened)
   }
 
@@ -103,9 +104,11 @@ class PurseContainer extends Component {
 
     return (
       <div id="purse_container" ref='purse' >
-          <img src={purse} onClick={this.togglePurseOpen} width="150" alt="Your purse to store items"/>
-            {(this.props.isPurseOpened === true && this.props.showPhone === false)?
-              <div id ="purse_contents" onMouseUp={this.handleMouseUp} onMouseMove={this.handleMouseMove}> { cells }</div> : null}
+          <img src={purse} onClick={this.handleTogglePurseOpen} width="150" alt="Your purse to store items"/>
+            {this.props.isPurseOpened?
+              <div id ="purse_contents" onMouseUp={this.handleMouseUp} onMouseMove={this.handleMouseMove}>
+                { cells }
+              </div> : null}
       </div>
     );
   }

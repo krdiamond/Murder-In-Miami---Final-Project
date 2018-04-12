@@ -1,11 +1,15 @@
 
+#call_police:hover{
+  cursor: url('images/hand.png') 30 100,auto;
+}
+
 
 
 /* -------------------------------- GENERAL --------------------------------- */
 
 #app {
   text-align: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .main_container {
@@ -63,7 +67,7 @@
 }
 
 #position_text{
-      position: absolute;
+    position: absolute;
     border: 6px solid purple;
     top: 0px;
     right: 0px;

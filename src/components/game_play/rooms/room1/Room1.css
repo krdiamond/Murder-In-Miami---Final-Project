@@ -116,7 +116,7 @@
   background-color:white;
 }
 
-#jessicas_note:hover{
+#jessicas_note:hover, #room1phone:hover{
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 

@@ -10,9 +10,9 @@ import './Room5.css';
 class Room5 extends Component {
 
   state = {
-    clickShoes: false,
-    clickTennisRacket: false,
-    clickAshtray: false,
+    toggleShoesMessage: false,
+    toggleTennisRacketMessage: false,
+    toggleAshTrayMessage: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -22,19 +22,25 @@ class Room5 extends Component {
   handleTennisRacket = () => {
     this.props.foundSuspiciousItem("Tennis Racket")
     this.setState({
-      clickTennisRacket: !this.state.clickTennisRacket
+      toggleTennisRacketMessage: !this.state.toggleTennisRacketMessage,
+      toggleShoesMessage: false,
+      toggleAshTrayMessage: false,
     })
   }
 
   handleShoes = () => {
     this.setState({
-      clickShoes: !this.state.clickShoes
+      toggleShoesMessage: !this.state.toggleShoesMessage,
+      toggleTennisRacketMessage: false,
+      toggleAshTrayMessage: false,
     })
   }
 
   handleAshtray = () => {
     this.setState({
-      clickAshtray: !this.state.clickAshtray
+      toggleAshTrayMessage: !this.state.toggleAshTrayMessage,
+      toggleShoesMessage: false,
+      toggleTennisRacketMessage: false,
     })
   }
 
@@ -56,19 +62,18 @@ class Room5 extends Component {
 
         {this.props.showKeys? <Keys/>: null}
 
-
         <div id="jess_tennis_racket" onClick={this.handleTennisRacket}></div>
-        {this.state.clickTennisRacket? <div id="tennis_message">
+        {this.state.toggleTennisRacketMessage? <div id="tennis_message">
         ..hmmm ... this tennis racket is very clean but still looks worn out. Thats so weird... who cleans their tennis racket...
         </div> : null }
 
         <div id="jess_shoes" onClick={this.handleShoes}></div>
-        {this.state.clickShoes? <div id="shoe_message">
+        {this.state.toggleShoesMessage? <div id="shoe_message">
         these sneakers are covered in sand.. thats so weird.
         </div> : null }
 
         <div id="jess_ashtray" onClick={this.handleAshtray}></div>
-        {this.state.clickAshtray? <div id="ashtray_message">
+        {this.state.toggleAshTrayMessage? <div id="ashtray_message">
         there are so many cigarettes in this ashtray. Jessica sure does smoke a lot.
         </div> : null }
 

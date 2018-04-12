@@ -9,7 +9,7 @@ import './Room9.css';
 class Room9 extends Component {
 
   state = {
-    clickJess: false,
+    toggleJessMessage: false,
     canGoIntoClub: false,
   }
 
@@ -19,7 +19,7 @@ class Room9 extends Component {
 
   handleJess = () => {
     this.setState({
-      clickJess: !this.state.clickJess,
+      toggleJessMessage: !this.state.toggleJessMessage, // move message over so it's not in the way of the purse
       canGoIntoClub: true
     })
   }
@@ -31,7 +31,7 @@ class Room9 extends Component {
           <img src={room9} alt="Beach Club Parking Lot"/>
 
           <div id="beach_jess" onClick={this.handleJess}></div>
-          {this.state.clickJess? <div id="beach_jess_message">
+          {this.state.toggleJessMessage? <div id="beach_jess_message">
             OMG you are here too? Why are you following me around. You are so weird. I am finishing this cigarette and then I'm going into work and I don't want to talk to you anymore. Ugh don't go into the club and start bothering the members. You are going to get kicked out.
           </div> : null }
 

@@ -18,6 +18,7 @@ const defaultState = {
   peopleTalkedTO: [],
   playingTape: false,
   suspiciousItemsInspected: [],
+  readingHeartMessage: false,
 }
 
 const reducer = (state = defaultState, action) => {
@@ -64,6 +65,8 @@ const reducer = (state = defaultState, action) => {
       return {...state, playingTape: action.payload}
     case "SUSPICIOUS_ITEMS":
       return {...state, suspiciousItemsInspected: [...state.suspiciousItemsInspected, action.payload]}
+    case "HEART":
+      return {...state, readingHeartMessage: action.payload}
     default:
       return state
     }

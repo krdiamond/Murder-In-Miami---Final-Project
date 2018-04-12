@@ -17,6 +17,17 @@ class Room6 extends Component {
 
   handlePhoneClick = () => {
     this.props.toggleShowPhone(!this.props.showPhone)
+    this.props.toggleIsPurseOpened(false)
+  }
+
+  isBeachClubAddressInPurse = () => {
+    const result = this.props.itemsInPurse.find(item => item.title === 'Beach Club Address')
+    if (result === undefined){
+      return false
+    }
+    else {
+      return true
+    }
   }
 
 
@@ -34,7 +45,7 @@ class Room6 extends Component {
           {(this.props.showPhone === true)?
             <PhoneContainer message="Hi Allison, It's your father. Your mother and I went by your house today and we noticed you weren't home. I thought we had plans to do our usual sunday brunch? Where are you? Call me back when you get this. "/>: null}
 
-          {this.props.findFridgeNote?
+          {this.isBeachClubAddressInPurse()?
           <div id="room6_go_to_room_9" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(9)}>
             <div id="room6_go_to_room_9_text">YOU FOUND THE ADDRESS TO THE BEACH CLUB! HEAD OVER THERE</div>
           </div> :null}
@@ -55,7 +66,7 @@ class Room6 extends Component {
 function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
-    findFridgeNote: state.findFridgeNote,
+    itemsInPurse: state.itemsInPurse
   }
 }
 

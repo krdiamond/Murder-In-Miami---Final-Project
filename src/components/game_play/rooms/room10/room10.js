@@ -17,14 +17,6 @@ class Room10 extends Component {
     this.props.goToRoom(roomNum)
   }
 
-  handleHeather = () => {
-    this.setState({
-      talkedToHeather: !this.state.talkedToHeather
-    })
-    this.talkedToBothParrots()
-    this.props.addToPeopleYouHaveTalkedTo("Heather")
-  }
-
   talkedToBothParrots = () => {
     if (this.props.talkedtoParrots.includes('right') && this.props.talkedtoParrots.includes('left')) {
       return true
@@ -32,9 +24,14 @@ class Room10 extends Component {
     else{
       return false
     }
-
   }
 
+  handleHeather = () => {
+    this.setState({
+      talkedToHeather: !this.state.talkedToHeather
+    })
+    this.props.addToPeopleYouHaveTalkedTo("Heather")
+  }
 
   render() {
     return (

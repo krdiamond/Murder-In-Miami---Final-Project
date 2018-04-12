@@ -12,19 +12,27 @@ import FridgeNote from './fridge_note'
 
 class Room7 extends Component {
 
+  state = {
+    findFridgeNote: false,
+  }
+
+
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
   }
 
   handlePhoneClick = () => {
     this.props.toggleShowPhone(!this.props.showPhone)
+    this.props.toggleIsPurseOpened(false)
   }
 
   handleFindFridgeNote = () => {
     this.props.showBeachAddress(!this.props.showNoteBeachAddress)
-    this.props.foundFridgeNote()
+    this.props.toggleShowPhone(!this.props.showPhone)
+    this.setState({
+      findFridgeNote: true,
+    })
   }
-
 
 
   render() {
@@ -33,7 +41,7 @@ class Room7 extends Component {
 
           <img src={room7} alt="Allison's Kitchen"/>
 
-          {this.props.findFridgeNote? null : <img id="fridge_note" src={fridgeNote} onClick={this.handleFindFridgeNote} alt="Fridge Note"/> }
+          {this.state.findFridgeNote? null : <img id="fridge_note" src={fridgeNote} onClick={this.handleFindFridgeNote} alt="Fridge Note"/> }
           {this.props.showNoteBeachAddress? <FridgeNote/> : null }
 
           <div id="room7phone" onClick={this.handlePhoneClick} >
@@ -60,7 +68,6 @@ function mapStateToProps(state){
   return {
     showPhone: state.showPhone,
     isPurseOpened: state.isPurseOpened,
-    findFridgeNote :state.findFridgeNote,
     showNoteBeachAddress: state.showNoteBeachAddress,
   }
 }

@@ -152,3 +152,10 @@ export function foundSuspiciousItem(item) {
     payload: item
   }
 }
+
+export function toggleHeart(result) {
+  return {
+    type: "HEART",
+    payload: result
+  }
+}

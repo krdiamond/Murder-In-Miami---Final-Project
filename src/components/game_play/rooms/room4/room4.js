@@ -16,15 +16,21 @@ class Room4 extends Component {
     toggleJessKneesMessage: false,
     toggleTooBusyMessage: false,
     togglePlantMessage: false,
-    jessIsTooBusy: false,
-    youAreBeingNosey: false,
-    stopSnooping: false,
+    toggleStopSnoopingMessage: false,
+    toggleNoseyMessage: false,
+    jessSaidShesTooBusyToTalk: false,
   }
 
   handleGoToRoom = (roomNum) => {
-    if (roomNum === 5 && this.state.jessIsTooBusy === false){
+    if (roomNum === 5 && this.state.jessSaidShesTooBusyToTalk === false){
+      this.props.toggleShowPhone(false)
       this.setState({
-        youAreBeingNosey: !this.state.youAreBeingNosey
+        toggleNoseyMessage: !this.state.toggleNoseyMessage,
+        toggleTalkToJessMessage: false,
+        toggleJessKneesMessage: false,
+        toggleTooBusyMessage: false,
+        togglePlantMessage: false,
+        toggleStopSnoopingMessage: false,
       })
     }
     else {
@@ -33,43 +39,84 @@ class Room4 extends Component {
   }
 
   handleTalkToJess = () => {
+    this.props.toggleShowPhone(false)
     this.setState({
-      toggleTalkToJessMessage: !this.state.toggleTalkToJessMessage
+      toggleTalkToJessMessage: !this.state.toggleTalkToJessMessage,
+      toggleJessKneesMessage: false,
+      toggleTooBusyMessage: false,
+      togglePlantMessage: false,
+      toggleNoseyMessage: false,
     })
     this.props.addToPeopleYouHaveTalkedTo("Jessica")
   }
 
   handleJessKnees = () => {
+    this.props.toggleShowPhone(false)
     this.setState({
-      toggleJessKneesMessage: !this.state.toggleJessKneesMessage
+      toggleJessKneesMessage: !this.state.toggleJessKneesMessage,
+      toggleTalkToJessMessage: false,
+      toggleTooBusyMessage: false,
+      togglePlantMessage: false,
+      toggleNoseyMessage: false,
     })
   }
 
   handleCellPhone = () => {
+    this.props.toggleShowPhone(false)
     this.setState({
-      jessIsTooBusy: true,
+      jessSaidShesTooBusyToTalk: true,
       toggleTooBusyMessage: !this.state.toggleTooBusyMessage,
+      toggleTalkToJessMessage: false,
+      toggleJessKneesMessage: false,
+      togglePlantMessage: false,
+      toggleNoseyMessage: false,
     })
   }
 
   handlePlant = () => {
+    this.props.toggleShowPhone(false)
     this.setState({
-      togglePlantMessage: !this.state.togglePlantMessage
+      togglePlantMessage: !this.state.togglePlantMessage,
+      toggleTalkToJessMessage: false,
+      toggleJessKneesMessage: false,
+      toggleTooBusyMessage: false,
     })
   }
 
   handlePhoneClick = () => {
-    this.props.toggleShowPhone(!this.props.showPhone)
+    this.setState({
+      toggleTalkToJessMessage: false,
+      toggleJessKneesMessage: false,
+      toggleTooBusyMessage: false,
+      togglePlantMessage: false,
+      toggleNoseyMessage: false,
+    })
+      this.props.toggleIsPurseOpened(false)
+      this.props.toggleShowPhone(!this.props.showPhone)
   }
 
   handleFindCrumpledNote = () => {
-    if (this.state.jessIsTooBusy) {
+    if (this.state.jessSaidShesTooBusyToTalk) {
       this.props.crumpledNoteRoom4Found()
       this.props.showAllisonsPhoneNumber(!this.props.showingAllisonsPhoneNumber)
+      this.props.toggleShowPhone(false)
+      this.setState({
+        toggleTalkToJessMessage: false,
+        toggleJessKneesMessage: false,
+        toggleTooBusyMessage: false,
+        togglePlantMessage: false,
+        toggleNoseyMessage: false,
+      })
     }
     else {
+      this.props.toggleShowPhone(false)
       this.setState({
-        stopSnooping: !this.state.stopSnooping
+        toggleStopSnoopingMessage: !this.state.toggleStopSnoopingMessage,
+        toggleTalkToJessMessage: false,
+        toggleJessKneesMessage: false,
+        toggleTooBusyMessage: false,
+        togglePlantMessage: false,
+        toggleNoseyMessage: false,
       })
     }
   }
@@ -83,7 +130,7 @@ class Room4 extends Component {
         {this.props.findRoom4CrumpledNote? null :
           <img id="room4crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
 
-        {this.state.stopSnooping?
+        {this.state.toggleStopSnoopingMessage?
           <div className="jessicas_message">
            DON'T TOUCH ANY OF MY THINGS!!!!! STOP SNOOPING AROUND!!!!
          </div> :null}
@@ -120,7 +167,7 @@ class Room4 extends Component {
             <div id="room4_go_to_room_1_text"> GO TO KELLY'S HOUSE</div>
         </div>
 
-        {this.state.jessIsTooBusy?
+        {this.state.jessSaidShesTooBusyToTalk?
         <div id="room4_go_to_room_5" className="traverse_rooms" onClick={(e) => this.handleGoToRoom(5)}>
            <div id="room4_go_to_room_5_text">SNEAK INTO JESSICA'S LIVING ROOM WHILE SHE'S BUSY TEXTING </div>
         </div> :
@@ -128,7 +175,7 @@ class Room4 extends Component {
           <div id="room4_go_to_room_5_text" >GO TO JESSICA'S LIVING ROOM</div>
         </div> }
 
-        {this.state.youAreBeingNosey?
+        {this.state.toggleNoseyMessage?
            <div className="jessicas_message">
              OMG WHAT ARE YOU DOING??? You can't just walk around my house. STOP SNOOPING AROUND. PLEASE LEAVE.
           </div> : null}

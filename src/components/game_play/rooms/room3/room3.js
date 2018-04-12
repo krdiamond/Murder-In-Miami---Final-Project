@@ -16,17 +16,19 @@ class Room3 extends Component {
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
   }
-  
+
   toggleClothesMessage =() => {
     this.setState({
-      showClothesMessage: !this.state.showClothesMessage
+      showClothesMessage: !this.state.showClothesMessage,
+      talkToSnake: false,
     })
   }
 
   handleSnake = () => {
     this.props.receivedClueFromSnake()
     this.setState({
-      talkToSnake: !this.state.talkToSnake
+      talkToSnake: !this.state.talkToSnake,
+      showClothesMessage: false,
     })
     this.props.addToPeopleYouHaveTalkedTo("Pet Snake")
   }

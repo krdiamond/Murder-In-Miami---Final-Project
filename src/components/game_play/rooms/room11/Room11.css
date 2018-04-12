@@ -1,4 +1,4 @@
-#parrot_left:hover, #parrot_right:hover, #tape:hover {
+#parrot_left:hover, #parrot_right:hover, #tape:hover, #room11phone:hover {
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
@@ -6,28 +6,27 @@
 
 /* -------------------------- NAVIGATE TO ROOM 10 ---------------------------- */
 
-#room11_go_to_room_10{
+#room11_go_to_room_10 {
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 10px;
   width: 300px;
   height: 200px;
   /* border: 6px solid purple; */
 }
 
 #room11_go_to_room_10:hover{
-  cursor: url('../../../../images/arrows/down_arrow.png') 30 80,auto;
+  cursor: url('../../../../images/arrows/down_left_arrow.png') 10 30,auto;
 }
 
- #room11_go_to_room_10_text {
-  width: 100px;
-  visibility: hidden;
-  background-color: black;
-  color: #fff;
-  border-radius: 6px;
-  padding: 5px 0;
-  margin: auto;
- }
+#room11_go_to_room_10_text {
+ width: 100px;
+ visibility: hidden;
+ background-color: black;
+ color: #fff;
+ border-radius: 6px;
+ padding: 5px 0;
+}
 
  #room11_go_to_room_10:hover #room11_go_to_room_10_text  {
    visibility: visible;

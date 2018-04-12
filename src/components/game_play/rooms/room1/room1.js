@@ -13,7 +13,6 @@ class Room1 extends Component {
 
   state = {
     openingStoryDisplayed: true,
-    readHeart: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -28,9 +27,8 @@ class Room1 extends Component {
 
   handlePhoneClick = () => {
     this.props.toggleShowPhone(!this.props.showPhone)
-    this.setState({
-      showKellysUniformMessage: false
-    })
+    this.props.toggleIsPurseOpened(false)
+    this.props.toggleHeart(false)
   }
 
   toggleKellysUniform =() => {
@@ -38,17 +36,16 @@ class Room1 extends Component {
   }
 
   handleFindCrumpledNote = () => {
+    this.props.toggleShowPhone(false)
     this.props.crumpledNoteFound()
-    this.props.showJessicasNote(!this.props.findJessicasNote)
+    this.props.showJessicasNote(true)
+    this.props.toggleHeart(false )
   }
 
   handleHeart = () => {
-    this.setState({
-      readHeart: !this.state.readHeart
-    })
+    this.props.toggleShowPhone(false)
+    this.props.toggleHeart(!this.props.readingHeartMessage)
   }
-
-
 
   render() {
     return (
@@ -60,7 +57,7 @@ class Room1 extends Component {
         {this.props.findJessicasNote? <Note/> : null }
 
         <div id="heart" onClick={this.handleHeart}> </div>
-        {this.state.readHeart? <div id="heart_award">"AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE IN 1987" what a strange award... but then why were there cigarettes found at the crime scene?
+        {this.props.readingHeartMessage? <div id="heart_award">"AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE IN 1987" what a strange award... but then why were there cigarettes found at the crime scene?
         </div> : null}
 
         <div id="room1phone" onClick={this.handlePhoneClick} >
@@ -103,7 +100,8 @@ function mapStateToProps(state){
     findCrumpledNote: state.findCrumpledNote,
     findJessicasNote: state.findJessicasNote,
     showNoteWithBeachAddress: state.showNoteWithBeachAddress,
-    gotClueFromSnake: state.gotClueFromSnake
+    gotClueFromSnake: state.gotClueFromSnake,
+    readingHeartMessage: state.readingHeartMessage
   }
 }
 

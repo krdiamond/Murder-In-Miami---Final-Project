@@ -35,14 +35,6 @@
 
 
 /* ------------------------------ WINE GLASSES ------------------------------ */
-#wine_glass_right {
-  position: absolute;
-  width: 50px;
-  height: 100px;
-  top: 510px;
-  right: 580px;
-  /* border: 3px solid green; */
-}
 
 #wine_glass_left{
   position: absolute;

@@ -20,13 +20,15 @@ class Room2 extends Component {
 
   toggleRacketMessage =() => {
     this.setState({
-      showRacketMessage: !this.state.showRacketMessage
+      showRacketMessage: !this.state.showRacketMessage,
+      showBedMessage: false,
     })
   }
 
   toggleBedMessage =() => {
     this.setState({
-      showBedMessage: !this.state.showBedMessage
+      showBedMessage: !this.state.showBedMessage,
+      showRacketMessage:false,
     })
   }
 

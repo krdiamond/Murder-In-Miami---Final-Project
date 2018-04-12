@@ -11,8 +11,8 @@ import Tape from './tape'
 class Room11 extends Component {
 
   state = {
-    clickParrotLeft: false,
-    clickParrotRight: false,
+    toggleParrotMessageLeft: false,
+    toggleParrotMessageRight: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -21,19 +21,28 @@ class Room11 extends Component {
 
   handlePhoneClick = () => {
     this.props.toggleShowPhone(!this.props.showPhone)
+    this.props.toggleIsPurseOpened(false)
+    this.setState({
+      toggleParrotMessageLeft: false,
+      toggleParrotMessageRight: false,
+    })
   }
 
   handleParrotLeft = () => {
+    this.props.toggleShowPhone(false)
     this.props.parrotTalkedTo('left')
     this.setState({
-      clickParrotLeft: !this.state.clickParrotLeft
+      toggleParrotMessageLeft: !this.state.toggleParrotMessageLeft,
+      toggleParrotMessageRight: false,
     })
   }
 
   handleParrotRight = () => {
+    this.props.toggleShowPhone(false)
     this.props.parrotTalkedTo('right')
     this.setState({
-      clickParrotRight: !this.state.clickParrotRight
+      toggleParrotMessageRight: !this.state.toggleParrotMessageRight,
+      toggleParrotMessageLeft: false,
     })
   }
 
@@ -47,15 +56,15 @@ class Room11 extends Component {
         {this.props.showTape? <Tape/>: null}
 
           <div id="room11phone" onClick={this.handlePhoneClick} >
-          </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
+          </div> {this.props.showPhone? <PhoneContainer message="0"/>: null}
 
           <div id="parrot_left" onClick={this.handleParrotLeft}></div>
-          {this.state.clickParrotLeft? <div className="parrot_message">
+          {this.state.toggleParrotMessageLeft? <div className="parrot_message">
           squawk squawk take her down to the beach take her down to the beach squawk
           </div> : null }
 
           <div id="parrot_right" onClick={this.handleParrotRight}></div>
-          {this.state.clickParrotRight? <div className="parrot_message">
+          {this.state.toggleParrotMessageRight? <div className="parrot_message">
           squawk ... squawk .. Heather I don't know Heather I don't know squawk ....
           </div> : null }
 
