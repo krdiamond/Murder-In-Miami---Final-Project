@@ -29,6 +29,9 @@ class Room1 extends Component {
     this.props.toggleShowPhone(!this.props.showPhone)
     this.props.toggleIsPurseOpened(false)
     this.props.toggleHeart(false)
+    this.setState({
+      openingStoryDisplayed: false,
+    })
   }
 
   toggleKellysUniform =() => {
@@ -40,11 +43,17 @@ class Room1 extends Component {
     this.props.crumpledNoteFound()
     this.props.showJessicasNote(true)
     this.props.toggleHeart(false )
+    this.setState({
+      openingStoryDisplayed: false,
+    })
   }
 
   handleHeart = () => {
     this.props.toggleShowPhone(false)
     this.props.toggleHeart(!this.props.readingHeartMessage)
+    this.setState({
+      openingStoryDisplayed: false,
+    })
   }
 
   render() {

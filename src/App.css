@@ -26,19 +26,29 @@
 
 #purse_container {
   position: absolute;
-  width:150px;
+  width:200px;
   right:0px;
   top: 0px;
   z-index: 2;
-  margin: 20px;
-  height: 200px;
-  /* border: 6px solid purple; */
+  margin-top: 10px;
+  margin-right: 10px;
+  /* border: 1px solid purple; */
+}
+
+#purse {
+    position: relative;
+    height: 200px;
+    right:0px;
 }
 
 #purse_contents {
+  position: relative;
   background: white;
   width: 150PX;
-  height: 645px;
+  padding-bottom: 10px;
+  /* height: 700px; */
+  margin: auto;
+  /* border: 1px solid purple; */
 }
 
 .cell {
@@ -47,7 +57,7 @@
   height: 120px;
   z-index: 10;
   margin:10px;
-  border: 6px solid purple;
+  /* border: 6px solid purple; */
 }
 
 .moon {
