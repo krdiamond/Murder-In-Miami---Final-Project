@@ -1,3 +1,8 @@
+#room7phone:hover, #fridge_note:hover, #beach_club_address:hover {
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
 /* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
 
 #room7_go_to_room_6{

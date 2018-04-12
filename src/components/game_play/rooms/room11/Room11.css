@@ -1,3 +1,9 @@
+#parrot_left:hover, #parrot_right:hover, #tape:hover {
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
+
 /* -------------------------- NAVIGATE TO ROOM 10 ---------------------------- */
 
 #room11_go_to_room_10{

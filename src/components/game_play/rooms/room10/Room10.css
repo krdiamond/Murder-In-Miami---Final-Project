@@ -1,3 +1,8 @@
+#heather:hover {
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
 /* -------------------------- NAVIGATE TO ROOM 11 ---------------------------- */
 
 #room10_go_to_room_11{

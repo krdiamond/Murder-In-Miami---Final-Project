@@ -1,3 +1,9 @@
+#jess_tennis_racket:hover, #jess_shoes:hover, #jess_ashtray:hover, #keys:hover{
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
+
 /* -------------------------- NAVIGATE TO ROOM 4 ---------------------------- */
 
 #room5_go_to_room_4{

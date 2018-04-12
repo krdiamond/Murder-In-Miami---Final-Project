@@ -1,3 +1,9 @@
+#wine_glass_right:hover, #wine_glass_left:hover, #allisons_tennis_racket:hover, #cigs:hover, #room8phone:hover, #beach_scene:hover {
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
+
+
 /* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
 
 #room8_go_to_room_7{
