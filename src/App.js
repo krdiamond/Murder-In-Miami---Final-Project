@@ -15,6 +15,7 @@ class App extends Component {
           <Route path="/play" render={()=><GameContainer/>}/>
           <Route component={NotFound}/>
         </Switch>
+        
       </div>
     );
   }

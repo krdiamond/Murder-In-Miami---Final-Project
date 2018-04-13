@@ -17,14 +17,6 @@ class PurseContainer extends Component {
   };
 
 
-  componentDidMount = () => {
-    this.findPurseDropZone()
-  }
-
-  findPurseDropZone = () => {
-    let zone = ReactDOM.findDOMNode(this.refs['purse']).getBoundingClientRect()
-    this.props.loadPurseLocation(zone)
-  }
 
   handleTogglePurseOpen = () => {
     this.props.toggleShowPhone(false)
@@ -59,7 +51,6 @@ class PurseContainer extends Component {
   }
 
   handleMouseUp = (event) => {
-          console.log(this.state.holdTitle)
     if (this.state.holdTitle === 'tape'){
       this.insertTape()
     }
@@ -67,14 +58,10 @@ class PurseContainer extends Component {
   }
 
   insertTape = () => {
-    if(this.state.x > -(this.props.TVDropZone.x) &&
-        this.state.x < -(this.props.TVDropZone.x - 100) &&
-        this.state.y > -(this.props.TVDropZone.y) &&
-        this.state.y < -(this.props.TVDropZone.y - 150) &&
-        this.props.currentRoom === 8) {
-          console.log("i'm here")
-        this.playTape()
-      }
+    if(this.state.x > -739 && this.state.x < -639 &&
+      this.state.y > -100 && this.state.y < 11) {
+      this.playTape()
+    }
   }
 
   playTape = () => {
@@ -85,6 +72,8 @@ class PurseContainer extends Component {
   sortItemsInThePurseByID = () => {
     return this.props.itemsInPurse.sort((a,b) => a.id - b.id)
   }
+
+
 
   render() {
     let cells = this.sortItemsInThePurseByID().map((cell) => {
@@ -104,7 +93,7 @@ class PurseContainer extends Component {
     );
 
     return (
-      <div id="purse_container" ref='purse' >
+      <div id="purse_container" >
           <img id="purse" src={purse} onClick={this.handleTogglePurseOpen} alt="Your purse to store items"/>
           {this.props.isPurseOpened?
             <div id ="purse_contents" onMouseUp={this.handleMouseUp} onMouseMove={this.handleMouseMove}>

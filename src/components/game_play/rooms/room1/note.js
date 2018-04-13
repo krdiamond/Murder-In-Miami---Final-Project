@@ -49,10 +49,8 @@ class Note extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > this.props.purseDropZone.right &&
-        this.state.x < (this.props.purseDropZone.right + 100) &&
-        this.state.y < (this.props.purseDropZone.bottom - 100)){
-        console.log("i'm here")
+      if(this.state.x > 633 && this.state.x < 683 &&
+        this.state.y > 0 && this.state.y < 64) {
         this.putNoteInPurse()
       }
     }
@@ -64,6 +62,8 @@ class Note extends Component {
 
 
   render() {
+    // console.log("x",this.state.x)
+    // console.log("y",this.state.y)
     return (
       <div
         id="jessicas_note"

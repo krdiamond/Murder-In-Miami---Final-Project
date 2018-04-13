@@ -52,9 +52,8 @@ class Tape extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > this.props.purseDropZone.right &&
-        this.state.x < (this.props.purseDropZone.right + 100) &&
-        this.state.y < (this.props.purseDropZone.bottom - 100)){
+      if(this.state.x > 633 && this.state.x < 683 &&
+        this.state.y > 0 && this.state.y < 64) {
         this.putTapeInPurse()
       }
     }

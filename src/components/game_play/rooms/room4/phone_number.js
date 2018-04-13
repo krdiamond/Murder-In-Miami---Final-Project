@@ -23,6 +23,7 @@ class PhoneNumber extends Component {
       x:0,
       y:10,
       img: note,
+      width:100,
     }
 
     handleMouseDown = (e) => {
@@ -48,9 +49,8 @@ class PhoneNumber extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > this.props.purseDropZone.right &&
-        this.state.x < (this.props.purseDropZone.right + 100) &&
-        this.state.y < (this.props.purseDropZone.bottom - 100)){
+      if(this.state.x > 633 && this.state.x < 683 &&
+        this.state.y > 0 && this.state.y < 64) {
         this.putNoteInPurse()
       }
     }

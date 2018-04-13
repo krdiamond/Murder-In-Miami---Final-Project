@@ -6,20 +6,13 @@ const defaultState = {
   findJessicasNote: false,
   findFridgeNote: false,
   showNoteBeachAddress: false,
-  purseDropZone: {},
-  itemsInPurse:
-  [{id: 1, title: "note", x: 0, y: 10, width: 100, img: "/static/media/note.4a5fa407.png"},
-  {id: 2, title: "Phone Number", x: 0, y: 10,  width: 100, img: "/static/media/note.4a5fa407.png"},
-  {id: 0, title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"},
-  {id: 3, title: "keys", x: 0, y: 10, width: 50, img: "/static/media/keys.e1c9c6c0.png"},
-  {id: 4, title: "Beach Club Address", x: 0, y: 10, width: 100, img: "/static/media/fridge_note.bf29f077.png"}],
+  itemsInPurse:[{id: 0, title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"}],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,
   gotClueFromSnake: false,
   findRoom4CrumpledNote: false,
   showingAllisonsPhoneNumber: false,
-  TVDropZone: {},
   peopleTalkedTO: [],
   playingTape: false,
   suspiciousItemsInspected: [],
@@ -38,10 +31,6 @@ const reducer = (state = defaultState, action) => {
         return {...state, findCrumpledNote: action.payload}
     case "SHOW_JESSICAS_NOTE":
         return {...state, findJessicasNote: action.payload}
-    case "LOAD_PURSE_LOCATION":
-        return {...state, purseDropZone: action.payload}
-    case "LOAD_TV_LOCATION":
-        return {...state, TVDropZone: action.payload}
     case "ADD_ITEM_TO_PURSE":
         return {...state, itemsInPurse: [...state.itemsInPurse, action.payload]}
     case "SHOW_TAPE":
@@ -83,8 +72,8 @@ const reducer = (state = defaultState, action) => {
 export default reducer
 
 // ALL ITEMS OBJECTS INCASE THEY ARE NEEDED FOR TESTING
-// {id: 1, title: "note", x: 0, y: 10, img: "/static/media/note.4a5fa407.png"},
-// {id: 2, title: "Phone Number", x: 0, y: 10,  img: "/static/media/note.4a5fa407.png"},
+// {id: 1, title: "note", x: 0, y: 10, width: 100, img: "/static/media/note.4a5fa407.png"},
+// {id: 2, title: "Phone Number", x: 0, y: 10,  width: 100, img: "/static/media/note.4a5fa407.png"},
 // {id: 0, title: "tape", x: 0, y: 10, img: "/static/media/tape.9736635e.png"},
-// {id: 3, title: "keys", x: 0, y: 10, img: "/static/media/keys.e1c9c6c0.png"},
-// {id: 4, title: "Beach Club Address", x: 0, y: 10, img: "/static/media/fridge_note.bf29f077.png"}
+// {id: 3, title: "keys", x: 0, y: 10, width: 50, img: "/static/media/keys.e1c9c6c0.png"},
+// {id: 4, title: "Beach Club Address", x: 0, y: 10, width: 100, img: "/static/media/fridge_note.bf29f077.png"}

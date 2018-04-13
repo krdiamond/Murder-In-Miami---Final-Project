@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import * as actions from '../../actions';
 import '../../App.css';
 import StartGame from './start_game';
-import Television from './television';
 import Room1 from './rooms/room1/room1';
 import Room2 from './rooms/room2/room2';
 import Room3 from './rooms/room3/room3';
@@ -16,6 +15,7 @@ import Room9 from './rooms/room9/room9';
 import Room10 from './rooms/room10/room10';
 import Room11 from './rooms/room11/room11';
 import PurseContainer from './purse_container';
+import ReactDOM from 'react-dom';
 
 
 class GameContainer extends Component {
@@ -32,8 +32,7 @@ class GameContainer extends Component {
     Room8,
     Room9,
     Room10,
-    Room11
-  ];
+    Room11];
 
   // componentDidMount = () => {
   //   setInterval(this.tick, 1000);
@@ -43,13 +42,14 @@ class GameContainer extends Component {
   //   this.props.startTimer(this.props.timer)
   // }
 
+
   render() {
     let Room = this.rooms[this.props.currentRoom];
     return (
       <div className="main_container">
         <Room />
-        <PurseContainer/>
-        <Television/>
+        <div id="clear_purse" onMouseUp={this.handleMouseUpOnPurseContainer}></div>
+        <PurseContainer  ref='purse'/>
       </div>
     );
   }
@@ -58,9 +58,6 @@ class GameContainer extends Component {
 function mapStateToProps(state){
   return {
     currentRoom: state.currentRoom,
-    peopleTalkedTO: state.peopleTalkedTO,
-    timer: state.timer,
-    itemsInPurse: state.itemsInPurse,
   }
 }
 

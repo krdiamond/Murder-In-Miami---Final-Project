@@ -1,9 +1,7 @@
 
-#call_police:hover{
+#call_police:hover, #purse_container:hover, #blinking_message_dot:hover {
   cursor: url('images/hand.png') 30 100,auto;
 }
-
-
 
 /* -------------------------------- GENERAL --------------------------------- */
 
@@ -29,16 +27,17 @@
   width:200px;
   right:0px;
   top: 0px;
-  z-index: 2;
   margin-top: 10px;
   margin-right: 10px;
-  /* border: 1px solid purple; */
+  border: 6px solid purple;
+  z-index: 2 ;
 }
 
 #purse {
     position: relative;
     height: 200px;
     right:0px;
+      z-index: 1;
 }
 
 #purse_contents {
@@ -46,7 +45,7 @@
   background: white;
   width: 150PX;
   padding-bottom: 10px;
-  /* height: 700px; */
+  height: 654px;
   margin: auto;
   /* border: 1px solid purple; */
 }
