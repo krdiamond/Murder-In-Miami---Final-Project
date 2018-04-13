@@ -7,10 +7,10 @@
 
 #room7_go_to_room_6{
   position: absolute;
-  top: 380px;
+  top: 445px;
   left: 10px;
   width: 180px;
-  height: 250px;
+  height: 239px;
   /* border: 6px solid purple; */
 }
 
@@ -37,8 +37,8 @@
   position: absolute;
   bottom: 0px;
   left: 10px;
-  width: 280px;
-  height: 250px;
+  width: 217px;
+  height: 200px;
   /* border: 6px solid purple; */
 }
 
@@ -64,9 +64,9 @@
 #room7phone {
   position: absolute;
   width: 90px;
-  height: 50px;
-  top: 809px;
-  left: 302px;
+  height: 51px;
+  bottom: 28px;
+  left: 241px;
   /* border: 3px solid green; */
 }
 
@@ -74,8 +74,9 @@
 
 #fridge_note {
   position: absolute;
-  top: 312px;
+  top: 380px;
   left: 30px;
+  height: 55px;
 }
 
 #beach_club_address {
