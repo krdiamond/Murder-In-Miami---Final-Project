@@ -1,9 +1,13 @@
+#tennis_racket:hover{
+  cursor: url('../../../../images/hand.png') 30 100,auto;
+}
+
 /* -------------------------- NAVIGATE TO ROOM 1 ---------------------------- */
 
 #room2_go_to_room_1{
   position: absolute;
-  top: 150px;
-  left: 214px;
+  top: 271px;
+  left: 162px;
   width: 100px;
   height: 250px;
   /* border: 6px solid purple; */
@@ -58,15 +62,11 @@
 
 #tennis_racket {
   position: absolute;
-  /* border: 3px solid green; */
-  width: 150px;
+  width: 180px;
   height: 100px;
-  bottom: 110px;
-  left: 500px;
-}
-
-#tennis_racket:hover{
-  cursor: url('../../../../images/hand.png') 30 100,auto;
+  bottom: 71px;
+  left: 369px;
+  /* border: 3px solid green; */
 }
 
 #racket_message {
@@ -76,16 +76,17 @@
   height: 170px;
   bottom: 210px;
   left: 500px;
+    border: 3px solid green;
 }
 /* ----------------------------------- BED ---------------------------------- */
 
 #bed {
   position: absolute;
-  /* border: 3px solid green; */
-  width: 400px;
+  width: 319px;
   height: 300px;
-  bottom: 300px;
+  bottom: 216px;
   right: 0px;
+  /* border: 3px solid green; */
 }
 
 #bed:hover{

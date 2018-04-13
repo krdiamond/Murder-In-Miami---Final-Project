@@ -10,7 +10,7 @@
   bottom: 0px;
   left: 0px;
   width: 100px;
-  height: 280px;
+  height: 230px;
   /* border: 6px solid purple; */
 }
 
@@ -34,32 +34,31 @@
 
 /* ------------------------------- CLOTHES  --------------------------------- */
 
-#clothes {
-  position: absolute;
-  /* border: 3px solid green; */
-  width: 120px;
-  height: 120px;
-  bottom: 100px;
-  left: 650px;
-}
-
 #shoes {
   position: absolute;
-  /* border: 3px solid green; */
-  width: 150px;
+  width: 120px;
   height: 80px;
-  bottom: 50px;
-  left: 700px;
+  bottom: 34px;
+  left: 576px;
+  /* border: 6px solid green; */
+}
+
+#clothes {
+  position: absolute;
+  width: 155px;
+  height: 120px;
+  bottom: 79px;
+  left: 510px;
+  /* border: 6px solid purple; */
 }
 
 #clothes_message {
   position: absolute;
-  border: 6px solid purple;
   width: 200px;
   height: 80px;
   bottom: 210px;
   left: 500px;
-    background-color:white;
+  background-color:white;
 }
 
 /* -------------------------------- SNAKE  ---------------------------------- */
@@ -68,8 +67,8 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  bottom: 230px;
-  left: 150px;
+  bottom: 190px;
+  left: 119px;
   /* border: 6px solid purple; */
 }
 

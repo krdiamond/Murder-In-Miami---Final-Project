@@ -46,10 +46,9 @@ class GameContainer extends Component {
   render() {
     let Room = this.rooms[this.props.currentRoom];
     return (
-      <div className="main_container">
+      <div id="game_container">
         <Room />
-        <div id="clear_purse" onMouseUp={this.handleMouseUpOnPurseContainer}></div>
-        <PurseContainer  ref='purse'/>
+        <PurseContainer/>
       </div>
     );
   }
