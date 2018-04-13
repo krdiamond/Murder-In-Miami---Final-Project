@@ -19,7 +19,9 @@ class PhoneContainer extends Component {
 
   handleClickMessage = () => {
     this.setState({
-      messageDisplayed: true
+      messageDisplayed: !this.state.messageDisplayed,
+      toggleCallPolice: false,
+      toggleCallAllison: false,
     })
     if (this.props.currentRoom === 6){
       this.props.addToPeopleYouHaveTalkedTo("Allison's Dad")
@@ -28,7 +30,9 @@ class PhoneContainer extends Component {
 
   callPolice = () => {
     this.setState({
-      toggleCallPolice: !this.state.toggleCallPolice
+      toggleCallPolice: !this.state.toggleCallPolice,
+      toggleCallAllison: false,
+      messageDisplayed: false,
     })
   }
 
@@ -41,6 +45,15 @@ class PhoneContainer extends Component {
     }
   }
 
+  callAllison = () => {
+    this.setState({
+      toggleCallAllison: !this.state.toggleCallAllison,
+      messageDisplayed: false,
+      toggleCallPolice: false,
+    })
+    this.props.addToPeopleYouHaveTalkedTo("Allison")
+  }
+
   isAllisonsPhoneNumberInPurse = () => {
     const result = this.props.itemsInPurse.find(item => item.title === 'Phone Number')
     if (result === undefined){
@@ -49,13 +62,6 @@ class PhoneContainer extends Component {
     else {
       return true
     }
-  }
-
-  callAllison = () => {
-    this.setState({
-      toggleCallAllison: !this.state.toggleCallAllison
-    })
-    this.props.addToPeopleYouHaveTalkedTo("Allison")
   }
 
   render() {

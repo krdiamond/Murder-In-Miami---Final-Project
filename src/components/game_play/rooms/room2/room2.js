@@ -1,3 +1,7 @@
+// add a uturn arrow to go to the  office room
+
+
+
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {goToRoom} from '../../../../actions'

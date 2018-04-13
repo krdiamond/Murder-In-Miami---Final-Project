@@ -28,7 +28,7 @@ class Room7 extends Component {
 
   handleFindFridgeNote = () => {
     this.props.showBeachAddress(!this.props.showNoteBeachAddress)
-    this.props.toggleShowPhone(!this.props.showPhone)
+    this.props.toggleShowPhone(false)
     this.setState({
       findFridgeNote: true,
     })

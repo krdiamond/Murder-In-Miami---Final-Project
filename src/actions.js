@@ -48,20 +48,6 @@ export function storeNoteInPurse() {
   }
 }
 
-export function loadPurseLocation(zone) {
-  return {
-    type: "LOAD_PURSE_LOCATION",
-    payload: zone
-  }
-}
-
-export function loadTVLocation(zone) {
-  return {
-    type: "LOAD_TV_LOCATION",
-    payload: zone
-  }
-}
-
 export function addItemToPurse(item) {
   return {
     type: "ADD_ITEM_TO_PURSE",

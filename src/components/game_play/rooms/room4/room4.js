@@ -46,6 +46,7 @@ class Room4 extends Component {
       toggleTooBusyMessage: false,
       togglePlantMessage: false,
       toggleNoseyMessage: false,
+      toggleStopSnoopingMessage: false,
     })
     this.props.addToPeopleYouHaveTalkedTo("Jessica")
   }
@@ -58,6 +59,7 @@ class Room4 extends Component {
       toggleTooBusyMessage: false,
       togglePlantMessage: false,
       toggleNoseyMessage: false,
+      toggleStopSnoopingMessage: false,
     })
   }
 
@@ -70,6 +72,7 @@ class Room4 extends Component {
       toggleJessKneesMessage: false,
       togglePlantMessage: false,
       toggleNoseyMessage: false,
+      toggleStopSnoopingMessage: false,
     })
   }
 
@@ -80,6 +83,7 @@ class Room4 extends Component {
       toggleTalkToJessMessage: false,
       toggleJessKneesMessage: false,
       toggleTooBusyMessage: false,
+      toggleStopSnoopingMessage: false,
     })
   }
 
@@ -90,6 +94,7 @@ class Room4 extends Component {
       toggleTooBusyMessage: false,
       togglePlantMessage: false,
       toggleNoseyMessage: false,
+      toggleStopSnoopingMessage: false,
     })
       this.props.toggleIsPurseOpened(false)
       this.props.toggleShowPhone(!this.props.showPhone)
@@ -106,6 +111,7 @@ class Room4 extends Component {
         toggleTooBusyMessage: false,
         togglePlantMessage: false,
         toggleNoseyMessage: false,
+        toggleStopSnoopingMessage: false,
       })
     }
     else {

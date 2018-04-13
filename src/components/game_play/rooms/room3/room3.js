@@ -25,12 +25,21 @@ class Room3 extends Component {
   }
 
   handleSnake = () => {
-    this.props.receivedClueFromSnake()
-    this.setState({
-      talkToSnake: !this.state.talkToSnake,
-      showClothesMessage: false,
-    })
-    this.props.addToPeopleYouHaveTalkedTo("Pet Snake")
+    if (this.isMeanLetterInPurse() === true){
+      this.props.receivedClueFromSnake()
+      this.setState({
+        talkToSnake: !this.state.talkToSnake,
+        showClothesMessage: false,
+      })
+      this.props.addToPeopleYouHaveTalkedTo("Pet Snake")
+    }
+    else {
+      this.setState({
+        talkToSnake: !this.state.talkToSnake,
+        showClothesMessage: false,
+      })
+      this.props.addToPeopleYouHaveTalkedTo("Pet Snake")
+    }
   }
 
   isMeanLetterInPurse = () => {
