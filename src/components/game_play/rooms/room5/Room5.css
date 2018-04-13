@@ -36,9 +36,9 @@
 
 #room5_go_to_room_6{
   position: absolute;
-  top: 50px;
-  left: 300px;
-  width: 150px;
+  top: 150px;
+  left: 289px;
+  width: 85px;
   height: 250px;
   /* border: 6px solid purple; */
 }
@@ -64,30 +64,31 @@
 
 #jess_tennis_racket{
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 320px;
-  right: 620px;
+  width: 77px;
+  height: 78px;
+  top: 420px;
+  left: 148px;
+
 }
 
 #tennis_message {
   position: absolute;
-  /* border: 3px solid green; */
   width: 150px;
   height: 120px;
   top: 220px;
   right: 650px;
-    background-color:white;
+  background-color:white;
 }
 
 /* -------------------------------- SHOES ----------------------------------- */
 
 #jess_shoes{
   position: absolute;
-  width: 80px;
-  height: 50px;
-  top: 300px;
-  right: 540px;
+  width: 64px;
+  height: 43px;
+  top: 400px;
+  left: 227px;
+
 }
 
 #shoe_message {
@@ -96,18 +97,18 @@
   height: 120px;
   top: 220px;
   right: 650px;
-    background-color:white;
+  background-color:white;
 }
 
 /* ------------------------------ ASHTRAY ----------------------------------- */
 
 #jess_ashtray {
   position: absolute;
-  /* border: 3px solid green; */
   width: 40px;
-  height: 50px;
-  bottom: 220px;
-  left: 130px;
+  height: 36px;
+  bottom: 185px;
+  left: 109px;
+  /* border: 3px solid green; */
 }
 
 #ashtray_message {
@@ -117,17 +118,13 @@
   height: 120px;
   top: 520px;
   right: 650px;
-    background-color:white;
+  background-color:white;
 }
 
 /* ------------------------------ KEYS ----------------------------------- */
 
 #keys {
   position: absolute;
-  height: 40px;
-  width: 49px;
-  bottom: 220px;
-  left: 130px;
   z-index: 3;
 }
 

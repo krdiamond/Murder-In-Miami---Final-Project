@@ -14,7 +14,7 @@ class Keys extends Component {
         mouseY: 0,
         clicked: false,
         x:60,
-        y:670,
+        y:700,
         showTape: true,
       };
 
@@ -50,8 +50,8 @@ class Keys extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 633 && this.state.x < 683 &&
-        this.state.y > 0 && this.state.y < 64) {
+      if(this.state.x > 750 && this.state.x < 890 &&
+        this.state.y > 0 && this.state.y < 135) {
         this.putKeysInPurse()
       }
     }
@@ -64,6 +64,8 @@ class Keys extends Component {
 
 
   render() {
+    // console.log("x",this.state.x)
+    // console.log("y",this.state.y)
     return (
       <div
         id="keys"
@@ -73,7 +75,7 @@ class Keys extends Component {
         onMouseDown={(e)=>this.handleMouseDown(e)}
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
-        <img src={keys} height="40" alt="Secret Video Tape"/>
+        <img src={keys} height="35" alt="Secret Video Tape"/>
         <div id="clear_keys" ></div>
       </div>
     )
