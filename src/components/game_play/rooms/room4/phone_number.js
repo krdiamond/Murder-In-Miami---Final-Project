@@ -49,8 +49,8 @@ class PhoneNumber extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 633 && this.state.x < 683 &&
-        this.state.y > 0 && this.state.y < 64) {
+      if(this.state.x > 730 && this.state.x < 774 &&
+        this.state.y > 0 && this.state.y < 150) {
         this.putNoteInPurse()
       }
     }
@@ -62,6 +62,8 @@ class PhoneNumber extends Component {
 
 
   render() {
+    // console.log("x",this.state.x)
+    // console.log("y",this.state.y)
     return (
       <div
         id="phone_number"

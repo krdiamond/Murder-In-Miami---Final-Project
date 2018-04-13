@@ -9,8 +9,8 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 250px;
-  height: 160px;
+  width: 200px;
+  height: 170px;
   /* border: 6px solid purple; */
 }
 
@@ -66,7 +66,8 @@
   width: 60px;
   height: 140px;
   bottom: 330px;
-  left: 390px;
+  left: 330px;
+   /* border: 6px solid purple; */
 }
 
 .jessicas_message {
@@ -75,23 +76,25 @@
   bottom: 510px;
   left: 500px;
   width: 200px;
-    background-color:white;
+  background-color:white;
 }
 
 #knees {
   position: absolute;
   bottom: 240px;
-  left: 430px;
+  left: 380px;
   width: 80px;
   height: 60px;
+  /* border: 6px solid purple; */
 }
 
 #cell_phone {
   position: absolute;
-  bottom: 370px;
-  left: 490px;
+  bottom: 390px;
+  left: 430px;
   width: 40px;
   height: 60px;
+  /* border: 6px solid purple; */
 }
 
 /* --------------------------------- PLANT ---------------------------------- */
@@ -99,16 +102,17 @@
 #plant {
   position: absolute;
   bottom: 230px;
-  right: 120px;
+  right: 42px;
   width: 80px;
   height: 140px;
+  /* border: 6px solid purple; */
 }
 
 /* --------------------------------- PHONE ---------------------------------- */
 #room4phone {
   position: absolute;
-  top: 435px;
-  left: 30px;
+  top: 421px;
+  left: 0px;
   width: 60px;
   height: 140px;
   /* border: 6px solid green; */
@@ -127,7 +131,6 @@
 
 #room4crumpled_note{
   position: absolute;
-  top: 700px;
-  left: 750px;
-  /* border: 6px solid green; */
+  top: 702px;
+  left: 683px;
 }
