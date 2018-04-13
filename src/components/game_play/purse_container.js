@@ -58,8 +58,8 @@ class PurseContainer extends Component {
   }
 
   insertTape = () => {
-    if(this.state.x > -739 && this.state.x < -639 &&
-      this.state.y > -100 && this.state.y < 11) {
+    if(this.state.x > -800 && this.state.x < -719 &&
+      this.state.y > 50 && this.state.y < 145) {
       this.playTape()
     }
   }
@@ -76,6 +76,8 @@ class PurseContainer extends Component {
 
 
   render() {
+    console.log("x",this.state.x)
+    console.log("y",this.state.y)
     let cells = this.sortItemsInThePurseByID().map((cell) => {
         return (
           <Cell

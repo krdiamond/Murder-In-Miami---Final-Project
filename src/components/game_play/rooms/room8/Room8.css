@@ -2,8 +2,6 @@
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
-
-
 /* -------------------------- NAVIGATE TO ROOM 6 ---------------------------- */
 
 #room8_go_to_room_7{
@@ -11,7 +9,7 @@
   bottom: 0px;
   left: 10px;
   width: 300px;
-  height: 200px;
+  height: 160px;
   /* border: 6px solid purple; */
 }
 
@@ -39,9 +37,9 @@
 #wine_glass_left{
   position: absolute;
   width: 120px;
-  height: 160px;
-  top: 480px;
-  right: 700px;
+  height: 131px;
+  top: 549px;
+  left: 50px;
   /* border: 3px solid green; */
 }
 
@@ -52,7 +50,6 @@
   height: 120px;
   top: 650px;
   right: 680px;
-  border: 3px solid green;
   background-color: white;
 }
 
@@ -60,10 +57,10 @@
 
 #allisons_tennis_racket {
   position: absolute;
-  width: 260px;
-  height: 120px;
-  top: 450px;
-  left: 420px;
+  width: 204px;
+  height: 92px;
+  top: 534px;
+  left: 357px;
   /* border: 3px solid green; */
 }
 
@@ -81,10 +78,10 @@
 #cigs {
   position: absolute;
   width: 40px;
-  height: 40px;
-  top: 615px;
-  left: 250px;
-  /* border: 3px solid green; */
+  height: 37px;
+  top: 658px;
+  left: 203px;
+  border: 3px solid green;
 }
 
 #cigs_message {
@@ -103,9 +100,9 @@
   position: absolute;
   width: 80px;
   height: 50px;
-  top: 580px;
-  left: 690px;
-  /* border: 3px solid green; */
+  top: 630px;
+  left: 571px;
+  border: 3px solid green;
 }
 
 /* -------------------------- BEACH SCENE ON TV ----------------------------- */
