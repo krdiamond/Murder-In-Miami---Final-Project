@@ -9,8 +9,8 @@
   position: absolute;
   top: 320px;
   right: 0px;
-  width: 200px;
-  height: 300px;
+  width: 180px;
+  height: 236px;
   /* border: 6px solid purple; */
 }
 
@@ -67,9 +67,9 @@
 #heather {
   position: absolute;
   width: 120px;
-  height: 100px;
-  top: 650px;
-  left: 520px;
+  height: 74px;
+  top: 577px;
+  left: 420px;
   /* border: 3px solid green; */
 }
 
