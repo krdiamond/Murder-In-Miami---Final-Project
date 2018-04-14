@@ -13,8 +13,8 @@ class Tape extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:520,
-        y:700,
+        x:425,
+        y:790,
         showTape: true,
       };
 
@@ -25,9 +25,6 @@ class Tape extends Component {
     y:10,
     img: tape,
   }
-
-
-
 
     handleMouseDown = (e) => {
       this.setState({
@@ -52,8 +49,8 @@ class Tape extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 633 && this.state.x < 683 &&
-        this.state.y > 0 && this.state.y < 64) {
+      if(this.state.x > 756 && this.state.x < 886 &&
+        this.state.y > 27 && this.state.y < 112) {
         this.putTapeInPurse()
       }
     }
@@ -66,6 +63,8 @@ class Tape extends Component {
 
 
   render() {
+    // console.log("x",this.state.x)
+    // console.log("y",this.state.y)
     return (
       <div
         id="tape"

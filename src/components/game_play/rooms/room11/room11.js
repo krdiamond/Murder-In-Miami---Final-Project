@@ -47,7 +47,6 @@ class Room11 extends Component {
   }
 
   render() {
-    console.log(this.props.itemsInPurse)
     return (
       <div className="main_container">
 

@@ -1,4 +1,4 @@
-#parrot_left:hover, #parrot_right:hover, #tape:hover, #room11phone:hover {
+#parrot_left:hover, #parrot_right:hover, #clear_tape:hover, #room11phone:hover {
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
@@ -10,8 +10,8 @@
   position: absolute;
   bottom: 0px;
   left: 10px;
-  width: 300px;
-  height: 200px;
+  width: 247px;
+  height: 176px;
   /* border: 6px solid purple; */
 }
 
@@ -36,10 +36,10 @@
 
 #room11phone {
   position: absolute;
-  width: 130px;
-  height: 90px;
-  top: 660px;
-  left: 710px;
+  width: 103px;
+  height: 74px;
+  top: 740px;
+  left: 600px;
   /* border: 3px solid green; */
 }
 
@@ -47,19 +47,19 @@
 
 #parrot_left {
   position: absolute;
-  width: 60px;
-  height: 220px;
-  top: 120px;
-  left: 160px;
+  width: 47px;
+  height: 189px;
+  top: 290px;
+  left: 135px;
   /* border: 3px solid green; */
 }
 
 #parrot_right {
   position: absolute;
-  width: 60px;
-  height: 80px;
-  top: 160px;
-  left: 225px;
+  width: 48px;
+  height: 92px;
+  top: 318px;
+  left: 184px;
   /* border: 3px solid green; */
 }
 

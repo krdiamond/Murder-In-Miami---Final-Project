@@ -54,10 +54,13 @@
 
 .cell {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   z-index: 10;
-  margin:10px;
+  margin: auto;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
   /* border: 6px solid purple; */
 }
 
@@ -74,8 +77,8 @@
 }
 
 #clearbox {
-  width:120px;
-  height:120px;
+  width:100px;
+  height:100px;
 }
 
 #position_text{
