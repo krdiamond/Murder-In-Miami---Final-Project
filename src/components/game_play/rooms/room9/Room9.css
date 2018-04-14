@@ -7,10 +7,10 @@
 
 #room9_go_to_room_10{
   position: absolute;
-  top: 300px;
-  left: 513px;
-  width: 130px;
-  height: 400px;
+  top: 289px;
+  left: 489px;
+  width: 113px;
+  height: 350px;
   /* border: 6px solid purple; */
 }
 
@@ -68,7 +68,7 @@
 #room9_go_to_room_4{
   position: absolute;
   bottom: 0px;
-  left: 320px;
+  left: 282px;
   width: 250px;
   height: 200px;
   /* border: 6px solid purple; */
@@ -99,7 +99,7 @@
   bottom: 0px;
   right: 0px;
   width: 180px;
-  height: 200px;
+  height: 127px;
   /* border: 6px solid purple; */
 }
 
