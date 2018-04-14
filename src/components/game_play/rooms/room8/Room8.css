@@ -81,7 +81,7 @@
   height: 37px;
   top: 658px;
   left: 203px;
-  border: 3px solid green;
+  /* border: 3px solid green; */
 }
 
 #cigs_message {
@@ -102,19 +102,17 @@
   height: 50px;
   top: 630px;
   left: 571px;
-  border: 3px solid green;
+  /* border: 3px solid green; */
 }
 
 /* -------------------------- BEACH SCENE ON TV ----------------------------- */
 
 #beach_scene {
   position: absolute;
-  width: 125px;
-  height: 100px;
-  top: 155px;
-  left: 15px;
-    /* border: 3px solid green; */
-    z-index:5;
+  width: 101px;
+  height: 84px;
+  top: 282px;
+  left: 16px;
 }
 #beach_message {
   position: absolute;

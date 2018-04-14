@@ -76,8 +76,8 @@ class PurseContainer extends Component {
 
 
   render() {
-    console.log("x",this.state.x)
-    console.log("y",this.state.y)
+    // console.log("x",this.state.x)
+    // console.log("y",this.state.y)
     let cells = this.sortItemsInThePurseByID().map((cell) => {
         return (
           <Cell
