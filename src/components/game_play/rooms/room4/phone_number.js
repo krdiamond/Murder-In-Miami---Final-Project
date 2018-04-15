@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import * as actions from '../../../../actions';
 import '../../../../App.css';
 import './Room4.css';
-import note from '../../../../images/room1/note.png';
+import phoneNumber from '../../../../images/room4/allisons_phone_number.png';
 
 class PhoneNumber extends Component {
 
@@ -13,8 +13,8 @@ class PhoneNumber extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:320,
-        y:530,
+        x:200,
+        y:250,
       };
 
     phoneNumber = {
@@ -22,7 +22,7 @@ class PhoneNumber extends Component {
       id:2,
       x:0,
       y:10,
-      img: note,
+      img: phoneNumber,
       width:100,
     }
 

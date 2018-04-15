@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import ReactDOM from 'react-dom';
 import '../../App.css';
 import * as actions from '../../actions';
 import purse from '../../images/purse.png';
@@ -78,6 +77,7 @@ class PurseContainer extends Component {
   render() {
     // console.log("x",this.state.x)
     // console.log("y",this.state.y)
+        // console.log(this.props.itemsInPurse)
     let cells = this.sortItemsInThePurseByID().map((cell) => {
         return (
           <Cell

@@ -110,10 +110,16 @@
 
 #jessicas_note {
   position: absolute;
-  height:210px;
-  width: 200px;
+  height: 250px;
+  width: 336px;
+  z-index: 2;
+}
+
+#clear_mean_note {
+  position: absolute;
+  width: 250px;
+  height: 336px;
   z-index: 3;
-  background-color:white;
 }
 
 #jessicas_note:hover, #room1phone:hover{

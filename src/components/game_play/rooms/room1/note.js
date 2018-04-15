@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import * as actions from '../../../../actions';
 import '../../../../App.css';
 import './Room1.css';
-import note from '../../../../images/room1/note.png';
+import meanNote from '../../../../images/room1/mean_note.png';
 
 class Note extends Component {
 
@@ -13,16 +13,16 @@ class Note extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:320,
-        y:530,
+        x:200,
+        y:250,
       };
 
-    note = {
+    mean_note = {
       id: 1,
-      title: 'note',
+      title: 'mean note',
       x:0,
       y:10,
-      img: note,
+      img: meanNote,
       width: 100,
     }
 
@@ -49,14 +49,14 @@ class Note extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 710 && this.state.x < 800 &&
-        this.state.y > 0 && this.state.y < 63) {
+      if(this.state.x > 630 && this.state.x < 740 &&
+        this.state.y > -58 && this.state.y < 40) {
         this.putNoteInPurse()
       }
     }
 
     putNoteInPurse = () => {
-      this.props.addItemToPurse(this.note)
+      this.props.addItemToPurse(this.mean_note)
       this.props.showJessicasNote(!this.props.findJessicasNote)
     }
 
@@ -72,9 +72,8 @@ class Note extends Component {
         onMouseDown={(e)=>this.handleMouseDown(e)}
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
-        <div id="text">
-          ---121 Street Lane, Miami Florida Address --- Dear Kelly, I can't believe what you did today during tennis practice. You are the most horrible disgusting person I have ever met. We are not friends anymore. Do not call me -Jessica
-        </div>
+        <div id="clear_mean_note"></div>
+        <img src={meanNote} alt="Mean note"/>
       </div>
     )
   }
@@ -94,4 +93,4 @@ export default connect( mapStateToProps, actions)(Note);
 
 
 // <div id="clearbox"></div>
-// <img src={note} alt="Note"/>
+// <img src={mean_note} alt="mean_note"/>

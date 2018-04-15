@@ -15,7 +15,6 @@ import Room9 from './rooms/room9/room9';
 import Room10 from './rooms/room10/room10';
 import Room11 from './rooms/room11/room11';
 import PurseContainer from './purse_container';
-import ReactDOM from 'react-dom';
 
 
 class GameContainer extends Component {
