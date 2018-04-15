@@ -70,7 +70,8 @@ class FridgeNote extends Component {
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
         <div id="text">
-        WORKS SCHEDULE WITH BEACH CLUB ADDRESS WRITTEN ON IT
+          <div id="clear_phone_number"></div>
+          <img src={fridgeNote} alt="Address and beach club schedule"/>
         </div>
       </div>
     )
