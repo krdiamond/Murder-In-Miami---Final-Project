@@ -4,7 +4,8 @@ import '../../../../App.css';
 import './Room3.css';
 import room3 from '../../../../images/room3/room3.jpg';
 import * as actions from '../../../../actions';
-
+import rightThought from '../../../../images/right_thought_bubble.png';
+import leftSpeech from '../../../../images/left_speech_bubble.png';
 
 class Room3 extends Component {
 
@@ -43,7 +44,7 @@ class Room3 extends Component {
   }
 
   isMeanLetterInPurse = () => {
-    const result = this.props.itemsInPurse.find(item => item.title ===  'mean note') 
+    const result = this.props.itemsInPurse.find(item => item.title ===  'mean note')
     if (result === undefined){
       return false
     }
@@ -61,20 +62,29 @@ class Room3 extends Component {
 
         <div id="clothes" onClick={this.toggleClothesMessage}></div>
         <div id="shoes" onClick={this.toggleClothesMessage}></div>
-        {this.state.showClothesMessage? <div id="clothes_message">
-          ... Kelly's Beach Club uniform. I know she was at work earlier that day. She must have come home and changed?
+        {this.state.showClothesMessage?
+          <div id="clothes_message">
+            <img id="clothes_thought_bubble" src={rightThought} alt="Tennis Racket Thoughts"/>
+              <div id="clothes_message_text">
+                 ...This looks like Kelly's Beach Club uniform. She must have come home and changed before going out?
+             </div>
         </div> : null }
 
         <div id="snake" onClick={this.handleSnake}></div>
-
         {this.state.talkToSnake && this.isMeanLetterInPurse() ?
-          <div className="snake_message">
-            ssssssssssss... that note from Jesssssssssssica sssssssssseemsssssss sssssssusssssspicioussssssss maybe ssssssssssssssssshe knowssssssssssssss ssssssssssssssomething
+          <div id="snake_message">
+            <img id="snake_thought_bubble" src={leftSpeech} alt="Tennis Racket Thoughts"/>
+              <div id="snake_message_text_1">
+                 that note from Jesssssssssssica sssssssssseemsssssss sssssssusssssspicioussssssss maybe ssssssssssssssssshe knowssssssssssssss ssssssssssssssomething
+             </div>
         </div> : null }
 
         {this.state.talkToSnake && (this.isMeanLetterInPurse() === false) ?
-          <div className="snake_message">
-            ssssssssssss... i'm just Kelly's pet ssssssssssnake.... when is ssssssssshe coming back sssssssss
+          <div id="snake_message">
+            <img id="snake_thought_bubble" src={leftSpeech} alt="Tennis Racket Thoughts"/>
+              <div id="snake_message_text_2">
+                 I'm jussssssssssssssst Kelly'sssssssssssss pet ssssssssssssssssnake.... When is ssssssssssssssssssshe coming home?
+             </div>
         </div> : null }
 
         <div id="room3_go_to_room_2" onClick={(e) => this.handleGoToRoom(2)}>

@@ -55,10 +55,25 @@
 #clothes_message {
   position: absolute;
   width: 200px;
-  height: 80px;
-  bottom: 210px;
-  left: 500px;
-  background-color:white;
+  height: 201px;
+  bottom: 204px;
+  left: 477px;
+}
+
+#clothes_thought_bubble{
+  position: absolute;
+  height: 210px;
+  left: 0px;
+}
+
+#clothes_message_text {
+  position: absolute;
+  width: 196px;
+  top: 35px;
+  left: 4px;
+  font-family: 'vcr';
+  font-size: 13px;
+  line-height: 1.3;
 }
 
 /* -------------------------------- SNAKE  ---------------------------------- */
@@ -72,11 +87,36 @@
   /* border: 6px solid purple; */
 }
 
-.snake_message {
+#snake_message {
   position: absolute;
-  width: 250px;
-  height: 120px;
-  bottom: 330px;
-  left: 150px;
-  background-color: white;
+  top: 393px;
+  left: 18px;
+  width: 326px;
+  height: 260px;
+}
+
+#snake_thought_bubble{
+  position: absolute;
+  height: 230px;
+  left: 0px;
+}
+
+#snake_message_text_1 {
+  position: absolute;
+  width: 196px;
+  top: 17px;
+  left: 38px;
+  font-family: 'vcr';
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#snake_message_text_2 {
+  position: absolute;
+  width: 196px;
+  top: 32px;
+  left: 38px;
+  font-family: 'vcr';
+  font-size: 13px;
+  line-height: 1.5;
 }

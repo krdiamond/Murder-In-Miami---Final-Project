@@ -13,7 +13,7 @@ class Note extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:290,
+        x:170,
         y:250,
       };
 
