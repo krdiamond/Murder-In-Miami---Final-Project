@@ -7,6 +7,7 @@ import './Room4.css';
 import PhoneContainer from '../../phone_container';
 import PhoneNumber from './phone_number'
 import crumpledNote from '../../../../images/room4/crumpled_note.png';
+import squareSpeech from '../../../../images/square_talk_bubble.png';
 
 
 class Room4 extends Component {
@@ -138,32 +139,48 @@ class Room4 extends Component {
 
         {this.state.toggleStopSnoopingMessage?
           <div className="jessicas_message">
-           DON'T TOUCH ANY OF MY THINGS!!!!! STOP SNOOPING AROUND!!!!
+            <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
+            <div id="stop_snooping_text">
+               DON'T TOUCH ANY OF MY THINGS!!!!! STOP SNOOPING AROUND!!!!
+            </div>
          </div> :null}
 
         {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null }
 
         <div id="jessica" onClick={this.handleTalkToJess}></div>
-        {this.state.toggleTalkToJessMessage? <div className="jessicas_message">
-          Woah what are you doing here? How do you even know where I live? Whatever, I'm too upset to care. I was with Kelly that night can you believe that?? I was with her!! We smoked cigarettes down by the beach and Allison dropped her off at home. She probably went to sleep when she got home. I don't know. Ugh can you leave please, like I'm really upset.
+        {this.state.toggleTalkToJessMessage?
+          <div id="jessicas_message_long">
+            <img id="jessicas_thought_bubble_long" src={squareSpeech} alt="Jessica's Thoughts"/>
+            <div id="long_text">
+               Woah what are you doing here? Whatever, I'm too upset to care. I was with Kelly that night can you believe that?? I was with her!! We smoked cigarettes down by the beach and Allison dropped her off at home. She probably went to sleep when she got home. I don't know. Ugh can you leave please, like I'm really upset.
+           </div>
         </div> : null }
 
         <div id="knees" onClick={this.handleJessKnees}></div>
         {this.state.toggleJessKneesMessage?
           <div className="jessicas_message">
-            OMG you are so annoying, my knees are fine. It's just a bruise and some cuts I got from playing tennis. Its nothing. I get bruises like this all the time. Can you leave now????'
+            <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
+            <div id="knees_text">
+              OMG you are so annoying, my knees are fine. It's just a bruise and some cuts I got from playing tennis. Its nothing. I get bruises like this all the time. Can you leave now????'
+            </div>
           </div> : null }
 
         <div id="cell_phone" onClick={this.handleCellPhone}></div>
         {this.state.toggleTooBusyMessage?
           <div className="jessicas_message">
-            You haven't left yet? I AM TOO BUSY AND UPSET texting everyone I know to talk to you. I need to find out what happened to Kelly!!!
+            <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
+            <div id="cell_text">
+              You haven't left yet? I AM TOO BUSY AND UPSET texting everyone I know to talk to you. I need to find out what happened to Kelly!!!
+            </div>
           </div> : null }
 
         <div id="plant" onClick={this.handlePlant}></div>
         {this.state.togglePlantMessage?
           <div className="jessicas_message">
-            mumble ... mumble ...  ugh I have so many plants to water, I have to go to Allison's later to water hers too. Ugh, it's so annoying... mumble
+            <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
+            <div id="cell_text">
+              mumble... ugh I have so many plants to water, I have to go to Allison's later to water hers too. Ugh, it's so annoying...
+            </div>
           </div> : null }
 
         <div id="room4phone" onClick={this.handlePhoneClick}></div>
@@ -183,8 +200,11 @@ class Room4 extends Component {
 
         {this.state.toggleNoseyMessage?
            <div className="jessicas_message">
-             OMG WHAT ARE YOU DOING??? You can't just walk around my house. STOP SNOOPING AROUND. PLEASE LEAVE.
-          </div> : null}
+             <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
+             <div id="stairs_text">
+                OMG WHAT ARE YOU DOING??? You can't just walk around my house. STOP SNOOPING AROUND. PLEASE LEAVE.
+              </div>
+            </div> : null}
 
       </div>
     );
@@ -201,8 +221,3 @@ function mapStateToProps(state){
 }
 
 export default connect( mapStateToProps, actions)(Room4);
-
-
-          // <div className="jessicas_message"> DON'T TOUCH ANYTHING IN MY HOUSE. STOP SNOOPING AROUND AND LEAVE?</div>
-
-        // {this.props.showingAllisonsPhoneNumber? <PhoneNumber/> : null}
