@@ -149,11 +149,24 @@
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
-#heart_award {
+#heart_message {
   position: absolute;
-  top:150px;
-  right: 0px;
-  width: 180px;
-  height: 180px;
-  background-color:white;
+  top: 228px;
+  left: 448px;
+    /* border: 3px solid green; */
+}
+
+#heart_thought_bubble{
+  position: absolute;
+  height: 250px;
+    /* border: 3px solid green; */
+
+}
+
+#heart_message_text {
+  position: absolute;
+    width: 250px;
+    height: 250px;
+    top:0px;
+    /* border: 3px solid green; */
 }

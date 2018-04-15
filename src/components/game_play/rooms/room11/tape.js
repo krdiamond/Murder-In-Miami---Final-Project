@@ -23,6 +23,7 @@ class Tape extends Component {
     title: 'tape',
     x:0,
     y:10,
+    width:80,
     img: tape,
   }
 

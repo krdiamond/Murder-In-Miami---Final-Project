@@ -6,6 +6,7 @@ import './Room1.css';
 import room1 from '../../../../images/room1/room1.jpg';
 import redDot from '../../../../images/room1/red_dot.gif';
 import crumpledNote from '../../../../images/room1/crumpled_note.png';
+import rightThought from '../../../../images/right_thought_bubble.png';
 import PhoneContainer from '../../phone_container';
 import Note from './note'
 
@@ -66,7 +67,12 @@ class Room1 extends Component {
         {this.props.findJessicasNote? <Note/> : null }
 
         <div id="heart" onClick={this.handleHeart}> </div>
-        {this.props.readingHeartMessage? <div id="heart_award">"AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE IN 1987" what a strange award... but then why were there cigarettes found at the crime scene?
+        {this.props.readingHeartMessage?
+          <div id="heart_message">
+            <img id="heart_thought_bubble" src={rightThought} alt="Heart Award Thoughts"/>
+            <div id="heart_message_text">
+              "AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE IN 1987" what a strange award... but then why were there cigarettes found at the crime scene?
+            </div>
         </div> : null}
 
         <div id="room1phone" onClick={this.handlePhoneClick} >
