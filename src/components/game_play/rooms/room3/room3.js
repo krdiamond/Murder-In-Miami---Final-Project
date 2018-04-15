@@ -43,7 +43,7 @@ class Room3 extends Component {
   }
 
   isMeanLetterInPurse = () => {
-    const result = this.props.itemsInPurse.find(item => item.title === 'note')
+    const result = this.props.itemsInPurse.find(item => item.title ===  'mean note') 
     if (result === undefined){
       return false
     }

@@ -24,7 +24,7 @@ class Keys extends Component {
         x:0,
         y:10,
         img: keys,
-        width: 50,
+        width: 80,
     }
 
     handleMouseDown = (e) => {

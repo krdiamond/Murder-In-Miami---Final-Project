@@ -123,10 +123,17 @@
 
 #phone_number {
   position: absolute;
-  border: 6px solid purple;
-  width: 200px;
+  width: 218px;
+  z-index: 2;
+  /* border: 1px solid purple; */
+}
+
+#clear_phone_number {
+  position: absolute;
+  width: 218px;
+  height: 112px;
   z-index: 3;
-  background-color:white;
+  /* border: 1px solid purple; */
 }
 
 #room4crumpled_note{

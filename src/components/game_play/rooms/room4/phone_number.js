@@ -13,8 +13,8 @@ class PhoneNumber extends Component {
         mouseX: 0,
         mouseY: 0,
         clicked: false,
-        x:200,
-        y:250,
+        x:341,
+        y:765,
       };
 
     phoneNumber = {
@@ -72,7 +72,8 @@ class PhoneNumber extends Component {
         onMouseDown={(e)=>this.handleMouseDown(e)}
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
-          PHONE NUMBER
+        <div id="clear_phone_number"></div>
+        <img src={phoneNumber} alt="Allison's Phone Numbe in Mexico"/>
       </div>
     )
   }
