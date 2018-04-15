@@ -1,16 +1,12 @@
 const defaultState = {
-  currentRoom: 1,
+  currentRoom: 2,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
   findJessicasNote: false,
   findFridgeNote: false,
   showNoteBeachAddress: false,
-  itemsInPurse:[{id: 0, title: "tape", x: 0, y: 10, width:80, img: "/static/media/tape.ab84cfe0.png"},
-  {id: 1, title: "mean note", x: 0, y: 10, width:100, img: "/static/media/mean_note.365e6713.png"},
-  {title: "Phone Number", id: 2, x: 0, y: 10, width:100, img: "/static/media/allisons_phone_number.e5b25f69.png"},
-  {id: 3, title: "keys", x: 0, y: 10, width:80, img: "/static/media/keys.e1c9c6c0.png"},
-  {id: 4, title: "Beach Club Address", x: 0, y: 10, width:100, img: "/static/media/fridge_note.c1df729f.png"}],
+  itemsInPurse:[],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,
@@ -76,8 +72,8 @@ const reducer = (state = defaultState, action) => {
 export default reducer
 
 // ALL ITEMS OBJECTS INCASE THEY ARE NEEDED FOR TESTING
-// {id: 0, title: "tape", x: 0, y: 10, img: "/static/media/tape.ab84cfe0.png"},
-// {id: 1, title: "mean note", x: 0, y: 10, img: "/static/media/mean_note.365e6713.png"},
-// {title: "Phone Number", id: 2, x: 0, y: 10, img: "/static/media/allisons_phone_number.e5b25f69.png"},
-// {id: 3, title: "keys", x: 0, y: 10, img: "/static/media/keys.e1c9c6c0.png"},
-// {id: 4, title: "Beach Club Address", x: 0, y: 10, img: "/static/media/fridge_note.bf29f077.png"}
+// {id: 0, title: "tape", x: 0, y: 10, width:80, img: "/static/media/tape.ab84cfe0.png"},
+// {id: 1, title: "mean note", x: 0, y: 10, width:100, img: "/static/media/mean_note.365e6713.png"},
+// {title: "Phone Number", id: 2, x: 0, y: 10, width:100, img: "/static/media/allisons_phone_number.e5b25f69.png"},
+// {id: 3, title: "keys", x: 0, y: 10, width:80, img: "/static/media/keys.e1c9c6c0.png"},
+// {id: 4, title: "Beach Club Address", x: 0, y: 10, width:100, img: "/static/media/fridge_note.c1df729f.png"}

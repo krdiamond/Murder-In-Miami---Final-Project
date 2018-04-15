@@ -69,9 +69,9 @@ class Room1 extends Component {
         <div id="heart" onClick={this.handleHeart}> </div>
         {this.props.readingHeartMessage?
           <div id="heart_message">
-            <img id="heart_thought_bubble" src={rightThought} alt="Heart Award Thoughts"/>
+            <img className="thought_bubble" src={rightThought} alt="Heart Award Thoughts"/>
             <div id="heart_message_text">
-              "AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE IN 1987" what a strange award... but then why were there cigarettes found at the crime scene?
+              "AN AWARD OF EXCELLENCE FOR BEING A SMOKE FREE ATHLETE"... hmm... what a strange award. Why were there cigarettes found at the crime scene?
             </div>
         </div> : null}
 
@@ -81,8 +81,6 @@ class Room1 extends Component {
         {(this.props.showPhone === true)?
           <PhoneContainer
             message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
-
-        <div id="jacket"  onClick={this.toggleKellysUniform}></div>
 
         <div id= "opening_story_closed" className="story"> </div>
         <div id="show_story" className="story" onClick={this.toggleShowStory}>x</div>
@@ -122,5 +120,4 @@ function mapStateToProps(state){
 
 export default connect( mapStateToProps, actions)(Room1);
 
-
-//actions.
+        // <div id="jacket"  onClick={this.toggleKellysUniform}></div>

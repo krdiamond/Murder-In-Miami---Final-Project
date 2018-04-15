@@ -5,6 +5,11 @@
 
 /* -------------------------------- GENERAL --------------------------------- */
 
+@font-face {
+  font-family:'vcr';
+  src: url(fonts/vcr.ttf);
+}
+
 #app {
   text-align: center;
   /* border: 2px solid red; */
@@ -20,6 +25,12 @@
     display: inline-block;
   /* border: 1px solid red; */
   float:left;
+}
+
+.thought_bubble{
+  position: absolute;
+  height: 250px;
+  left:0px;
 }
 
 /* -------------------------- LANDING PAGE CONTAINER ------------------------ */
