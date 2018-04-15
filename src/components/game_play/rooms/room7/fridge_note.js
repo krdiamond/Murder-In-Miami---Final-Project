@@ -49,8 +49,8 @@ class FridgeNote extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 633 && this.state.x < 683 &&
-        this.state.y > 0 && this.state.y < 64) {
+      if(this.state.x > 600 && this.state.x < 700 &&
+        this.state.y > -41 && this.state.y < 41) {
         this.putAddressInPurse()
       }
     }
@@ -62,6 +62,8 @@ class FridgeNote extends Component {
 
 
   render() {
+    // console.log("x",this.state.x)
+    // console.log("y",this.state.y)
     return (
       <div id="beach_club_address"
         style={{left: this.state.x,
@@ -69,10 +71,8 @@ class FridgeNote extends Component {
         onMouseDown={(e)=>this.handleMouseDown(e)}
         onMouseUp={this.handleMouseUp}
         onMouseMove={this.handleMouseMove}>
-        <div id="text">
-          <div id="clear_phone_number"></div>
+          <div id="clear_beach_address"></div>
           <img src={fridgeNote} alt="Address and beach club schedule"/>
-        </div>
       </div>
     )
   }

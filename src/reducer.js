@@ -10,7 +10,7 @@ const defaultState = {
   {id: 1, title: "mean note", x: 0, y: 10, width:100, img: "/static/media/mean_note.365e6713.png"},
   {title: "Phone Number", id: 2, x: 0, y: 10, width:100, img: "/static/media/allisons_phone_number.e5b25f69.png"},
   {id: 3, title: "keys", x: 0, y: 10, width:80, img: "/static/media/keys.e1c9c6c0.png"},
-  {id: 4, title: "Beach Club Address", x: 0, y: 10, width:100, img: "/static/media/fridge_note.bf29f077.png"}],
+  {id: 4, title: "Beach Club Address", x: 0, y: 10, width:100, img: "/static/media/fridge_note.c1df729f.png"}],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,
