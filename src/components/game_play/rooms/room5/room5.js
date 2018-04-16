@@ -5,7 +5,8 @@ import '../../../../App.css';
 import room5 from '../../../../images/room5/room5.jpg';
 import Keys from './keys'
 import './Room5.css';
-
+import rightThought from '../../../../images/right_thought_bubble.png';
+import thinkBubble from '../../../../images/think_bubble.png';
 
 class Room5 extends Component {
 
@@ -63,18 +64,30 @@ class Room5 extends Component {
         {this.props.showKeys? <Keys/>: null}
 
         <div id="jess_tennis_racket" onClick={this.handleTennisRacket}></div>
-        {this.state.toggleTennisRacketMessage? <div id="tennis_message">
-        ..hmmm ... this tennis racket is very clean but still looks worn out. Thats so weird... who cleans their tennis racket...
+        {this.state.toggleTennisRacketMessage?
+          <div id="tennis_message">
+            <img id="tennis_message_bubble" src={thinkBubble} alt="Jessica's Thoughts"/>
+              <div id="tennis_message_bubble_text">
+                 ..hmmm ... this tennis racket is very clean but still looks worn out. Thats so weird... who cleans their tennis racket...
+               </div>
         </div> : null }
 
         <div id="jess_shoes" onClick={this.handleShoes}></div>
-        {this.state.toggleShoesMessage? <div id="shoe_message">
-        these sneakers are covered in sand.. thats so weird.
+        {this.state.toggleShoesMessage?
+          <div id="shoe_message">
+            <img id="shoe_message_bubble" src={rightThought} alt="Jessica's Thoughts"/>
+              <div id="shoe_message_bubble_text">
+                  these sneakers are covered in sand.. thats so weird.
+              </div>
         </div> : null }
 
         <div id="jess_ashtray" onClick={this.handleAshtray}></div>
-        {this.state.toggleAshTrayMessage? <div id="ashtray_message">
-        there are so many cigarettes in this ashtray. Jessica sure does smoke a lot.
+        {this.state.toggleAshTrayMessage?
+          <div id="ashtray_message">
+            <img id="ashtray_message_bubble" src={rightThought} alt="Jessica's Thoughts"/>
+              <div id="ashtray_message_bubble_text">
+                  there are so many cigarettes in this ashtray. Jessica sure does smoke a lot.
+              </div>
         </div> : null }
 
         <div id="room5_go_to_room_4" onClick={(e) => this.handleGoToRoom(4)}>
