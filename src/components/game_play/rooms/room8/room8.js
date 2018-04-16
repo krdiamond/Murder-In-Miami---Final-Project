@@ -6,6 +6,8 @@ import beach from '../../../../images/room8/beach.jpg';
 import './Room8.css';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
+import rightThought from '../../../../images/right_thought_bubble.png';
+import leftThought from '../../../../images/left_thought_bubble.png';
 
 
 
@@ -83,23 +85,35 @@ class Room8 extends Component {
             </div> : null}
 
           <div id="wine_glass_left" onClick={this.handleWineGlasses}></div>
-          {this.state.toggleWineGlassMessage? <div id="wine_glasses_message">
-            Two glasses of wine... I think Allison and Jessica were hanging out here when Allison left Kelly that message the other night. They probably left in a hurry to pick up Kelly.
+          {this.state.toggleWineGlassMessage?
+            <div id="wine_glasses_message">
+              <img id="wine_glasses_bubble" src={rightThought} alt="Wine Glasses"/>
+                <div id="wine_glasses_message_text">
+                  There are two glasses of wine... I think Allison and Jessica were hanging out here when Allison left Kelly that message on her answering machine the night of the murder. Looks like they left in a hurry to pick up Kelly.
+              </div>
           </div> : null }
 
           <div id="room8phone" onClick={this.handlePhoneClick} >
           </div> {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}
 
-
           <div id="cigs" onClick={this.handleCigs}></div>
-          {this.state.toggleCigMessage? <div id="cigs_message">
-            A pack of cigarettes. These girls sure smoke a lot.
+          {this.state.toggleCigMessage?
+            <div id="cigs_message">
+              <img id="cigs_bubble" src={leftThought} alt="Cigarettes"/>
+                <div id="cigs_message_text">
+                   A pack of cigarettes. These girls sure smoke a lot.
+                 </div>
           </div> : null }
 
           <div id="allisons_tennis_racket" onClick={this.handleRacket}></div>
-          {this.state.toggleTennisRacketMessage? <div id="racket_message">
-            Another tennis racket. It seems like Allison and Jessica all play tennis together. This one seems to be broken in and pretty dirty.
+          {this.state.toggleTennisRacketMessage?
+            <div id="room8_racket_message">
+              <img id="room8_racket_bubble" src={leftThought} alt="Cigarettes"/>
+                <div id="room8_racket_message_text">
+                    Another tennis racket. It seems like Allison and Jessica all play tennis together. This one seems to be broken in and pretty dirty.
+                </div>
           </div> : null }
+
 
         <div id="room8_go_to_room_7" onClick={(e) => this.handleGoToRoom(7)}>
             <div id="room8_go_to_room_7_text">GO TO ALLISON'S KITCHEN</div>
