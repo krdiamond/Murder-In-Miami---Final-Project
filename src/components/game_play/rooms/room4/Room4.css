@@ -1,4 +1,5 @@
-#jessica:hover, #knees:hover, #cell_phone:hover, #plant:hover, #phone_number:hover, #cell_phone:hover, #room4phone:hover, #room4crumpled_note:hover {
+#jessica:hover, #knees:hover, #cell_phone:hover, #plant:hover, #phone_number:hover, #cell_phone:hover, #room4phone:hover, #room4crumpled_note:hover,
+#vacuum:hover {
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
@@ -176,7 +177,25 @@
   right: 42px;
   width: 80px;
   height: 140px;
-  /* border: 6px solid purple; */
+}
+
+/* --------------------------------- Vacuum ---------------------------------- */
+#vacuum {
+  position: absolute;
+  bottom: 210px;
+  right: 0px;
+  width: 30px;
+  height: 170px;
+}
+
+#vacuum_text {
+   position: absolute;
+   width: 207px;
+   top: 25px;
+   left: 30px;
+   font-family: 'vcr';
+   font-size: 13px;
+   line-height: 1.3;
 }
 
 /* --------------------------------- PHONE ---------------------------------- */

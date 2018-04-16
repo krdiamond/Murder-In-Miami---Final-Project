@@ -15,6 +15,7 @@ class Room4 extends Component {
   state = {
     toggleTalkToJessMessage: false,
     toggleJessKneesMessage: false,
+    toggleVacuumMessage: false,
     toggleTooBusyMessage: false,
     togglePlantMessage: false,
     toggleStopSnoopingMessage: false,
@@ -27,6 +28,7 @@ class Room4 extends Component {
       this.props.toggleShowPhone(false)
       this.setState({
         toggleNoseyMessage: !this.state.toggleNoseyMessage,
+        toggleVacuumMessage: false,
         toggleTalkToJessMessage: false,
         toggleJessKneesMessage: false,
         toggleTooBusyMessage: false,
@@ -43,6 +45,7 @@ class Room4 extends Component {
     this.props.toggleShowPhone(false)
     this.setState({
       toggleTalkToJessMessage: !this.state.toggleTalkToJessMessage,
+      toggleVacuumMessage: false,
       toggleJessKneesMessage: false,
       toggleTooBusyMessage: false,
       togglePlantMessage: false,
@@ -56,6 +59,7 @@ class Room4 extends Component {
     this.props.toggleShowPhone(false)
     this.setState({
       toggleJessKneesMessage: !this.state.toggleJessKneesMessage,
+        toggleVacuumMessage: false,
       toggleTalkToJessMessage: false,
       toggleTooBusyMessage: false,
       togglePlantMessage: false,
@@ -68,6 +72,7 @@ class Room4 extends Component {
     this.props.toggleShowPhone(false)
     this.setState({
       jessSaidShesTooBusyToTalk: true,
+        toggleVacuumMessage: false,
       toggleTooBusyMessage: !this.state.toggleTooBusyMessage,
       toggleTalkToJessMessage: false,
       toggleJessKneesMessage: false,
@@ -81,6 +86,19 @@ class Room4 extends Component {
     this.props.toggleShowPhone(false)
     this.setState({
       togglePlantMessage: !this.state.togglePlantMessage,
+        toggleVacuumMessage: false,
+      toggleTalkToJessMessage: false,
+      toggleJessKneesMessage: false,
+      toggleTooBusyMessage: false,
+      toggleStopSnoopingMessage: false,
+    })
+  }
+
+  handleVacuum = () => {
+    this.props.toggleShowPhone(false)
+    this.setState({
+      toggleVacuumMessage: !this.state.toggleVacuumMessage,
+      togglePlantMessage: false,
       toggleTalkToJessMessage: false,
       toggleJessKneesMessage: false,
       toggleTooBusyMessage: false,
@@ -91,6 +109,7 @@ class Room4 extends Component {
   handlePhoneClick = () => {
     this.setState({
       toggleTalkToJessMessage: false,
+        toggleVacuumMessage: false,
       toggleJessKneesMessage: false,
       toggleTooBusyMessage: false,
       togglePlantMessage: false,
@@ -108,6 +127,7 @@ class Room4 extends Component {
       this.props.toggleShowPhone(false)
       this.setState({
         toggleTalkToJessMessage: false,
+        toggleVacuumMessage: false,
         toggleJessKneesMessage: false,
         toggleTooBusyMessage: false,
         togglePlantMessage: false,
@@ -119,6 +139,7 @@ class Room4 extends Component {
       this.props.toggleShowPhone(false)
       this.setState({
         toggleStopSnoopingMessage: !this.state.toggleStopSnoopingMessage,
+        toggleVacuumMessage: false,
         toggleTalkToJessMessage: false,
         toggleJessKneesMessage: false,
         toggleTooBusyMessage: false,
@@ -161,7 +182,7 @@ class Room4 extends Component {
           <div className="jessicas_message">
             <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
             <div id="knees_text">
-              OMG you are so annoying, my knees are fine. It's just a bruise and some cuts I got from playing tennis. Its nothing. I get bruises like this all the time. Can you leave now????'
+              OMG you are so annoying, my knees are fine. It's just a bruise shaped like tennis racket strings. I get bruises like this all the time. Can you leave now????'
             </div>
           </div> : null }
 
@@ -182,6 +203,15 @@ class Room4 extends Component {
               mumble... ugh I have so many plants to water, I have to go to Allison's later to water hers too. Ugh, it's so annoying...
             </div>
           </div> : null }
+
+          <div id="vacuum" onClick={this.handleVacuum}></div>
+          {this.state.toggleVacuumMessage?
+            <div className="jessicas_message">
+              <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
+              <div id="vacuum_text">
+                OMG don't touch my vacuum. 
+              </div>
+            </div> : null }
 
         <div id="room4phone" onClick={this.handlePhoneClick}></div>
         {(this.props.showPhone === true)? <PhoneContainer message="0"/>: null}

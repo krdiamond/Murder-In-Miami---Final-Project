@@ -1,4 +1,4 @@
-#jess_tennis_racket:hover, #jess_shoes:hover, #jess_ashtray:hover, #keys:hover{
+#jess_tennis_racket:hover, #jess_shoes:hover, #jess_ashtray:hover, #keys:hover, #room5_vacuum:hover{
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
@@ -96,6 +96,46 @@
     font-size: 13px;
     line-height: 1.3;
 }
+
+/* -------------------------------- VACUUM ---------------------------------- */
+
+#room5_vacuum{
+  position: absolute;
+  width: 110px;
+  height: 277px;
+  bottom: 0px;
+  left: 284px;
+  /* border: 3px solid green; */
+
+}
+
+#room5_vacuum_message {
+  position: absolute;
+      height: 190px;
+      width: 210px;
+      top: 429px;
+      left: 271px;
+
+}
+
+#room5_vacuum_message_bubble {
+  position: absolute;
+  height: 190px;
+  width: 210px;
+  left: 0px;
+
+  }
+
+#room5_vacuum_message_bubble_text {
+  position: absolute;
+  width: 165px;
+  top: 38px;
+  left: 12px;
+  font-family: 'vcr';
+  font-size: 13px;
+  line-height: 1.3;
+}
+
 
 /* -------------------------------- SHOES ----------------------------------- */
 

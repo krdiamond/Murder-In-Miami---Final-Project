@@ -8,6 +8,7 @@ import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 import rightThought from '../../../../images/right_thought_bubble.png';
 import leftThought from '../../../../images/left_thought_bubble.png';
+import longSpeech from '../../../../images/long_speech_bubble.png';
 
 
 
@@ -68,21 +69,63 @@ class Room8 extends Component {
     })
   }
 
+  //
+   //
+  // Heather:
+  // Jessica:
+  // Heather:
+  // Jessica:
+  // Heather:
+
+
+
+  // <img id="heather_bubble_4" src={longSpeech} alt="Cigarettes"/>
+
+  // <img id="jessica_bubble_5" src={longSpeech} alt="Cigarettes"/>
+  //   <div id="jessica_message_text_5">
+  //
+
+
+
   render() {
     return (
       <div className="main_container">
         <img src={room8} alt="Allison's Bedroom"/>
 
           {this.props.playingTape? <img src={beach} id="beach_scene" onClick={this.handleBeachSceneClick} alt="Beach Scene"/> : null}
-          {this.props.playingTape && this.state.toggleBeachSceneMessage? <div id="beach_message">
-            Heather: "ok like I've never even met that girl but she is so gross, how could she do that??"
-            Jessica: " I know I hate her so much"
-            Heather: "it would be so funny to take her out to the beach at night and like totally bash her head in"
-            Jessica: "hahahaha could you imagine"
-            Heather: " who would even miss her???"
-            Jessica: "well I guess me beacuse like she does most of the work around here anyways, I just sit around and hang out with you.... I should probably be working right now..."
-            Heather: "yea what are you even doing talking to me, go get me a drink hahahaha!! "
+          {this.props.playingTape && this.state.toggleBeachSceneMessage?
+
+            <div id="beach_message">
+              <div className="message_bubble_right">
+                <div className="bubble_text"> <strong>Heather</strong> "She is so gross, how could she do that??"</div>
+                <img className="bubble" src={longSpeech} alt="Beach Convo"/>
+              </div>
+              <div className="message_bubble_left">
+                <div className="bubble_text"> <strong>Jessica</strong> "I know I hate her so much."</div>
+                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+              </div>
+              <div className="message_bubble_right">
+                <div className="bubble_text"> <strong>Heather</strong> "it would be so funny to take her out to the beach at night and like totally bash her head in"</div>
+                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+              </div>
+              <div className="message_bubble_left">
+                <div className="bubble_text"> <strong>Jessica</strong> "hahahaha could you imagine"</div>
+                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+              </div>
+              <div className="message_bubble_right">
+                <div className="bubble_text"> <strong>Heather</strong> " who would even miss her???"</div>
+                 <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+               </div>
+              <div className="message_bubble_left">
+                <div className="bubble_text"> <strong>Jessica</strong> "well I guess me beacuse like she does most of the work around here anyways, I just sit around and hang out with you.... I should probably be working right now..."</div>
+                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+              </div>
+              <div className="message_bubble_right">
+                <div className="bubble_text"> <strong>Heather</strong> "yea what are you even doing talking to me, go get me a drink hahahaha!! "</div>
+                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+              </div>
             </div> : null}
+
 
           <div id="wine_glass_left" onClick={this.handleWineGlasses}></div>
           {this.state.toggleWineGlassMessage?

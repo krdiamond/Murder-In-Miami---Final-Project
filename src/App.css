@@ -1,5 +1,5 @@
 
-#call_police:hover, #purse_container:hover, #blinking_message_dot:hover, #close_phone:hover{
+#call_police:hover, #purse:hover, #blinking_message_dot:hover, #close_phone:hover, .cell:hover{
   cursor: url('images/hand.png') 30 100,auto;
 }
 

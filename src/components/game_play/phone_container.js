@@ -11,6 +11,7 @@ class PhoneContainer extends Component {
     messageDisplayed:false,
     toggleCallPolice: false,
     toggleCallAllison: false,
+    solution: []
   }
 
   handleClosePhone = () => {
@@ -36,14 +37,29 @@ class PhoneContainer extends Component {
     })
   }
 
-  solveMurder = (person) => {
-    if(person === "Jessica"){
-      console.log("GO TO WINNERS PAGE!!!")
-    }
-    else{
-      console.log("GO TO LOSERS PAGE!!!")
+ addMurderClueToSolution = (itemOrPerson) => {
+   this.setState({
+     solution: [...this.state.solution, itemOrPerson]
+   }, () => this.solveMurder())
+ }
+
+
+
+  solveMurder = () => {
+    if (this.state.solution.length === 2){
+        if (this.state.solution.includes("Jessica") && this.state.solution.includes("Tennis Racket") === true) {
+          this.handleGoToRoom(12)
+        }
+        else {
+          this.handleGoToRoom(13)
+        }
     }
   }
+
+  handleGoToRoom = (roomNum) => {
+    this.props.goToRoom(roomNum)
+  }
+
 
   callAllison = () => {
     this.setState({
@@ -65,14 +81,14 @@ class PhoneContainer extends Component {
   }
 
   render() {
+
     let people = [...new Set( this.props.peopleTalkedTO )].map(person => {
-      return(<div id="each_person" onClick={(e) => this.solveMurder(person)} >{person}</div>)
+      return(<div id="each_person" onClick={(e) => this.addMurderClueToSolution(person)} >{person}</div>)
     });
 
     let suspiciousItems = [...new Set( this.props.suspiciousItemsInspected )].map(item => {
-      return(<div id="each_suspicious_item" onClick={(e) => this.solveMurder(item)} >{item}</div>)
+      return(<div id="each_suspicious_item" onClick={(e) => this.addMurderClueToSolution(item)} >{item}</div>)
     });
-
 
 
     return (

@@ -6,10 +6,14 @@ import './Room6.css';
 import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
+import rightThought from '../../../../images/right_thought_bubble.png';
 
 
 class Room6 extends Component {
 
+  state = {
+    toggleBarBellsMessage: false,
+  }
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
@@ -30,6 +34,15 @@ class Room6 extends Component {
     }
   }
 
+  handleBarBells = () => {
+    this.props.foundSuspiciousItem("Bar Bells")
+    this.props.toggleShowPhone(false)
+    this.props.toggleIsPurseOpened(false)
+    this.setState({
+      toggleBarBellsMessage: !this.state.toggleBarBellsMessage,
+    })
+  }
+
 
   render() {
     return (
@@ -41,6 +54,15 @@ class Room6 extends Component {
           <div id="room6phone" onClick={this.handlePhoneClick} >
             <img src={redDot} width="5" alt="blinking light"/>
           </div>
+
+          <div id="bar_bells" onClick={this.handleBarBells}></div>
+          {this.state.toggleBarBellsMessage?
+            <div id="bar_bells_message">
+              <img id="bar_bells_message_bubble" src={rightThought} alt="Jessica's Thoughts"/>
+                <div id="bar_bells_message_bubble_text">
+                  why would Allison leave these out?
+                 </div>
+          </div> : null }
 
           {(this.props.showPhone === true)?
             <PhoneContainer message="Hi Allison, It's your father. Your mother and I went by your house today and we noticed you weren't home. I thought we had plans to do our usual sunday brunch? Where are you? Call me back when you get this. "/>: null}

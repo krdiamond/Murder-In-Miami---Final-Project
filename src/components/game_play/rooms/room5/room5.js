@@ -12,6 +12,7 @@ class Room5 extends Component {
 
   state = {
     toggleShoesMessage: false,
+    toggleVacuumMessage: false,
     toggleTennisRacketMessage: false,
     toggleAshTrayMessage: false,
   }
@@ -24,6 +25,17 @@ class Room5 extends Component {
     this.props.foundSuspiciousItem("Tennis Racket")
     this.setState({
       toggleTennisRacketMessage: !this.state.toggleTennisRacketMessage,
+          toggleVacuumMessage: false,
+      toggleShoesMessage: false,
+      toggleAshTrayMessage: false,
+    })
+  }
+
+  handleVacuum = () => {
+    this.props.foundSuspiciousItem("Vacuum")
+    this.setState({
+      toggleTennisRacketMessage: false,
+      toggleVacuumMessage: !this.state.toggleVacuumMessage,
       toggleShoesMessage: false,
       toggleAshTrayMessage: false,
     })
@@ -32,6 +44,7 @@ class Room5 extends Component {
   handleShoes = () => {
     this.setState({
       toggleShoesMessage: !this.state.toggleShoesMessage,
+          toggleVacuumMessage: false,
       toggleTennisRacketMessage: false,
       toggleAshTrayMessage: false,
     })
@@ -40,6 +53,7 @@ class Room5 extends Component {
   handleAshtray = () => {
     this.setState({
       toggleAshTrayMessage: !this.state.toggleAshTrayMessage,
+          toggleVacuumMessage: false,
       toggleShoesMessage: false,
       toggleTennisRacketMessage: false,
     })
@@ -72,12 +86,21 @@ class Room5 extends Component {
                </div>
         </div> : null }
 
+        <div id="room5_vacuum" onClick={this.handleVacuum}></div>
+        {this.state.toggleVacuumMessage?
+          <div id="room5_vacuum_message">
+            <img id="room5_vacuum_message_bubble" src={rightThought} alt="Jessica's Thoughts"/>
+              <div id="room5_vacuum_message_bubble_text">
+                 ..hmmm another vacuum. This is getting suspicious.
+               </div>
+        </div> : null }
+
         <div id="jess_shoes" onClick={this.handleShoes}></div>
         {this.state.toggleShoesMessage?
           <div id="shoe_message">
             <img id="shoe_message_bubble" src={rightThought} alt="Jessica's Thoughts"/>
               <div id="shoe_message_bubble_text">
-                  these sneakers are covered in sand.. thats so weird.
+                  these sneakers are covered in sand...
               </div>
         </div> : null }
 

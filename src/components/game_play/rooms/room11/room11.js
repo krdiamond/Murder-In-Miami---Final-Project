@@ -76,6 +76,7 @@ class Room11 extends Component {
                  </div>
           </div> : null }
 
+
           <div id="room11_go_to_room_10" onClick={(e) => this.handleGoToRoom(10)}>
              <div id="room11_go_to_room_10_text">GO TO THE POOL</div>
           </div>
