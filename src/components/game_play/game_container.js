@@ -14,8 +14,8 @@ import Room8 from './rooms/room8/room8';
 import Room9 from './rooms/room9/room9';
 import Room10 from './rooms/room10/room10';
 import Room11 from './rooms/room11/room11';
-import Room12 from './rooms/room11/room11';
-import Room13 from './rooms/room11/room11';
+import Room12 from './rooms/room12/room12';
+import Room13 from './rooms/room13/room13';
 import PurseContainer from './purse_container';
 
 
@@ -36,15 +36,6 @@ class GameContainer extends Component {
     Room11,
     Room12,
     Room13];
-
-  // componentDidMount = () => {
-  //   setInterval(this.tick, 1000);
-  // }
-  //
-  // tick = () => {
-  //   this.props.startTimer(this.props.timer)
-  // }
-
 
   render() {
     let Room = this.rooms[this.props.currentRoom];

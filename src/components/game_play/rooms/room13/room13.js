@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
-import {goToRoom} from '../../actions'
-import '../../App.css';
-import loserIMG from '../../images/loser.jpg';
+import '../../../../App.css';
+// import room13 from '../../../../images/room13/room13.jpg';
 
 
 class Loser extends Component {
@@ -14,11 +12,10 @@ class Loser extends Component {
   render() {
     return (
       <div className="main_container">
-        <img src={startIMG} height="900" alt="start page"/>
-        <button id="start_button" type="button" onClick={this.handleGoToRoom} >START GAME</button>
+      YOU LOSE
       </div>
     );
   }
 }
 
-export default connect( null, {goToRoom} )(Loser);
+export default Loser
