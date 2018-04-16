@@ -6,6 +6,7 @@ import './Room11.css';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 import Tape from './tape'
+import yelling from '../../../../images/yelling_bubble.png';
 
 
 class Room11 extends Component {
@@ -58,13 +59,21 @@ class Room11 extends Component {
           </div> {this.props.showPhone? <PhoneContainer message="0"/>: null}
 
           <div id="parrot_left" onClick={this.handleParrotLeft}></div>
-          {this.state.toggleParrotMessageLeft? <div className="parrot_message">
-          squawk squawk take her down to the beach take her down to the beach squawk
+          {this.state.toggleParrotMessageLeft?
+            <div id="parrot_message">
+              <img id="parrot_bubble" src={yelling} alt="Cigarettes"/>
+                <div id="parrot_message_text">
+                     squawk squawk take her down to the beach take her down to the beach squawk
+                </div>
           </div> : null }
 
           <div id="parrot_right" onClick={this.handleParrotRight}></div>
-          {this.state.toggleParrotMessageRight? <div className="parrot_message">
-          squawk ... squawk .. Heather I don't know Heather I don't know squawk ....
+          {this.state.toggleParrotMessageRight?
+            <div id="parrot_message">
+              <img id="parrot_bubble" src={yelling} alt="Cigarettes"/>
+                <div id="parrot_message_text">
+                   squawk ... squawk .. Heather I don't know Heather I don't know squawk ....
+                 </div>
           </div> : null }
 
           <div id="room11_go_to_room_10" onClick={(e) => this.handleGoToRoom(10)}>
