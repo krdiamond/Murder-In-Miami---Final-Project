@@ -4,6 +4,7 @@ import '../../../../App.css';
 import room10 from '../../../../images/room10/room10.jpg';
 import './Room10.css';
 import * as actions from '../../../../actions';
+import squareSpeech from '../../../../images/square_talk_bubble.png';
 
 
 class Room10 extends Component {
@@ -41,12 +42,21 @@ class Room10 extends Component {
 
           <div id="heather" onClick={this.handleHeather}></div>
 
-          {this.state.talkedToHeather && (this.talkedToBothParrots() === true)?
-            <div className="heather_message"> hm.. ugh.. I guess you heard  those annoying parrots in the other room. Why do they have to repeat everything they hear. They overheard a conversation that I was having with Jessica. It was really not a big deal. What a coincidence something like this would happen after we were just joking around about it... I don't even know kelly. I don't ususally talk to the employees.  </div>
-          :null}
-
-          {this.state.talkedToHeather && (this.talkedToBothParrots() === false)?
-            <div className="heather_message"> Are you even a member? Don't bother me while I'm swimming... </div>
+          {this.state.talkedToHeather?
+            this.talkedToBothParrots()?
+            <div id="heather_message_1">
+              <img id="heather_bubble_1" src={squareSpeech} alt="Cigarettes"/>
+                <div id="heather_message_text_1">
+                 hm.. ugh.. I guess you heard  those annoying parrots in the other room. Why do they have to repeat everything they hear. They overheard a conversation that I was having with Jessica. It was really not a big deal. What a coincidence something like this would happen after we were just joking around about it... I don't even know kelly. I don't ususally talk to the employees.
+               </div>
+            </div>
+           :
+            <div id="heather_message_3">
+              <img id="heather_bubble_3" src={squareSpeech} alt="Cigarettes"/>
+                <div id="heather_message_text_3">
+                  Are you even a member? Don't bother me while I'm swimming...
+                </div>
+            </div>
           :null}
 
           <div id="room10_go_to_room_11" onClick={(e) => this.handleGoToRoom(11)}>
@@ -71,3 +81,12 @@ function mapStateToProps(state){
 }
 
 export default connect( mapStateToProps, actions)(Room10);
+
+
+// {this.state.talkedToHeather && (this.talkedToBothParrots() === true)?
+//   <div className="heather_message"> hm.. ugh.. I guess you heard  those annoying parrots in the other room. Why do they have to repeat everything they hear. They overheard a conversation that I was having with Jessica. It was really not a big deal. What a coincidence something like this would happen after we were just joking around about it... I don't even know kelly. I don't ususally talk to the employees.  </div>
+// :null}
+//
+// {this.state.talkedToHeather && (this.talkedToBothParrots() === false)?
+//   <div className="heather_message"> Are you even a member? Don't bother me while I'm swimming... </div>
+// :null}

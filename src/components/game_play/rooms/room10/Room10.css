@@ -73,11 +73,51 @@
   /* border: 3px solid green; */
 }
 
-.heather_message {
+#heather_message_1 {
   position: absolute;
-  width: 200px;
-  height: 250px;
-  top: 400px;
-  left: 520px;
-  background-color: white;
+      height: 288px;
+      width: 326px;
+      top: 205px;
+      left: 323px;
+}
+
+#heather_bubble_1 {
+  position: absolute;
+  height: 357px;
+  width: 326px;
+  left: 0px;
+}
+
+#heather_message_text_1 {
+  position: absolute;
+  width: 250px;
+  top: 18px;
+  left: 33px;
+  font-family: 'vcr';
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+#heather_message_3 {
+  position: absolute;
+      height: 288px;
+      width: 326px;
+      top: 405px;
+      left: 323px;
+}
+
+#heather_bubble_3 {
+  position: absolute;
+  height: 171px;
+  left: 0px;
+}
+
+#heather_message_text_3 {
+  position: absolute;
+  width: 183px;
+  top: 33px;
+  left: 14px;
+  font-family: 'vcr';
+  font-size: 13px;
+  line-height: 1.3;
 }

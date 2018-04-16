@@ -4,6 +4,7 @@ import {goToRoom} from '../../../../actions'
 import '../../../../App.css';
 import room9 from '../../../../images/room9/room9.jpg';
 import './Room9.css';
+import squareSpeech from '../../../../images/square_talk_bubble.png';
 
 
 class Room9 extends Component {
@@ -31,8 +32,12 @@ class Room9 extends Component {
           <img src={room9} alt="Beach Club Parking Lot"/>
 
           <div id="beach_jess" onClick={this.handleJess}></div>
-          {this.state.toggleJessMessage? <div id="beach_jess_message">
-            OMG you are here too? Why are you following me around. You are so weird. I am finishing this cigarette and then I'm going into work and I don't want to talk to you anymore. Ugh don't go into the club and start bothering the members. You are going to get kicked out.
+          {this.state.toggleJessMessage?
+             <div id="beach_jess_message">
+               <img id="beach_jess_bubble" src={squareSpeech} alt="Cigarettes"/>
+                 <div id="beach_jess_message_text">
+                   OMG you are here too? Why are you following me around. You are so weird. I am finishing this cigarette and then I'm going into work and I don't want to talk to you anymore. Ugh don't go into the club and start bothering the members. You are going to get kicked out.
+                 </div>
           </div> : null }
 
           {this.state.canGoIntoClub?

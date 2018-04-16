@@ -134,10 +134,25 @@
 
 #beach_jess_message {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 410px;
-  left: 650px;
-  /* border: 3px solid green; */
-  background-color: white;
+      height: 288px;
+      width: 326px;
+      top: 313px;
+      left: 407px;
+}
+
+#beach_jess_bubble {
+  position: absolute;
+  height: 288px;
+  width: 326px;
+  left: 0px;
+}
+
+#beach_jess_message_text {
+    position: absolute;
+    width: 250px;
+    top: 31px;
+    left: 33px;
+    font-family: 'vcr';
+    font-size: 13px;
+    line-height: 1.3;
 }
