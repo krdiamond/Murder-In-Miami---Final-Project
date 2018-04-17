@@ -20,6 +20,11 @@
   src: url(fonts/alien-encounters.ttf);
 }
 
+@font-face {
+  font-family:'digital';
+  src: url(fonts/digital.ttf);
+}
+
 #app {
   text-align: center;
   /* border: 2px solid red; */
@@ -48,34 +53,35 @@
 /* ------------------------------- START GAME ------------------------------- */
 
 #header {
-   position: absolute;
-   font-family: 'streamster';
-   height: 199px;
-   bottom: 0px;
-   right: 0px;
-   left: 0px;
-   top: 0px;
-   margin-left: auto;
-   margin-right: auto;
-   color: #F1EFFB;
-   font-size: 127px;
-   z-index: 1;
+  position: absolute;
+  font-family: 'streamster';
+  font-size: 104px;
+  height: 199px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  top: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #F1EFFB;
+  z-index: 1;
+  text-shadow: 2px 2px #002D54;
 }
 
 
 #intro {
-  position:absolute;
-  width: 718px;
-  height: 163px;
-  top: 190px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #49A2E8;
-  border: 8px solid #F1EFFB;
-  border-radius: 30px;
+  position: absolute;
+    width: 600px;
+    height: 200px;
+    top: 197px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #49A2E8;
+    border: 3px solid #F1EFFB;
+    border-radius: 15px;
 }
 
 #opening_story {
@@ -96,7 +102,7 @@
   padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
-  top: 140px;
+  top: 169px;
   right: 0px;
   left: 0px;
   background-color: #005EA6;
@@ -104,6 +110,7 @@
   text-decoration: none;
   border-radius: 46px;
   font-family: 'alien_encounters';
+  -webkit-box-shadow: 5px 8px 0px #081c48;
   box-shadow: 5px 8px 0px #081c48;
   letter-spacing: 1px;
   line-height: .8;
@@ -186,15 +193,27 @@ button:focus {outline:0;}
 /* --------------------------------- PHONE ---------------------------------- */
 #blinking_message_dot {
   position: absolute;
-  left:325px;
-  top:70px;
+  left: 255px;
+  bottom: 65px;
+}
+
+#close_phone {
+   position: absolute;
+   top: 0px;
+   left: 45px;
+   width: 123px;
+   height: 593px;
+   border-radius: 19px;
+   color: white;
+   font-family: 'vcr';
+   font-size: 13px;
 }
 
 #phone_container{
   z-index: 3;
   position: absolute;
-  width:400px;
-  height:400px;
+  width:516px;
+  height: 600px;
   margin: auto;
   top: 0px;
   left: 0px;
@@ -202,31 +221,17 @@ button:focus {outline:0;}
   right: 0px;
 }
 
-#phone_message{
-    border: 6px solid purple;
-    background-color: white;
-}
-
-#close_phone{
-  background-color:white;
-}
-
-.phone_button {
-  position: absolute;
-  background-color: white;
-  height: 50px;
-  width: 80px;
-  padding-top: 10px;
-  top: 100px;
-
-}
 
 #call_police {
-  left: 207px;
-}
-
-#call_allison {
-  left: 295px;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0px;
+  left: 0px;
+  top: 23px;
+  color: white;
+  font-family: 'digital';
+  font-size: 50px;
 }
 
 #police_message {
@@ -238,44 +243,55 @@ button:focus {outline:0;}
   width: 210px;
 }
 
-#people_container{
-  position: absolute;
-  left: 187px;
-  top: 160px;
-  /* border: 6px solid purple; */
+#phone_buttons_container {
+    position: absolute;
+    top: 92px;
+    right: 34px;
+    width: 267px;
+    height: 314px;
+    border: 1px solid purple;
 }
 
-#each_person{
+.phone_button {
   background-color: white;
-  height: 20px;
-  width: 91px;
-  padding: 5px;
-  margin-top:10px;
-  margin-bottom:10px;
-  /* border: 6px solid purple; */
+  height: 33px;
+  width: 73px;
+  /* padding: 3px; */
+  border-radius: 13px;
+  font-family: 'digital';
+  margin-bottom: 15px;
+  border: 1px solid purple;
 }
 
-#each_suspicious_item_container {
-  position: absolute;
-  left: 295px;
-  top: 160px;
+#people_container_left{
+   position: relative;
+   float: left;
+       width: 74px;
+   height: 186px;
+   top: 127px;
+   border: 1px solid purple;
 }
 
-#each_suspicious_item{
-  background-color: white;
-  height: 20px;
-  width: 91px;
-  padding: 5px;
-  margin-top:10px;
-  margin-bottom:10px;
-  /* border: 6px solid purple; */
+#item_container_right{
+  position: relative;
+float: right;
+    width: 74px;
+height: 186px;
+top: 127px;
+border: 1px solid purple;
 }
+
 
 #allison_message{
   left: 227px;
   top: 180px;
   width: 400px;
   background-color:white;
+}
+
+#phone_message{
+    border: 6px solid purple;
+    background-color: white;
 }
 
 
@@ -287,4 +303,41 @@ button:focus {outline:0;}
   height: 130px;
   top: 155px;
   left: 15px;
+}
+
+/* -------------------------------- WINNER ---------------------------------- */
+#murder_story {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  color: white;
+  font-family: 'vcr';
+  font-size: 14px;
+  text-shadow: 2px 2px #091225;
+}
+
+#loser {
+    position: absolute;
+    font-size: 100px;
+    font-family: 'alien_encounters';
+    top: 159px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    color: #FF9F63;
+}
+
+#loser_story {
+  position: absolute;
+  font-size: 14px;
+  font-family: 'vcr';
+  top: 255px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  color: #FFC559;
 }

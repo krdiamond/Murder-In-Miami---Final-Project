@@ -1,5 +1,5 @@
 const defaultState = {
-  currentRoom: 8,
+  currentRoom: 1 ,
   isPurseOpened: false,
   showPhone: false,
   findCrumpledNote: false,
@@ -13,9 +13,9 @@ const defaultState = {
   gotClueFromSnake: false,
   findRoom4CrumpledNote: false,
   showingAllisonsPhoneNumber: false,
-  peopleTalkedTO: [],
+  peopleTalkedTO: ["Jessica", "Pet Snake", "Allison", "Allison's Dad"],
   playingTape: false,
-  suspiciousItemsInspected: [],
+  suspiciousItemsInspected: ["Tennis Racket", "Vaccum", "Bar Bells"],
   readingHeartMessage: false,
 }
 
