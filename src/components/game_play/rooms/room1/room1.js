@@ -14,6 +14,13 @@ class Room1 extends Component {
 
   state = {
     openingStoryDisplayed: true,
+    nextRoomShowing: false,
+  }
+
+  handleNextRoom = () => {
+    this.setState({
+      nextRoomShowing: true,
+    })
   }
 
   handleGoToRoom = (roomNum) => {
@@ -63,10 +70,10 @@ class Room1 extends Component {
 
         <img src={room1} alt="Victim's Living Room"/>
 
-        {this.props.findCrumpledNote? null : <img id="crumpled_note" src={crumpledNote} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
+        {this.props.findCrumpledNote? null : <img id="crumpled_note" src={crumpledNote} onMouseEnter={this.handleNextRoom} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
         {this.props.findJessicasNote? <Note/> : null }
 
-        <div id="heart" onClick={this.handleHeart}> </div>
+        <div id="heart" onClick={this.handleHeart} onMouseEnter={this.handleNextRoom}>  </div>
         {this.props.readingHeartMessage?
           <div id="heart_message">
             <img className="thought_bubble" src={rightThought} alt="Heart Award Thoughts"/>
@@ -75,20 +82,24 @@ class Room1 extends Component {
             </div>
         </div> : null}
 
-        <div id="room1phone" onClick={this.handlePhoneClick} >
+        <div id="room1phone" onClick={this.handlePhoneClick} onMouseEnter={this.handleNextRoom} >
           <img src={redDot} width="5" alt="blinking light"/>
         </div>
         {(this.props.showPhone === true)?
           <PhoneContainer
             message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
 
-        <div id="room1_go_to_room_2" onClick={(e) => this.handleGoToRoom(2)}>
-            <div id="room1_go_to_room_2_text">GO TO KELLY'S BEDROOM</div>
-        </div>
-
         {this.props.gotClueFromSnake?
         <div id="room1_go_to_room_4" onClick={(e) => this.handleGoToRoom(4)}>
           <div id="room1_go_to_room_4_text"> VISIT JESSICA </div>
+        </div> :null}
+
+        <div id="bottom_screen" onMouseEnter={this.handleNextRoom}></div>
+        <div id="top_screen" onMouseEnter={this.handleNextRoom}></div>
+
+       {this.state.nextRoomShowing ?
+        <div id="room1_go_to_room_2" onClick={(e) => this.handleGoToRoom(2)}>
+            <div id="room1_go_to_room_2_text">GO TO KELLY'S BEDROOM</div>
         </div> :null}
 
       </div>

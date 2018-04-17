@@ -63,7 +63,7 @@ class Room11 extends Component {
             <div id="parrot_message">
               <img id="parrot_bubble" src={yelling} alt="Cigarettes"/>
                 <div id="parrot_message_text">
-                     squawk squawk take her down to the beach take her down to the beach squawk
+                     squawk... squawk... take her down to the beach... take her down to the beach... squawk
                 </div>
           </div> : null }
 
@@ -72,7 +72,7 @@ class Room11 extends Component {
             <div id="parrot_message">
               <img id="parrot_bubble" src={yelling} alt="Cigarettes"/>
                 <div id="parrot_message_text">
-                   squawk ... squawk .. Heather I don't know Heather I don't know squawk ....
+                   squawk... squawk... Heather I don't know... Heather I don't know... squawk
                  </div>
           </div> : null }
 

@@ -173,7 +173,7 @@ class Room4 extends Component {
           <div id="jessicas_message_long">
             <img id="jessicas_thought_bubble_long" src={squareSpeech} alt="Jessica's Thoughts"/>
             <div id="long_text">
-               Woah what are you doing here? Whatever, I'm too upset to care. I was with Kelly that night can you believe that?? I was with her!! We smoked cigarettes down by the beach and Allison dropped her off at home. She probably went to sleep when she got home. I don't know. Ugh can you leave please, like I'm really upset.
+               Woah what are you doing here? Whatever, I'm too upset to care. I was with Kelly that night. Can you believe that?? I was with her!! We smoked cigarettes down by the beach and Allison dropped her off at home. She probably went to sleep when she got home. I don't know. Ugh can you leave please, like I'm really upset.
            </div>
         </div> : null }
 
@@ -182,7 +182,7 @@ class Room4 extends Component {
           <div className="jessicas_message">
             <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
             <div id="knees_text">
-              OMG you are so annoying, my knees are fine. It's just a bruise shaped like tennis racket strings. I get bruises like this all the time. Can you leave now????'
+              OMG you are so annoying, my knees are fine. It's just a bruise shaped like tennis racket strings. I get bruises like this all the time from playing tennis. Can you leave now????'
             </div>
           </div> : null }
 
@@ -209,7 +209,7 @@ class Room4 extends Component {
             <div className="jessicas_message">
               <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
               <div id="vacuum_text">
-                OMG don't touch my vacuum. 
+                OMG don't touch my vacuum.
               </div>
             </div> : null }
 

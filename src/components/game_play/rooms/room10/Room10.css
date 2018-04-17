@@ -74,16 +74,16 @@
 }
 
 #heather_message_1 {
-  position: absolute;
-      height: 288px;
-      width: 326px;
-      top: 205px;
-      left: 323px;
+    position: absolute;
+    height: 288px;
+    width: 326px;
+    top: 278px;
+    left: 270px;
 }
 
 #heather_bubble_1 {
   position: absolute;
-  height: 357px;
+  height: 305px;
   width: 326px;
   left: 0px;
 }

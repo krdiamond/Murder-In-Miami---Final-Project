@@ -105,23 +105,23 @@ class Room8 extends Component {
                 <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
               </div>
               <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> "it would be so funny to take her out to the beach at night and like totally bash her head in"</div>
+                <div className="bubble_text"> <strong>Heather</strong> "you should take her out to the beach at night and like totally bash her head in"</div>
                 <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
               </div>
               <div className="message_bubble_left">
-                <div className="bubble_text"> <strong>Jessica</strong> "hahahaha could you imagine"</div>
+                <div  className="bubble_text"> <strong>Jessica</strong> "hahahaha could you imagine"</div>
                 <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
               </div>
               <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> " who would even miss her???"</div>
+                <div className="bubble_text"> <strong>Heather</strong> "Who would even miss her???"</div>
                  <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
                </div>
-              <div className="message_bubble_left">
-                <div className="bubble_text"> <strong>Jessica</strong> "well I guess me beacuse like she does most of the work around here anyways, I just sit around and hang out with you.... I should probably be working right now..."</div>
-                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
+              <div id="bubble_message_6" className="message_bubble_left">
+                <div id="bubble_text_6"className="bubble_text"> <strong>Jessica</strong> "well I guess me beacuse like she does most of the work around here anyways, I just sit around and hang out with you.... I should probably be working right now..."</div>
+                <img id="bubble_6" className="bubble"  src={longSpeech} alt="Beach Convo"/>
               </div>
               <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> "yea what are you even doing talking to me, go get me a drink hahahaha!! "</div>
+                <div className="bubble_text"> <strong>Heather</strong> "yea what are you even doing talking to me, go get me a drink hahahaha!!"</div>
                 <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
               </div>
             </div> : null}
@@ -132,7 +132,7 @@ class Room8 extends Component {
             <div id="wine_glasses_message">
               <img id="wine_glasses_bubble" src={rightThought} alt="Wine Glasses"/>
                 <div id="wine_glasses_message_text">
-                  There are two glasses of wine... I think Allison and Jessica were hanging out here when Allison left Kelly that message on her answering machine the night of the murder. Looks like they left in a hurry to pick up Kelly.
+                  Two glasses of wine... Allison and Jessica were hanging out here before they picked up Kelly on the night of the murder. Looks like they left in a hurry.
               </div>
           </div> : null }
 
@@ -153,7 +153,7 @@ class Room8 extends Component {
             <div id="room8_racket_message">
               <img id="room8_racket_bubble" src={leftThought} alt="Cigarettes"/>
                 <div id="room8_racket_message_text">
-                    Another tennis racket. It seems like Allison and Jessica all play tennis together. This one seems to be broken in and pretty dirty.
+                    Another tennis racket. It seems like Jessica, Kelly, and Allison play tennis, maybe together? It looks broken in and pretty dirty.
                 </div>
           </div> : null }
 

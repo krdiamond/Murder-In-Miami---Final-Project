@@ -150,3 +150,22 @@
   line-height: 1.3;
     /* border: 3px solid green; */
 }
+
+
+#bottom_screen {
+  position: absolute;
+  width: 400px;
+  height: 125px;
+  bottom:0px;
+  right:0px;
+  /* border: 3px solid green; */
+}
+
+
+#top_screen {
+  position: absolute;
+  width: 750px;
+  height: 229px;
+  top:0px;
+  /* border: 3px solid green; */
+}
