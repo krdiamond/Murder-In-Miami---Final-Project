@@ -82,15 +82,6 @@ class Room1 extends Component {
           <PhoneContainer
             message="HEYYYYYYY KEL IT'S ALLISON!!! WANNA COME OUT WITH US TONIGHT?? ME AND JESS ARE HANGING OUT AND I KNOW YOU GUYS AREN'T SO TIGHT RIGHT NOW BUT IT WILL BE SO MUCH FUN MAYBE YOU GUYS CAN MAKE UP??? EITHER WAY, CALL ME BACK AND LET ME KNOW. I CAN PICK YOU UP IN MY CAR!!!!!!  "/>: null}
 
-        <div id= "opening_story_closed" className="story"> </div>
-        <div id="show_story" className="story" onClick={this.toggleShowStory}>x</div>
-        {this.state.openingStoryDisplayed?
-          <div id="opening_story" className="story">
-             A girl named Kelly was found brutally murdered by the beach two nights ago. Police found the body covered with fallen branches, rocks, sand and dirt.  They also found numerous cigarette butts all over the area but were too covered with sand to test for DNA. The police have not been able to find any leads and the case is looking bleak. You are super nosy and have decided to snoop around to try and help. If you are able to figure out who the murderer is and what the murder weapon was, please call the police from any phone as soon as possible!!!!
-             <div className="story" onClick={this.toggleShowStory}>x</div>
-          </div> : null}
-
-
         <div id="room1_go_to_room_2" onClick={(e) => this.handleGoToRoom(2)}>
             <div id="room1_go_to_room_2_text">GO TO KELLY'S BEDROOM</div>
         </div>

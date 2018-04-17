@@ -54,23 +54,7 @@
     visibility: visible;
   }
 
- /* ----------------------------- OPENING STORY ----------------------------- */
 
-.story {
-  position: absolute;
-  background: black;
-  color: white;
-  width: 900px;
-}
-
- #opening_story {
-   top: 0px;
-   height:100px;
- }
-
- #show_story {
-   top: 0px;
- }
 
 /* ---------------------------------- PHONE --------------------------------- */
 

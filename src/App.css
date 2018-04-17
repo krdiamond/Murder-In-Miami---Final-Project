@@ -10,6 +10,16 @@
   src: url(fonts/vcr.ttf);
 }
 
+@font-face {
+  font-family:'streamster';
+  src: url(fonts/streamster.ttf);
+}
+
+@font-face {
+  font-family:'alien_encounters';
+  src: url(fonts/alien-encounters.ttf);
+}
+
 #app {
   text-align: center;
   /* border: 2px solid red; */
@@ -27,15 +37,84 @@
   float:left;
 }
 
-.thought_bubble{
+/* .thought_bubble{
   position: absolute;
   height: 250px;
   left:0px;
-}
+} */
 
 /* -------------------------- LANDING PAGE CONTAINER ------------------------ */
 
-/* ---------------------------- GENERAL GAME PLAY --------------------------- */
+/* ------------------------------- START GAME ------------------------------- */
+
+#header {
+   position: absolute;
+   font-family: 'streamster';
+   height: 199px;
+   bottom: 0px;
+   right: 0px;
+   left: 0px;
+   top: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   color: #F1EFFB;
+   font-size: 127px;
+   z-index: 1;
+}
+
+
+#intro {
+  position:absolute;
+  width: 718px;
+  height: 163px;
+  top: 190px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #49A2E8;
+  border: 8px solid #F1EFFB;
+  border-radius: 30px;
+}
+
+#opening_story {
+   position: absolute;
+   color: #F1EFFB;
+   padding: 10px;
+   font-family: 'vcr';
+    font-size: 14px;
+}
+
+#start_button{
+  position: absolute;
+  width: 262px;
+  height: 120px;
+  font-size: 59px;
+  color: #F1EFFB;
+  padding: 19px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 140px;
+  right: 0px;
+  left: 0px;
+  background-color: #005EA6;
+  border: 1px solid #1374a4;
+  text-decoration: none;
+  border-radius: 46px;
+  font-family: 'alien_encounters';
+  box-shadow: 5px 8px 0px #081c48;
+  letter-spacing: 1px;
+  line-height: .8;
+}
+
+#start_button:active {
+  box-shadow: 0px 0px 0px #081c48;
+  transform: translate(5px,5px);
+}
+
+button:focus {outline:0;}
 
 /* --------------------------------- PURSE ---------------------------------- */
 
@@ -208,13 +287,4 @@
   height: 130px;
   top: 155px;
   left: 15px;
-}
-
-
-/* ------------------------------- START GAME ------------------------------- */
-
-#start_button{
-  position: absolute;
-  left: 0px;
-  font-size: 24px;
 }
