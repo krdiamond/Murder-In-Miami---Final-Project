@@ -5,6 +5,7 @@ import room10 from '../../../../images/room10/room10.jpg';
 import './Room10.css';
 import * as actions from '../../../../actions';
 import squareSpeech from '../../../../images/square_talk_bubble.png';
+import water from '../../../../images/water.gif';
 
 
 class Room10 extends Component {
@@ -40,6 +41,8 @@ class Room10 extends Component {
 
           <img src={room10} alt="Beach Club Pool"/>
 
+          <img id="water" src={water} alt="Water"/>
+
           <div id="heather" onClick={this.handleHeather}></div>
 
           {this.state.talkedToHeather?
@@ -47,7 +50,7 @@ class Room10 extends Component {
             <div id="heather_message_1">
               <img id="heather_bubble_1" src={squareSpeech} alt="Cigarettes"/>
                 <div id="heather_message_text_1">
-                 hm.. ugh.. I guess you heard those annoying parrots. They repeat everything they hear. We were just joking around. We would never actually do it. I don't even know kelly. I don't ususally talk to the employees. This club is so annoying, there is always someone listening or watching. 
+                 hm.. ugh.. I guess you heard those annoying parrots. They repeat everything they hear. We were just joking around. We would never actually do it. I don't even know kelly. I don't ususally talk to the employees. This club is so annoying, there is always someone listening or watching.
                </div>
             </div>
            :

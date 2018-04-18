@@ -213,7 +213,7 @@
 
 #keys {
   position: absolute;
-  z-index: 3;
+  z-index: 10;
 }
 
 #clear_keys {
@@ -236,8 +236,8 @@
 }
 
 #dancing_michael {
-  position: absolute;
-  top: 207px;
-  right: 94px;
-  height: 300px;
+    position: absolute;
+    top: 288px;
+    right: 0px;
+    height: 394px;
 }
