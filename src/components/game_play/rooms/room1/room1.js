@@ -6,6 +6,7 @@ import './Room1.css';
 import room1 from '../../../../images/room1/room1.jpg';
 import redDot from '../../../../images/room1/red_dot.gif';
 import crumpledNote from '../../../../images/room1/crumpled_note.png';
+import staticGIF from '../../../../images/room1/static.gif';
 import rightThought from '../../../../images/right_thought_bubble.png';
 import PhoneContainer from '../../phone_container';
 import Note from './note'
@@ -69,6 +70,9 @@ class Room1 extends Component {
       <div className="main_container">
 
         <img src={room1} alt="Victim's Living Room"/>
+
+      <img id="static" src={staticGIF} alt="Victim's Living Room"/>
+
 
         {this.props.findCrumpledNote? null : <img id="crumpled_note" src={crumpledNote} onMouseEnter={this.handleNextRoom} onClick={this.handleFindCrumpledNote} alt="Crumpled Note"/> }
         {this.props.findJessicasNote? <Note/> : null }

@@ -169,3 +169,17 @@
   top:0px;
   /* border: 3px solid green; */
 }
+
+
+/* ------------------------------ TV STATIC --------------------------------- */
+
+#static {
+  position: absolute;
+    width: 81px;
+    height: 59px;
+    bottom: 238px;
+    right: 123px;
+    -webkit-transform: perspective( 2000px ) rotateY( 50deg ) rotateZ( .5deg );
+    transform: perspective( 263px ) rotateY( -14deg ) rotateZ( 10.5deg );
+
+}

@@ -83,7 +83,7 @@
   top: 48px;
   left: 20px;
   font-family: 'vcr';
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.3;
 }
 /* ----------------------------------- BED ---------------------------------- */
@@ -111,10 +111,10 @@
 
 #bed_message_text {
   position: absolute;
-  width: 196px;
+  width: 173px;
   top: 41px;
-  left: 55px;
+  left: 49px;
   font-family: 'vcr';
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.3;
 }

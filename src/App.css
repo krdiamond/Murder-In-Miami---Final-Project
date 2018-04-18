@@ -44,8 +44,8 @@
 
 .thought_bubble{
   position: absolute;
-  height: 250px;
-  left:0px;
+    height: 220px;
+    left: 0px;
 }
 
 /* -------------------------- LANDING PAGE CONTAINER ------------------------ */
@@ -54,18 +54,18 @@
 
 #header {
   position: absolute;
-  font-family: 'streamster';
-  font-size: 104px;
-  height: 199px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  top: 39px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #F1EFFB;
-  z-index: 1;
-  text-shadow: 2px 2px #002D54;
+font-family: 'streamster';
+font-size: 104px;
+height: 199px;
+bottom: 0px;
+right: 0px;
+left: 0px;
+top: 39px;
+margin-left: auto;
+margin-right: auto;
+color: #F1EFFB;
+z-index: 1;
+text-shadow: 5px 5px #002D54;
 }
 
 
@@ -198,16 +198,28 @@ button:focus {outline:0;}
 }
 
 #close_phone {
-   position: absolute;
-   top: 0px;
-   left: 45px;
-   width: 123px;
-   height: 593px;
-   border-radius: 19px;
-   color: white;
-   font-family: 'vcr';
-   font-size: 13px;
+  position: absolute;
+  top: 0px;
+  left: -87px;
+  height: 588px;
+  width: 6px;
+  color: white;
+  font-family: 'vcr';
+  font-size: 13px;
+  border: 6px solid white;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding-left: 58px;
+  padding-right: 58px;
+  border-radius: 19px;
 }
+
+#close_phone:active {
+transform: translate(1px,1px);
+}
+
 
 #phone_container{
   z-index: 3;
@@ -235,12 +247,16 @@ button:focus {outline:0;}
 
 }
 
+.phone_button:active {
+transform: translate(3px,3px);
+}
+
 .each_item {
-    font-family: 'digital';
-    font-size: 13px;
-    padding-top: 10px;
-   padding-bottom: 10px;
-       /* border: 1px solid purple; */
+  font-family: 'digital';
+  font-size: 13px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  /* border: 1px solid purple; */
 }
 
 #people_container_left{
@@ -279,7 +295,7 @@ button:focus {outline:0;}
   margin-left: auto;
   right: 0px;
   left: 0px;
-  top: 23px;
+  top: 26px;
   color: white;
   font-family: 'digital';
   font-size: 50px;
@@ -287,10 +303,10 @@ button:focus {outline:0;}
 
 #police_message {
   position: absolute;
-  height: 444px;
-  width: 485px;
+    height: 444px;
+    width: 485px;
     top: -199px;
-    left: 456px;
+    left: 436px;
 }
 
   #police_bubble {
