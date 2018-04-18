@@ -221,64 +221,55 @@ button:focus {outline:0;}
   right: 0px;
 }
 
-
-#call_police {
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  right: 0px;
-  left: 0px;
-  top: 23px;
-  color: white;
-  font-family: 'digital';
-  font-size: 50px;
-}
-
-#police_message {
-  position: absolute;
-  background-color: white;
-  top: 100px;
-  left: 420px;
-  height: 170px;
-  width: 210px;
-}
-
 #phone_buttons_container {
     position: absolute;
     top: 92px;
     right: 34px;
     width: 267px;
     height: 314px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 .phone_button {
-  background-color: white;
-  height: 33px;
-  width: 73px;
-  /* padding: 3px; */
-  border-radius: 13px;
-  font-family: 'digital';
-  margin-bottom: 15px;
-  border: 1px solid purple;
+      margin-bottom: 20px;
+
+}
+
+.each_item {
+    font-family: 'digital';
+    font-size: 13px;
+    padding-top: 10px;
+   padding-bottom: 10px;
+       /* border: 1px solid purple; */
 }
 
 #people_container_left{
    position: relative;
    float: left;
-       width: 74px;
+   width: 74px;
    height: 186px;
    top: 127px;
-   border: 1px solid purple;
+   /* border: 1px solid purple; */
 }
 
 #item_container_right{
   position: relative;
-float: right;
-    width: 74px;
-height: 186px;
-top: 127px;
-border: 1px solid purple;
+  float: right;
+  width: 74px;
+  height: 186px;
+  top: 127px;
+/* border: 1px solid purple; */
+}
+
+#call_allison {
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0px;
+  left: 0px;
+  top: 137px;
+  font-family: 'digital';
+  font-size: 13px;
 }
 
 
@@ -294,6 +285,43 @@ border: 1px solid purple;
     background-color: white;
 }
 
+#call_police {
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0px;
+  left: 0px;
+  top: 23px;
+  color: white;
+  font-family: 'digital';
+  font-size: 50px;
+}
+
+#police_message {
+  position: absolute;
+  height: 444px;
+  width: 485px;
+    top: -199px;
+    left: 456px;
+}
+
+  #police_bubble {
+    position: absolute;
+height: 444px;
+width: 485px;
+left: 0px;
+  }
+
+  #police_message_text {
+    position: absolute;
+width: 273px;
+top: 106px;
+left: 89px;
+font-family: 'vcr';
+font-size: 13px;
+line-height: 1.3;
+  }
+
 
 /* ------------------------------ TELEVISION --------------------------------- */
 
@@ -308,7 +336,7 @@ border: 1px solid purple;
 /* -------------------------------- WINNER ---------------------------------- */
 #murder_story {
   position: absolute;
-  width: 700px;
+  width: 730px;
   height: 500px;
   top: 0px;
   right: 0px;
@@ -316,8 +344,8 @@ border: 1px solid purple;
   margin: auto;
   color: white;
   font-family: 'vcr';
-  font-size: 14px;
-  text-shadow: 2px 2px #091225;
+  font-size: 14.5px;
+  text-shadow: 2px 2px 18px #091225;
 }
 
 #loser {

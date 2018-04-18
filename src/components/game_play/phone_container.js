@@ -4,6 +4,7 @@ import '../../App.css';
 import * as actions from '../../actions';
 import phone from '../../images/phone.png';
 import redDot from '../../images/room1/red_dot.gif';
+import yelling from '../../images/yelling_bubble.png';
 
 class PhoneContainer extends Component {
 
@@ -83,51 +84,47 @@ class PhoneContainer extends Component {
   render() {
 
     let people = [...new Set( this.props.peopleTalkedTO )].map(person => {
-      return(<div className="phone_button" onClick={(e) => this.addMurderClueToSolution(person)} >{person}</div>)
+      return(<div className="phone_button" onClick={(e) => this.addMurderClueToSolution(person)}><div className="each_item">{person}</div></div>)
     });
 
     let suspiciousItems = [...new Set( this.props.suspiciousItemsInspected )].map(item => {
-      return(<div className="phone_button" onClick={(e) => this.addMurderClueToSolution(item)} >{item}</div>)
+      return(<div className="phone_button" onClick={(e) => this.addMurderClueToSolution(item)} ><div className="each_item">{item}</div></div>)
     });
 
 
     return (
       <div id="phone_container">
 
-        <img src={phone} alt="A phone"/>
+         <img src={phone} alt="A phone"/>
 
-        {(this.props.message === "0")? null :
-        <div id="blinking_message_dot" onClick={this.handleClickMessage}>
+         {(this.props.message === "0")? null :
+         <div id="blinking_message_dot" onClick={this.handleClickMessage}>
             <img src={redDot} width="80" alt="blinking light"/>
-        </div>}
+         </div>}
 
          <div id="close_phone" onClick={this.handleClosePhone}>HANG UP PHONE</div>
 
          <div id="phone_buttons_container">
-
               <div id="call_police" onClick={this.callPolice}>CALL POLICE</div>
-
-              {this.state.toggleCallPolice?
-                <div id="police_message">
-                    hmm.. you say you know who murdered Kelly... This is a list of everyone you talked to recently and all of the suspicious items you have inspected. Did you solve the case? Help us out by selecting the murderer and the murder weapon.
-                </div> : null}
-
               {this.state.toggleCallPolice? <div id="people_container_left">{people}</div> : null }
-
               {this.state.toggleCallPolice? <div id="item_container_right">{suspiciousItems}</div> : null}
+              {this.isAllisonsPhoneNumberInPurse()? <div className="phone_button" id="call_allison" onClick={this.callAllison}> CALL ALLISON </div> : null}
+          </div>
 
-
-
-              {this.isAllisonsPhoneNumberInPurse()?
-              <div className="phone_button" id="call_allison" onClick={this.callAllison}> CALL ALLISON </div> :
-              <div className="phone_button" id="call_allison" ></div>}
-                {this.state.toggleCallAllison?
-                  <div id="allison_message">
-                    oh I'll be back at the beach club soon, I got all my shifts covered by Jessica. I'm just in Mexico for a little while with my mom and my dad and my brother. You know just enjoying the sun. I should be back soon nice and tan. Who is this again? I don't think we've ever worked together?
-                  </div> : null}
-
-           </div>
           {this.state.messageDisplayed? <div id="phone_message">{this.props.message}</div> :null }
+
+          {this.state.toggleCallPolice?
+            <div id="police_message">
+              <img id="police_bubble" src={yelling} alt="Police Message"/>
+                  <div id="police_message_text">
+                      hmm... You say you know who murdered Kelly? Your keypad shows a list of everyone you talked to recently and all of the suspicious items you have inspected.  Help us out by selecting the murderer and the murder weapon.  If you help us we'll give you the full story, otherwise GAME OVER.
+                  </div>
+            </div> : null}
+
+           {this.state.toggleCallAllison?
+             <div id="allison_message">
+               oh I'll be back at the beach club soon, I got all my shifts covered by Jessica. I'm just in Mexico for a little while with my mom and my dad and my brother. You know just enjoying the sun. I should be back soon nice and tan. Who is this again? I don't think we've ever worked together?
+           </div> : null}
 
       </div>
     );
@@ -148,4 +145,10 @@ function mapStateToProps(state){
 
 export default connect( mapStateToProps, actions)(PhoneContainer);
 
-          //
+// {this.state.toggleParrotMessageRight?
+//   <div id="parrot_message">
+//     <img id="parrot_bubble" src={yelling} alt="Cigarettes"/>
+//       <div id="parrot_message_text">
+//          squawk... squawk... Heather I don't know... Heather I don't know... squawk
+//        </div>
+// </div> : null }
