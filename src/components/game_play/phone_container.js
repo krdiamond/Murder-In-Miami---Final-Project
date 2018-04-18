@@ -5,6 +5,7 @@ import * as actions from '../../actions';
 import phone from '../../images/phone.png';
 import redDot from '../../images/room1/red_dot.gif';
 import yelling from '../../images/yelling_bubble.png';
+import upSpeech from '../../images/up_talk_bubble.png';
 
 class PhoneContainer extends Component {
 
@@ -111,7 +112,12 @@ class PhoneContainer extends Component {
               {this.isAllisonsPhoneNumberInPurse()? <div className="phone_button" id="call_allison" onClick={this.callAllison}> CALL ALLISON </div> : null}
           </div>
 
-          {this.state.messageDisplayed? <div id="phone_message">{this.props.message}</div> :null }
+          {this.state.messageDisplayed?
+            <div className="phone_message">
+              <img className="phone_bubble" src={upSpeech} alt="Tennis Racket Thoughts"/>
+              <div className="phone_message_text"> {this.props.message} </div>
+            </div> :null }
+
 
           {this.state.toggleCallPolice?
             <div id="police_message">
@@ -122,8 +128,11 @@ class PhoneContainer extends Component {
             </div> : null}
 
            {this.state.toggleCallAllison?
-             <div id="allison_message">
-               oh I'll be back at the beach club soon, I got all my shifts covered by Jessica. I'm just in Mexico for a little while with my mom and my dad and my brother. You know just enjoying the sun. I should be back soon nice and tan. Who is this again? I don't think we've ever worked together?
+             <div className="phone_message">
+                 <img className="phone_bubble" src={upSpeech} alt="Tennis Racket Thoughts"/>
+                   <div className="phone_message_text">
+                       I'll be back at the beach club soon. I got all my shifts covered by Jessica. I'm just in Mexico for a little while with my mom dad and lil bro. You know, just enjoying the sun. I should be back soon, nice and tan. Who is this again? I don't think we've ever worked together??
+                    </div>
            </div> : null}
 
       </div>

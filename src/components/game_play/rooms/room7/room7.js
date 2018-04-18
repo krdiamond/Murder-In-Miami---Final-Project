@@ -49,7 +49,7 @@ class Room7 extends Component {
           </div>
 
           {this.props.showPhone ?
-            <PhoneContainer message= "girl when are you coming back from Mexico? I am so sick of watering your plants and it's only been two days. You have so many plants ugh."/>: null}
+            <PhoneContainer message= "girl when are you coming back from Mexico? I am so sick of watering your plants and it's only been two days. You have so many plants ugh. oh yea sorry, It's Jess by the way. Bye."/>: null}
 
           <div id="room7_go_to_room_6" onClick={(e) => this.handleGoToRoom(6)}>
             <div id="room7_go_to_room_6_text">GO TO ALLISON'S LIVING ROOM</div>
