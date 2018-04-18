@@ -223,3 +223,21 @@
   width: 49px;
   z-index: 4;
 }
+
+/* ------------------------------ MICHAEL ----------------------------------- */
+
+#michael_poster {
+  position: absolute;
+  top: 207px;
+  right: 94px;
+  width: 171px;
+  height: 200px;
+  /* border: 6px solid purple; */
+}
+
+#dancing_michael {
+  position: absolute;
+  top: 207px;
+  right: 94px;
+  height: 300px;
+}

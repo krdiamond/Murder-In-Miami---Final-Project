@@ -27,7 +27,6 @@ class PhoneContainer extends Component {
       toggleCallAllison: false,
     })
     if (this.props.currentRoom === 6){
-      this.props.addToPeopleYouHaveTalkedTo("Allison's Dad")
     }
   }
 

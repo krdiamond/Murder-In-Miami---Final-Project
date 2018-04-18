@@ -45,6 +45,7 @@ class Room8 extends Component {
   }
 
   handleCigs = () => {
+    this.props.foundSuspiciousItem("Cigarettes")
     this.props.toggleShowPhone(false)
     this.setState({
       toggleCigMessage: !this.state.toggleCigMessage,
@@ -68,23 +69,6 @@ class Room8 extends Component {
       toggleBeachSceneMessage: !this.state.toggleBeachSceneMessage,
     })
   }
-
-  //
-   //
-  // Heather:
-  // Jessica:
-  // Heather:
-  // Jessica:
-  // Heather:
-
-
-
-  // <img id="heather_bubble_4" src={longSpeech} alt="Cigarettes"/>
-
-  // <img id="jessica_bubble_5" src={longSpeech} alt="Cigarettes"/>
-  //   <div id="jessica_message_text_5">
-  //
-
 
 
   render() {
@@ -147,6 +131,9 @@ class Room8 extends Component {
                    A pack of cigarettes. These girls sure smoke a lot.
                  </div>
           </div> : null }
+
+
+
 
           <div id="allisons_tennis_racket" onClick={this.handleRacket}></div>
           {this.state.toggleTennisRacketMessage?

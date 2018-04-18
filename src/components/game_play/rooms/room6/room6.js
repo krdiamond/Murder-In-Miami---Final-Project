@@ -7,12 +7,14 @@ import redDot from '../../../../images/room1/red_dot.gif';
 import * as actions from '../../../../actions';
 import PhoneContainer from '../../phone_container';
 import rightThought from '../../../../images/right_thought_bubble.png';
+import michael from '../../../../images/michael.gif';
 
 
 class Room6 extends Component {
 
   state = {
     toggleBarBellsMessage: false,
+    toggleMichaelDance: false,
   }
 
   handleGoToRoom = (roomNum) => {
@@ -22,6 +24,10 @@ class Room6 extends Component {
   handlePhoneClick = () => {
     this.props.toggleShowPhone(!this.props.showPhone)
     this.props.toggleIsPurseOpened(false)
+    this.setState({
+      toggleBarBellsMessage: false,
+      toggleMichaelDance: false,
+    })
   }
 
   isBeachClubAddressInPurse = () => {
@@ -40,6 +46,14 @@ class Room6 extends Component {
     this.props.toggleIsPurseOpened(false)
     this.setState({
       toggleBarBellsMessage: !this.state.toggleBarBellsMessage,
+      toggleMichaelDance: false,
+    })
+  }
+
+  handleMichael = () => {
+    this.setState({
+      toggleMichaelDance: !this.state.toggleMichaelDance,
+      toggleBarBellsMessage: false,
     })
   }
 
@@ -63,6 +77,9 @@ class Room6 extends Component {
                   why would Allison leave these out?
                  </div>
           </div> : null }
+
+          <div id="room6_michael_poster" onClick={this.handleMichael}></div>
+          {this.state.toggleMichaelDance? <img id="room6_dancing_michael" src={michael} alt="Dancing Michael"/> : null }
 
           {(this.props.showPhone === true)?
             <PhoneContainer message="Hi Allison, It's your father. Your mother and I went by your house today and we noticed you weren't home. I thought we had plans to do our usual sunday brunch? Where are you? Call me back when you get this. "/>: null}

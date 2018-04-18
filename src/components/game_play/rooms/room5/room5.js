@@ -7,6 +7,7 @@ import Keys from './keys'
 import './Room5.css';
 import rightThought from '../../../../images/right_thought_bubble.png';
 import thinkBubble from '../../../../images/think_bubble.png';
+import michael from '../../../../images/michael.gif';
 
 class Room5 extends Component {
 
@@ -15,19 +16,28 @@ class Room5 extends Component {
     toggleVacuumMessage: false,
     toggleTennisRacketMessage: false,
     toggleAshTrayMessage: false,
+    toggleMichaelDance: false,
   }
+
 
   handleGoToRoom = (roomNum) => {
     this.props.goToRoom(roomNum)
+  }
+
+  handleMichael = () => {
+    this.setState({
+      toggleMichaelDance: !this.state.toggleMichaelDance,
+    })
   }
 
   handleTennisRacket = () => {
     this.props.foundSuspiciousItem("Tennis Racket")
     this.setState({
       toggleTennisRacketMessage: !this.state.toggleTennisRacketMessage,
-          toggleVacuumMessage: false,
+      toggleVacuumMessage: false,
       toggleShoesMessage: false,
       toggleAshTrayMessage: false,
+      toggleMichaelDance: false,
     })
   }
 
@@ -38,24 +48,27 @@ class Room5 extends Component {
       toggleVacuumMessage: !this.state.toggleVacuumMessage,
       toggleShoesMessage: false,
       toggleAshTrayMessage: false,
+      toggleMichaelDance: false,
     })
   }
 
   handleShoes = () => {
     this.setState({
       toggleShoesMessage: !this.state.toggleShoesMessage,
-          toggleVacuumMessage: false,
+      toggleVacuumMessage: false,
       toggleTennisRacketMessage: false,
       toggleAshTrayMessage: false,
+      toggleMichaelDance: false,
     })
   }
 
   handleAshtray = () => {
     this.setState({
       toggleAshTrayMessage: !this.state.toggleAshTrayMessage,
-          toggleVacuumMessage: false,
+      toggleVacuumMessage: false,
       toggleShoesMessage: false,
       toggleTennisRacketMessage: false,
+      toggleMichaelDance: false,
     })
   }
 
@@ -82,7 +95,7 @@ class Room5 extends Component {
           <div id="tennis_message">
             <img id="tennis_message_bubble" src={thinkBubble} alt="Jessica's Thoughts"/>
               <div id="tennis_message_bubble_text">
-                 ..hmmm ... this tennis racket is very clean but still looks worn out. Thats so weird... who cleans their tennis racket...
+                 hmmm... this tennis racket is very clean but still looks worn out. Weird. Who cleans their tennis racket this much?
                </div>
         </div> : null }
 
@@ -94,6 +107,9 @@ class Room5 extends Component {
                  ..hmmm another vacuum. This is getting suspicious.
                </div>
         </div> : null }
+
+        <div id="michael_poster" onClick={this.handleMichael}></div>
+        {this.state.toggleMichaelDance? <img id="dancing_michael" src={michael} alt="Dancing Michael"/> : null }
 
         <div id="jess_shoes" onClick={this.handleShoes}></div>
         {this.state.toggleShoesMessage?
