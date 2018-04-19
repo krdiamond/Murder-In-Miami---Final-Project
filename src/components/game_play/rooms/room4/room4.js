@@ -200,7 +200,7 @@ class Room4 extends Component {
           <div className="jessicas_message">
             <img className="jessicas_thought_bubble" src={squareSpeech} alt="Jessica's Thoughts"/>
             <div id="cell_text">
-              mumble... ugh I have so many plants to water, I have to go to Allison's later to water hers too. Ugh, it's so annoying...
+              mumble... ugh I have so many plants to water, I have to go to Allison's later to water her plants too. Ugh, it's so annoying...
             </div>
           </div> : null }
 

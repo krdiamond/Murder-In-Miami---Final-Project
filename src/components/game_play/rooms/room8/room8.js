@@ -9,6 +9,7 @@ import PhoneContainer from '../../phone_container';
 import rightThought from '../../../../images/right_thought_bubble.png';
 import leftThought from '../../../../images/left_thought_bubble.png';
 import longSpeech from '../../../../images/long_speech_bubble.png';
+import staticIMG from '../../../../images/room8/static.gif';
 
 
 
@@ -32,6 +33,7 @@ class Room8 extends Component {
       toggleWineGlassMessage: !this.state.toggleWineGlassMessage,
       toggleTennisRacketMessage: false,
       toggleCigMessage: false,
+      toggleBeachSceneMessage: false,
     })
   }
 
@@ -41,6 +43,7 @@ class Room8 extends Component {
       toggleTennisRacketMessage: !this.state.toggleTennisRacketMessage,
       toggleWineGlassMessage: false,
       toggleCigMessage: false,
+      toggleBeachSceneMessage: false,
     })
   }
 
@@ -51,6 +54,7 @@ class Room8 extends Component {
       toggleCigMessage: !this.state.toggleCigMessage,
       toggleWineGlassMessage: false,
       toggleTennisRacketMessage: false,
+      toggleBeachSceneMessage: false,
     })
   }
 
@@ -61,12 +65,16 @@ class Room8 extends Component {
       toggleCigMessage: false,
       toggleWineGlassMessage: false,
       toggleTennisRacketMessage: false,
+      toggleBeachSceneMessage: false,
     })
   }
 
   handleBeachSceneClick =() =>{
     this.setState({
       toggleBeachSceneMessage: !this.state.toggleBeachSceneMessage,
+      toggleWineGlassMessage: false,
+      toggleTennisRacketMessage: false,
+      toggleCigMessage: false,
     })
   }
 
@@ -76,7 +84,8 @@ class Room8 extends Component {
       <div className="main_container">
         <img src={room8} alt="Allison's Bedroom"/>
 
-          {this.props.playingTape? <img src={beach} id="beach_scene" onClick={this.handleBeachSceneClick} alt="Beach Scene"/> : null}
+          {this.props.playingTape?
+              <img src={beach} id="beach_scene" onClick={this.handleBeachSceneClick} alt="Beach Scene"/> : null}
           {this.props.playingTape && this.state.toggleBeachSceneMessage?
 
             <div id="beach_message">

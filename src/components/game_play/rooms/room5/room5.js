@@ -27,6 +27,10 @@ class Room5 extends Component {
   handleMichael = () => {
     this.setState({
       toggleMichaelDance: !this.state.toggleMichaelDance,
+      toggleTennisRacketMessage: false,
+      toggleVacuumMessage: false,
+      toggleShoesMessage: false,
+      toggleAshTrayMessage: false,
     })
   }
 

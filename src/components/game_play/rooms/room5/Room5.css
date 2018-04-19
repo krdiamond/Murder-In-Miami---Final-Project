@@ -1,4 +1,4 @@
-#jess_tennis_racket:hover, #jess_shoes:hover, #jess_ashtray:hover, #keys:hover, #room5_vacuum:hover{
+#jess_tennis_racket:hover, #jess_shoes:hover, #jess_ashtray:hover, #keys:hover, #room5_vacuum:hover, #michael_poster:hover{
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
@@ -236,8 +236,8 @@
 }
 
 #dancing_michael {
-    position: absolute;
-    top: 288px;
-    right: 0px;
-    height: 394px;
+  position: absolute;
+top: 345px;
+right: 26px;
+height: 367px;
 }

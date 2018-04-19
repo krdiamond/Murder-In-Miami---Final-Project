@@ -154,6 +154,15 @@
 
 /* -------------------------- BEACH SCENE ON TV ----------------------------- */
 
+#room8_static {
+  position: absolute;
+  width: 101px;
+  height: 84px;
+  top: 282px;
+  left: 16px;
+  z-index: 5;
+}
+
 #beach_scene {
   position: absolute;
   width: 101px;

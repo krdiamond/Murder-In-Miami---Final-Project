@@ -51,6 +51,7 @@ class Room6 extends Component {
   }
 
   handleMichael = () => {
+    this.props.toggleShowPhone(false)
     this.setState({
       toggleMichaelDance: !this.state.toggleMichaelDance,
       toggleBarBellsMessage: false,

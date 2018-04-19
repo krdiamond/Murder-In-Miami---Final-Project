@@ -65,14 +65,35 @@
 /* --------------------------------- WATER ---------------------------------- */
 
 #water {
-  position: absolute;
-  width:300px;
-  height: 300px;
-  top: 0px;
-  left: 0px;
-  opacity: 0.5;
+    position: absolute;
+    width: 412px;
+    height: 110px;
+    bottom: 237px;
+    left: 170px;
+    opacity: 0.7;
+    -webkit-transform: perspective( 263px ) rotateY( -7deg ) rotateZ( 10.5deg );
+    transform: perspective( 87px ) rotateY( 0deg ) rotateZ( 0deg ) rotateX( 18deg );
+    /* border: 1px solid purple; */
 }
 
+#pool_plant {
+  position: absolute;
+  bottom: 208px;
+  right: 98px;
+}
+
+#edge {
+    position: absolute;
+    bottom: 269px;
+    right: 143px;
+}
+
+#pool_board {
+  position: absolute;
+ bottom: 218px;
+ left: 145px;
+ z-index: 5;
+}
 
 
 /* -------------------------------- HEATHER --------------------------------- */
@@ -83,6 +104,7 @@
   height: 74px;
   top: 577px;
   left: 420px;
+  z-index: 5;
   /* border: 3px solid green; */
 }
 

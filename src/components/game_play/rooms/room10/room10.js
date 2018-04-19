@@ -5,7 +5,10 @@ import room10 from '../../../../images/room10/room10.jpg';
 import './Room10.css';
 import * as actions from '../../../../actions';
 import squareSpeech from '../../../../images/square_talk_bubble.png';
-import water from '../../../../images/water.gif';
+import water from '../../../../images/room10/water.gif';
+import plant from '../../../../images/room10/plant.png';
+import board from '../../../../images/room10/diving_board.png';
+import edge from '../../../../images/room10/pool_edge.png';
 
 
 class Room10 extends Component {
@@ -42,6 +45,9 @@ class Room10 extends Component {
           <img src={room10} alt="Beach Club Pool"/>
 
           <img id="water" src={water} alt="Water"/>
+          <img id="pool_plant" src={plant} alt="Plant"/>
+          <img id="pool_board" src={board} alt="Diving Board"/>
+          <img id="edge" src={edge} alt="something"/>
 
           <div id="heather" onClick={this.handleHeather}></div>
 
