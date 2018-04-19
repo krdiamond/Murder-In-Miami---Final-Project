@@ -6,7 +6,7 @@ const defaultState = {
   findJessicasNote: false,
   findFridgeNote: false,
   showNoteBeachAddress: false,
-  itemsInPurse:[ {id: 0, title: "tape", x: 0, y: 10, width:80, img: "/static/media/tape.ab84cfe0.png"}],
+  itemsInPurse:[ ],
   showTape: true,
   talkedtoParrots: [],
   showKeys: true,
