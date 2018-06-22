@@ -49,8 +49,8 @@ class Note extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 630 && this.state.x < 740 &&
-        this.state.y > -58 && this.state.y < 40) {
+      if(this.state.x > 500 && this.state.x < 900 &&
+        this.state.y > -100 && this.state.y < 100) {
         this.putNoteInPurse()
       }
     }
