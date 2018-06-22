@@ -50,8 +50,8 @@ class Keys extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 750 && this.state.x < 890 &&
-        this.state.y > 0 && this.state.y < 135) {
+      if(this.state.x > 730 && this.state.x < 950 &&
+        this.state.y > -50 && this.state.y < 150) {
         this.putKeysInPurse()
       }
     }
