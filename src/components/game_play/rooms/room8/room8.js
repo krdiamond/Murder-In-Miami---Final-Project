@@ -20,6 +20,7 @@ class Room8 extends Component {
     toggleTennisRacketMessage: false,
     toggleCigMessage: false,
     toggleBeachSceneMessage: true,
+    toggleTV:false
   }
 
 
@@ -44,6 +45,17 @@ class Room8 extends Component {
       toggleWineGlassMessage: false,
       toggleCigMessage: false,
       toggleBeachSceneMessage: false,
+    })
+  }
+
+  handleTV = () => {
+    this.props.toggleShowPhone(false)
+    this.setState({
+      toggleTennisRacketMessage: false,
+      toggleWineGlassMessage: false,
+      toggleCigMessage: false,
+      toggleBeachSceneMessage: false,
+      toggleTV: !this.state.toggleTV
     })
   }
 
@@ -126,6 +138,15 @@ class Room8 extends Component {
               <img id="wine_glasses_bubble" src={rightThought} alt="Wine Glasses"/>
                 <div id="wine_glasses_message_text">
                   Two glasses of wine... Allison and Jessica were hanging out here before they picked up Kelly on the night of the murder. Looks like they left in a hurry.
+              </div>
+          </div> : null }
+
+          <div id="tv_no_tape" onClick={this.handleTV}></div>
+          {this.state.toggleTV?
+            <div id="tv_no_tape_message">
+              <img id="tv_no_tape_bubble" src={leftThought} alt="TV"/>
+                <div id="tv_no_tape_message_text">
+                  hmmm a VCR. No tape is inside.
               </div>
           </div> : null }
 
