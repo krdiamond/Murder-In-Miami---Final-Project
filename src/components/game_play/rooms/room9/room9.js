@@ -36,7 +36,7 @@ class Room9 extends Component {
              <div id="beach_jess_message">
                <img id="beach_jess_bubble" src={squareSpeech} alt="Cigarettes"/>
                  <div id="beach_jess_message_text">
-                   OMG you are here too? Why are you following me around. You are so weird. I am finishing this cigarette and then I'm going into work and I don't want to talk to you anymore. Ugh don't go into the club and start bothering the members. You are going to get kicked out.
+                   OMG, Why are you following me around? You are so weird. I am finishing this cigarette, then I'm going into work and I don't want to talk to you anymore. Ugh, don't go into the club and start bothering the members. You are going to get kicked out!
                  </div>
           </div> : null }
 
