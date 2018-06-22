@@ -49,8 +49,8 @@ class FridgeNote extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 500 && this.state.x < 800 &&
-        this.state.y > -100 && this.state.y < 100) {
+      if(this.state.x > 400 && this.state.x < 1000 &&
+        this.state.y > -100 && this.state.y < 150) {
         this.putAddressInPurse()
       }
     }
