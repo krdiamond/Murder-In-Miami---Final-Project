@@ -49,8 +49,8 @@ class PhoneNumber extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 730 && this.state.x < 774 &&
-        this.state.y > 0 && this.state.y < 150) {
+      if(this.state.x > 600 && this.state.x < 900 &&
+        this.state.y > -100 && this.state.y < 150) {
         this.putNoteInPurse()
       }
     }
