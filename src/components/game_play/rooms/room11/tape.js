@@ -50,8 +50,8 @@ class Tape extends Component {
 
     handleMouseUp = () => {
       this.setState({clicked: false});
-      if(this.state.x > 756 && this.state.x < 886 &&
-        this.state.y > 27 && this.state.y < 112) {
+      if(this.state.x > 730 && this.state.x < 950 &&
+        this.state.y > -50 && this.state.y < 150) {
         this.putTapeInPurse()
       }
     }
@@ -64,8 +64,6 @@ class Tape extends Component {
 
 
   render() {
-    // console.log("x",this.state.x)
-    // console.log("y",this.state.y)
     return (
       <div
         id="tape"
@@ -85,7 +83,7 @@ function mapStateToProps(state){
   return {
     purseDropZone: state.purseDropZone,
     showTape: state.showTape,
-    itemsInPurse: state.itemsInPurse
+    itemsInPurse: state.itemsInPurse,
   }
 }
 
