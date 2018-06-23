@@ -49,6 +49,16 @@
 
 }
 
+.no-padding {
+  padding:0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.top-padding {
+  padding: 0px 0 0 0;
+  margin: 15px 0 0 0;
+}
+
 /* -------------------------- LANDING PAGE CONTAINER ------------------------ */
 
 /* ------------------------------- START GAME ------------------------------- */
@@ -73,7 +83,7 @@ text-shadow: 5px 5px #002D54;
 #intro {
   position: absolute;
     width: 600px;
-    height: 200px;
+    height: 250px;
     top: 207px;
     right: 0px;
     left: 0px;
@@ -103,7 +113,7 @@ text-shadow: 5px 5px #002D54;
   padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
-  top: 156px;
+  top: 217px;
   right: 0px;
   left: 0px;
   background-color: #005EA6;
@@ -115,6 +125,34 @@ text-shadow: 5px 5px #002D54;
   box-shadow: 5px 8px 0px #081c48;
   letter-spacing: 1px;
   line-height: .8;
+}
+
+#play_again_button {
+    position: absolute;
+    width: 262px;
+    height: 120px;
+    font-size: 59px;
+    color: #F1EFFB;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 293px;
+    right: 0px;
+    left: 0px;
+    background-color: #005EA6;
+    border: 1px solid #1374a4;
+    text-decoration: none;
+    border-radius: 46px;
+    font-family: 'vcr';
+    -webkit-box-shadow: 5px 8px 0px #081c48;
+    box-shadow: 5px 8px 0px #081c48;
+    letter-spacing: 1px;
+    line-height: .8;
+}
+
+#play_again_button:active {
+  box-shadow: 0px 0px 0px #081c48;
+  transform: translate(5px,5px);
 }
 
 #start_button:active {

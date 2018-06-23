@@ -20,7 +20,8 @@ class Room8 extends Component {
     toggleTennisRacketMessage: false,
     toggleCigMessage: false,
     toggleBeachSceneMessage: true,
-    toggleTV:false
+    toggleTV:false,
+    message: 0,
   }
 
 
@@ -54,8 +55,9 @@ class Room8 extends Component {
       toggleTennisRacketMessage: false,
       toggleWineGlassMessage: false,
       toggleCigMessage: false,
-      toggleBeachSceneMessage: false,
-      toggleTV: !this.state.toggleTV
+      toggleBeachSceneMessage: !this.state.toggleBeachSceneMessage,
+      toggleTV: !this.state.toggleTV,
+      message: 0
     })
   }
 
@@ -87,7 +89,33 @@ class Room8 extends Component {
       toggleWineGlassMessage: false,
       toggleTennisRacketMessage: false,
       toggleCigMessage: false,
+      message: 0
     })
+  }
+
+  conversation = [
+    "Heather: She is so gross how could she do that.",
+    "Jessica: I know I hate her so much.",
+    "Heather: You should take her out to the beach at night and like totally bash her head in.",
+    "Jessica: For sure.",
+    "Heather: Totally",
+    "Jessica: It would be so easy. No one would think it was me. Everyone thinks we're best friends.",
+    "Heather: No one would even miss her.",
+    "Jessica: Well, I guess I would beacuse like she does most of the work around here anyways. I just sit around and hang out with you.... I should probably be working right now...",
+    "Heather: Yea what are you even doing talking to me, go get me a drink hahahaha!!",
+  ]
+
+  handleNextMessage =() => {
+    if (this.state.message == 8) {
+      this.setState({
+        message: 0
+      })
+    }
+    else{
+      this.setState({
+        message: this.state.message + 1
+      })
+    }
   }
 
 
@@ -98,37 +126,12 @@ class Room8 extends Component {
 
           {this.props.playingTape?
               <img src={beach} id="beach_scene" onClick={this.handleBeachSceneClick} alt="Beach Scene"/> : null}
-          {this.props.playingTape && this.state.toggleBeachSceneMessage?
 
+          {this.props.playingTape && this.state.toggleBeachSceneMessage?
             <div id="beach_message">
-              <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> "She is so gross, how could she do that??"</div>
-                <img className="bubble" src={longSpeech} alt="Beach Convo"/>
-              </div>
-              <div className="message_bubble_left">
-                <div className="bubble_text"> <strong>Jessica</strong> "I know I hate her so much."</div>
-                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
-              </div>
-              <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> "you should take her out to the beach at night and like totally bash her head in"</div>
-                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
-              </div>
-              <div className="message_bubble_left">
-                <div  className="bubble_text"> <strong>Jessica</strong> "hahahaha could you imagine"</div>
-                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
-              </div>
-              <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> "Who would even miss her???"</div>
-                 <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
-               </div>
-              <div id="bubble_message_6" className="message_bubble_left">
-                <div id="bubble_text_6"className="bubble_text"> <strong>Jessica</strong> "well I guess me beacuse like she does most of the work around here anyways, I just sit around and hang out with you.... I should probably be working right now..."</div>
-                <img id="bubble_6" className="bubble"  src={longSpeech} alt="Beach Convo"/>
-              </div>
-              <div className="message_bubble_right">
-                <div className="bubble_text"> <strong>Heather</strong> "yea what are you even doing talking to me, go get me a drink hahahaha!!"</div>
-                <img className="bubble"  src={longSpeech} alt="Beach Convo"/>
-              </div>
+                <div className="beach_message_bubble_text">{this.conversation[this.state.message]}</div>
+                {this.state.message === 8? null : <div className="next" onClick={this.handleNextMessage}>NEXT</div>}
+                <img className="beach_message_bubble" src={longSpeech} alt="Beach Convo"/>
             </div> : null}
 
 
@@ -142,7 +145,7 @@ class Room8 extends Component {
           </div> : null }
 
           <div id="tv_no_tape" onClick={this.handleTV}></div>
-          {this.state.toggleTV?
+          {this.state.toggleTV && (this.props.playingTape === false)?
             <div id="tv_no_tape_message">
               <img id="tv_no_tape_bubble" src={leftThought} alt="TV"/>
                 <div id="tv_no_tape_message_text">
@@ -161,9 +164,6 @@ class Room8 extends Component {
                    A pack of cigarettes. These girls sure smoke a lot.
                  </div>
           </div> : null }
-
-
-
 
           <div id="allisons_tennis_racket" onClick={this.handleRacket}></div>
           {this.state.toggleTennisRacketMessage?
@@ -193,8 +193,3 @@ function mapStateToProps(state){
 }
 
 export default connect( mapStateToProps, actions)(Room8);
-
-
-
-
-  // {this.props.room1listenedToMessage? null : <img src={redDot} width="5" alt="blinking light"/>}

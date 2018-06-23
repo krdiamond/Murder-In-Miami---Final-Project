@@ -18,8 +18,13 @@ class StartGame extends Component {
         <div id="header">Murder In Miami</div>
         <div id="intro">
             <div id="opening_story">
-               A girl named Kelly was found brutally murdered by the beach. Police have been combing the area for clues. The body was found covered with fallen branches, rocks, and sand. Cigarette butts were found all over the area but were too sandy to test for for DNA.  The police do not have any leads and the case is looking bleak.  You are nosy and have decided to snoop around. You are equiped with a duffle bag (on the right), to store any items that might help along the way. Explore Kelly's world to figure out what happened to her. If you think you know who the murderer is and what the murder weapon was, please call the police from any phone as soon as possible!!!!
+               <p className="no-padding">A girl named Kelly was found brutally murdered by the beach. Police have been combing the area for clues. Her body was found covered with fallen branches, rocks, and sand. Cigarette butts were found all over the area but were too sandy to test for DNA.  The police do not have any leads and the case is looking bleak.  You are nosy and have decided to snoop around. You are equiped with a duffle bag (on the right), to store any items that might help along the way. Explore Kelly's world to figure out what happened to her. If you think you know who the murderer is and what the murder weapon was, please call the police from any phone as soon as possible!!!!
+               </p>
+               <p className="top-padding">Game Design & Story -  Kristina Diamond</p>
+               <p className="no-padding">Artwork - Yoko Honda</p>
+               <p className="no-padding">Made using React/Redux & Javascript</p>
             </div>
+
             <button id="start_button" type="button" onMouseUp={this.handleGoToRoom} >START GAME</button>
         </div>
       </div>
