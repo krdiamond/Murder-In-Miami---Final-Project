@@ -22,7 +22,7 @@ class StartGame extends Component {
                </p>
                <p className="top-padding">Game Design & Story -  Kristina Diamond</p>
                <p className="no-padding">Artwork - Yoko Honda</p>
-               <p className="no-padding">Made using React/Redux & Javascript</p>
+               <p className="no-padding">Made using React/Redux & JavaScript</p>
             </div>
 
             <button id="start_button" type="button" onMouseUp={this.handleGoToRoom} >START GAME</button>
