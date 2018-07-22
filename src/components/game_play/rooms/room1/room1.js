@@ -11,7 +11,7 @@ import rightThought from '../../../../images/right_thought_bubble.png';
 import PhoneContainer from '../../phone_container';
 import Note from './note'
 
-class Room1 extends Component {
+class Room1 extends Component {0
 
   state = {
     openingStoryDisplayed: true,
@@ -65,7 +65,10 @@ class Room1 extends Component {
     })
   }
 
+
+
   render() {
+
     return (
       <div className="main_container">
 

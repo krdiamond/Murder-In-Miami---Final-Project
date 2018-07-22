@@ -97,14 +97,10 @@
   width: 250px;
   height: 336px;
   z-index: 2;
+  left: 170px;
+  top: 250px;
 }
 
-#clear_mean_note {
-  position: absolute;
-  width: 250px;
-  height: 336px;
-  z-index: 3;
-}
 
 #jessicas_note:hover, #room1phone:hover{
   cursor: url('../../../../images/hand.png') 30 100,auto;
