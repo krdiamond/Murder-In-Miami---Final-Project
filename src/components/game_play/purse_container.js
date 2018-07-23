@@ -9,23 +9,36 @@ const interact = require('interactjs');
 
 class PurseContainer extends Component {
 
+  state = {
+    holdTitle: null,
+  };
+
+  componentDidMount = () => {
+    interact('.tv').dropzone({
+      ondrop: this.insertTape
+    });
+  }
+
   handleTogglePurseOpen = () => {
     this.props.toggleShowPhone(false)
     this.props.toggleIsPurseOpened(!this.props.isPurseOpened)
   }
 
-  componentDidMount = () => {
-    interact('.tv').dropzone({
-      accept: '.cell',
-      ondrop: this.playTape
+  findTheMovingCellOnMouseDown = (title) => {
+    this.setState({
+      holdTitle: title
     });
   }
 
-  playTape = () => {
-    if(this.props.itemsInPurse[0].title == "tape"){
-      this.props.playTape(!this.props.playingTape)
-      this.props.removeItemFromPurse(this.props.itemsInPurse.filter(item => item.title !== "tape"))
+  insertTape = () => {
+    if(this.state.holdTitle == "tape") {
+      this.playTape()
     }
+  }
+
+  playTape = () => {
+    this.props.playTape(!this.props.playingTape)
+    this.props.removeItemFromPurse(this.props.itemsInPurse.filter(item => item.title !== "tape"))
   }
 
   sortItemsInThePurseByID = () => {
@@ -33,7 +46,7 @@ class PurseContainer extends Component {
   }
 
   render() {
-
+    // console.log(this.props.itemsInPurse)
     let cells = this.sortItemsInThePurseByID().map((cell) => {
         return (
           <Cell
@@ -42,18 +55,23 @@ class PurseContainer extends Component {
             title={cell.title}
             img={cell.img}
             width={cell.width}
+            findTheMovingCell={this.findTheMovingCellOnMouseDown}
           />
         );
       }
     );
 
     return (
-      <div id="purse_container" className="dropzone" >
-          <img id="purse" src={purse} onClick={this.handleTogglePurseOpen} alt="Your purse to store items"/>
+      <div id="purse_container" >
+          <img id="purse"
+                className="dropzone"
+                src={purse}
+                onClick={this.handleTogglePurseOpen}
+                alt="Your purse to store items"/>
           {this.props.isPurseOpened?
-            <div id ="purse_contents">
-              { cells }
-            </div> : null}
+          <div id ="purse_contents">
+            { cells }
+          </div> : null}
       </div>
     );
   }

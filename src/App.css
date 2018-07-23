@@ -32,6 +32,7 @@
 
 #game_container {
   display: inline-block;
+  width: 950px;
   /* border: 1px solid purple; */
 }
 
@@ -193,7 +194,7 @@ button:focus {outline:0;}
   z-index: 10;
   margin: auto;
   left: 0px;
-  top: 0px;
+  top: 20px;
   bottom: 0px;
   /* border: 6px solid purple; */
 }

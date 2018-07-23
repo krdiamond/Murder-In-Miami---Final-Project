@@ -82,13 +82,7 @@
 
 #beach_club_address {
   position: absolute;
-  z-index: 3;
+  z-index: 99;
   left: 100px;
   top: 100px;
-}
-
-#clear_beach_address {
-  position: absolute;
-  height: 384px;
-  width: 363px;
 }

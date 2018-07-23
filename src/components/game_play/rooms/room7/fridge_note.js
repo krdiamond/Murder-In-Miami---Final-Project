@@ -20,7 +20,7 @@ class FridgeNote extends Component {
   }
 
   componentDidMount = () => {
-    interact('.tv').dropzone({
+      interact('.dropzone').dropzone({
       accept: '.found-object',
       ondrop: this.putAddressInPurse
     });
