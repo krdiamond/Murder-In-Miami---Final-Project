@@ -5,17 +5,10 @@ import '../../../../App.css';
 import './Room1.css';
 import meanNote from '../../../../images/room1/mean_note.png';
 
+const interact = require('interactjs');
+
 class Note extends Component {
 
-  state = {
-        oldMouseX: 0,
-        oldMouseY: 0,
-        mouseX: 0,
-        mouseY: 0,
-        clicked: false,
-        x:170,
-        y:250,
-      };
 
     mean_note = {
       id: 1,
@@ -26,33 +19,11 @@ class Note extends Component {
       width: 100,
     }
 
-    handleMouseDown = (e) => {
-      this.setState({
-        oldMouseX: e.clientX,
-        oldMouseY: e.clientY,
-        clicked: true,
+    componentDidMount = () => {
+      interact('.dropzone').dropzone({
+        accept: '.found-object',
+        ondrop: this.putNoteInPurse
       });
-    }
-
-    handleMouseMove = (e) => {
-      this.setState({
-        mouseX: e.clientX,
-        mouseY: e.clientY,
-      })
-      if(this.state.clicked === true ) {
-          this.setState({
-          x: this.state.x + e.clientX - this.state.mouseX,
-          y: this.state.y + e.clientY - this.state.mouseY,
-        })
-      }
-    }
-
-    handleMouseUp = () => {
-      this.setState({clicked: false});
-      if(this.state.x > 500 && this.state.x < 900 &&
-        this.state.y > -100 && this.state.y < 100) {
-        this.putNoteInPurse()
-      }
     }
 
     putNoteInPurse = () => {
@@ -62,17 +33,10 @@ class Note extends Component {
 
 
   render() {
-    // console.log("x",this.state.x)
-    // console.log("y",this.state.y)
     return (
       <div
         id="jessicas_note"
-        style={{left: this.state.x,
-                top: this.state.y}}
-        onMouseDown={(e)=>this.handleMouseDown(e)}
-        onMouseUp={this.handleMouseUp}
-        onMouseMove={this.handleMouseMove}>
-        <div id="clear_mean_note"></div>
+        className="draggable found-object">
         <img src={meanNote} alt="Mean note"/>
       </div>
     )

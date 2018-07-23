@@ -5,6 +5,8 @@ import '../../../../App.css';
 import './Room11.css';
 import tape from '../../../../images/room11/tape.png';
 
+const interact = require('interactjs');
+
 class Tape extends Component {
 
   state = {
@@ -27,34 +29,12 @@ class Tape extends Component {
     img: tape,
   }
 
-    handleMouseDown = (e) => {
-      this.setState({
-        oldMouseX: e.clientX,
-        oldMouseY: e.clientY,
-        clicked: true,
-      });
-    }
-
-    handleMouseMove = (e) => {
-      this.setState({
-        mouseX: e.clientX,
-        mouseY: e.clientY,
-      })
-      if(this.state.clicked === true ) {
-          this.setState({
-          x: this.state.x + e.clientX - this.state.mouseX,
-          y: this.state.y + e.clientY - this.state.mouseY,
-        })
-      }
-    }
-
-    handleMouseUp = () => {
-      this.setState({clicked: false});
-      if(this.state.x > 730 && this.state.x < 950 &&
-        this.state.y > -50 && this.state.y < 150) {
-        this.putTapeInPurse()
-      }
-    }
+  componentDidMount = () => {
+    interact('.dropzone').dropzone({
+      accept: '.found-object',
+      ondrop: this.putTapeInPurse
+    });
+  }
 
     putTapeInPurse = () => {
       this.props.addItemToPurse(this.tape)
@@ -65,15 +45,8 @@ class Tape extends Component {
 
   render() {
     return (
-      <div
-        id="tape"
-        style={{left: this.state.x,
-                top: this.state.y}}
-        onMouseDown={(e)=>this.handleMouseDown(e)}
-        onMouseUp={this.handleMouseUp}
-        onMouseMove={this.handleMouseMove}>
+      <div id="tape" className="draggable found-object">
         <img src={tape} alt="Secret Video Tape"/>
-        <div id="clear_tape" ></div>
       </div>
     )
   }

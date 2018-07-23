@@ -144,7 +144,7 @@ class Room8 extends Component {
               </div>
           </div> : null }
 
-          <div id="tv_no_tape" onClick={this.handleTV}></div>
+          <div id="tv_no_tape" className="tv" onClick={this.handleTV}></div>
           {this.state.toggleTV && (this.props.playingTape === false)?
             <div id="tv_no_tape_message">
               <img id="tv_no_tape_bubble" src={leftThought} alt="TV"/>

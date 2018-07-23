@@ -1,4 +1,4 @@
-#parrot_left:hover, #parrot_right:hover, #clear_tape:hover, #room11phone:hover {
+#parrot_left:hover, #parrot_right:hover, #tape:hover, #room11phone:hover {
   cursor: url('../../../../images/hand.png') 30 100,auto;
 }
 
@@ -93,6 +93,8 @@
 #tape {
   position: absolute;
   z-index: 3;
+  left: 425px;
+  top: 790px;
 }
 
 #clear_tape{

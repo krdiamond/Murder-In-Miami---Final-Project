@@ -83,6 +83,8 @@
 #beach_club_address {
   position: absolute;
   z-index: 3;
+  left: 100px;
+  top: 100px;
 }
 
 #clear_beach_address {

@@ -4,15 +4,13 @@ export default class Cell extends Component {
 
  render() {
    return (
-     <div className="cell"
+     <div className="cell draggable"
           id={this.props.id}
-          key ={this.props.id}
-          style={{left: this.props.x,
-                  top: this.props.y}}
-          onMouseDown={(e)=>this.props.findTheMovingCell(e,this.props.title)}>
+          key ={this.props.id}>
         <div id="clearbox"></div>
         <img width={this.props.width} className="moon" src={this.props.img} alt="full moon" />
     </div>
+
     );
   }
 }

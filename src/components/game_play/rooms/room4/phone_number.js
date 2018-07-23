@@ -5,17 +5,9 @@ import '../../../../App.css';
 import './Room4.css';
 import phoneNumber from '../../../../images/room4/allisons_phone_number.png';
 
-class PhoneNumber extends Component {
+const interact = require('interactjs');
 
-  state = {
-        oldMouseX: 0,
-        oldMouseY: 0,
-        mouseX: 0,
-        mouseY: 0,
-        clicked: false,
-        x:341,
-        y:765,
-      };
+class PhoneNumber extends Component {
 
     phoneNumber = {
       title: 'Phone Number',
@@ -26,33 +18,11 @@ class PhoneNumber extends Component {
       width:100,
     }
 
-    handleMouseDown = (e) => {
-      this.setState({
-        oldMouseX: e.clientX,
-        oldMouseY: e.clientY,
-        clicked: true,
+    componentDidMount = () => {
+      interact('.dropzone').dropzone({
+        accept: '.found-object',
+        ondrop: this.putNoteInPurse
       });
-    }
-
-    handleMouseMove = (e) => {
-      this.setState({
-        mouseX: e.clientX,
-        mouseY: e.clientY,
-      })
-      if(this.state.clicked === true ) {
-          this.setState({
-          x: this.state.x + e.clientX - this.state.mouseX,
-          y: this.state.y + e.clientY - this.state.mouseY,
-        })
-      }
-    }
-
-    handleMouseUp = () => {
-      this.setState({clicked: false});
-      if(this.state.x > 600 && this.state.x < 900 &&
-        this.state.y > -100 && this.state.y < 150) {
-        this.putNoteInPurse()
-      }
     }
 
     putNoteInPurse = () => {
@@ -62,17 +32,8 @@ class PhoneNumber extends Component {
 
 
   render() {
-    // console.log("x",this.state.x)
-    // console.log("y",this.state.y)
     return (
-      <div
-        id="phone_number"
-        style={{left: this.state.x,
-                top: this.state.y}}
-        onMouseDown={(e)=>this.handleMouseDown(e)}
-        onMouseUp={this.handleMouseUp}
-        onMouseMove={this.handleMouseMove}>
-        <div id="clear_phone_number"></div>
+      <div id="phone_number" className="draggable found-object">
         <img src={phoneNumber} alt="Allison's Phone Numbe in Mexico"/>
       </div>
     )

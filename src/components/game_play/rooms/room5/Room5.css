@@ -214,6 +214,8 @@
 #keys {
   position: absolute;
   z-index: 10;
+  left: 60px;
+  top: 700px;
 }
 
 #clear_keys {

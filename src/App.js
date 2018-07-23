@@ -5,8 +5,34 @@ import GameContainer from './components/game_play/game_container';
 import NotFound from './components/pre_game/route_not_found';
 import './App.css';
 
+const interact = require('interactjs');
 
 class App extends Component {
+
+  componentDidMount = () => {
+    interact('.draggable')
+      .draggable({
+        onmove: this.dragMoveListener
+      });
+  }
+
+  dragMoveListener (event) {
+    var target = event.target,
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+
+
   render() {
     return (
       <div id="app">
@@ -15,7 +41,7 @@ class App extends Component {
           <Route path="/play" render={()=><GameContainer/>}/>
           <Route component={NotFound}/>
         </Switch>
-        
+
       </div>
     );
   }
